@@ -104,7 +104,7 @@
         </div> <!-- end services-list -->
     </section> <!-- end s-services -->
 
-    <!-- Mapas
+    <!-- Mapas y listado de madroños
     ================================================== -->
     <section id="esp" class="s-clients">
         <div class="row section-header has-bottom-sep" data-aos="fade-up">
@@ -113,8 +113,8 @@
             </div>
         </div> <!-- end section-header -->
         <!--Seccion de mas info-->
-        <div class="wrap" data-aos="fade-up">
-            <div class="tarjeta-wrap">
+        <div class="wrap">
+            <div class="tarjeta-wrap" data-aos="fade-right">
                 <div class="tarjeta">
                     <div class="adelante card1"></div>
                     <div class="atras">
@@ -122,7 +122,7 @@
                     </div>
                 </div>
             </div>
-            <div class="tarjeta-wrap">
+            <div class="tarjeta-wrap" data-aos="fade-up">
                 <div class="tarjeta">
                     <div class="adelante card2"></div>
                     <div class="atras">
@@ -130,7 +130,7 @@
                     </div>
                 </div>
             </div>
-            <div class="tarjeta-wrap">
+            <div class="tarjeta-wrap" data-aos="fade-left">
                 <div class="tarjeta">
                     <div class="adelante card3"></div>
                     <div class="atras">
@@ -140,15 +140,20 @@
             </div>
         </div>
         <!--Cierre de la seccion de mas info-->
-
-        <div class="container">
-            <div class="w-70 embed-container">
+        <div class="row section-header has-bottom-sep" data-aos="fade-up">
+            <div class="col-full">
+                <span>Da click para obtener mas información</span>
+            </div>
+        </div>
+        <!--Mapa-->
+        <div class="container-fluid">
+            <div class="w-70">
                 <div class="embed-container">
                     <iframe width="500" height="400" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" title="Madroños en  México" src="https://kaxkhzaa6jbz4ylj.maps.arcgis.com/apps/Embed/index.html?webmap=aa715489865d4aee88c6af5a16517675&extent=-118.7437,14.4806,-86.2901,31.7498&home=true&zoom=true&previewImage=false&scale=true&search=true&searchextent=true&disable_scroll=true&theme=dark"></iframe>
                 </div>
             </div>    
         </div>
-        
+        <!--Cierre del mapa-->
     </section> <!-- end s-clients -->
 
 
@@ -288,7 +293,7 @@
 
             <div class="col-six tab-full right footer-subscribe text-dark">
 
-                <h4>Get Notified</h4>
+                <h4 class="text-dark">Get Notified</h4>
                 <p>Quia quo qui sed odit. Quaerat voluptas autem necessitatibus vitae aut non alias sed quia. Ut itaque
                     enim optio ut excepturi deserunt iusto porro.</p>
             </div>
@@ -333,25 +338,14 @@
     <script src="js/main2.js"></script>
     <script>
         $(document).ready(function () {
-
             //funcion de cuando haga clik en cada una de las categorias de la pagina me desplase a esa parte pero de una manera lenta
             //y con suabidad
-            // Add smooth scrolling to all links in navbar + footer link
             $(".navbar a, footer a[href='#myPage']").on('click', function (event) {
-
-                // Prevent default anchor click behavior
                 event.preventDefault();
-
-                // Store hash
                 var hash = this.hash;
-
-                // Using jQuery's animate() method to add smooth page scroll
-                // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
                 $('html, body').animate({
                     scrollTop: $(hash).offset().top
                 }, 900, function () {
-
-                    // Add hash (#) to URL when done scrolling (default click behavior)
                     window.location.hash = hash;
                 });
             });
