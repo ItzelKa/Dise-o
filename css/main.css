@@ -74,13 +74,11 @@ body {
 }
 
 body {
-  background: #111111;
   font-family: "lora-regular", serif;
   font-size: 1.7rem;
   font-style: normal;
   font-weight: normal;
   line-height: 1.765;
-  color: #757575;
   margin: 0;
   padding: 0;
 }
@@ -1437,7 +1435,7 @@ input::-moz-focus-inner {
 
 @media only screen and (max-width: 800px) {
   .s-clients {
-    padding-bottom: 17.4rem;
+    padding-bottom: 5rem;
   }
   .section-header.has-bottom-sep::before {
     width: 400px;
@@ -2447,7 +2445,7 @@ html.no-csstransitions .home-content__main {
  * ------------------------------------------------------------------- */
 .s-services {
   padding-top: 5rem;
-  padding-bottom: 13.2rem;
+  padding-bottom: 7.2rem;
   background-color: #ffffff;
   color: #757575;
   position: relative;
@@ -2802,7 +2800,7 @@ html.no-csstransitions .home-content__main {
  *
  * ------------------------------------------------------------------- */
 .s-clients {
-  padding-top: 16.2rem;
+  padding-top: 9.5rem;
   padding-bottom: 16.8rem;
   background-color: #e6e6e6;
   color: #757575;

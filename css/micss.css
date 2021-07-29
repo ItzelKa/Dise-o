@@ -12,7 +12,7 @@
 }
 
 .tarjeta-wrap {
-  margin: 10px;
+  margin: 20px;
   -webkit-perspective: 800;
   perspective: 800;
 }
@@ -20,7 +20,13 @@
 .tarjeta {
   width: 300px;
   height: 350px;
-  background: #021c1e;
+  border-radius: 10%;
+  background: rgb(253, 29, 29);
+  background: linear-gradient(
+    177deg,
+    rgba(253, 29, 29, 1) 0%,
+    rgba(252, 176, 69, 1) 100%
+  );
   position: relative;
   -webkit-transform-style: preserve-3d;
   transform-style: preserve-3d;
@@ -76,14 +82,17 @@
 .card1 {
   background-image: url(../img/Arbutus/A.arizonica-cf/Img3.jpg);
   background-size: cover;
+  border-radius: 10%;
 }
 
 .card2 {
   background-image: url(../img/Comarostaphylis/C.arbutoides/Img2.jpg);
   background-size: cover;
+  border-radius: 10%;
 }
 
 .card3 {
-  background-image: url(../img/Olia_Gozha.jpg);
+  background-image: url(../img/Dictionary.jpg);
   background-size: cover;
+  border-radius: 10%;
 }
