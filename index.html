@@ -118,7 +118,8 @@
                 <div class="tarjeta">
                     <div class="adelante card1"></div>
                     <div class="atras">
-                        <a href="#"><h1 class="display-4 text-white">Arbutus</h1></a>
+                        <input type="text" id="inputArbutus" value="Aguascalientes">
+                        <button type="submit" id="buscarArbutus">Arbutus</button>
                     </div>
                 </div>
             </div>
@@ -134,11 +135,20 @@
                 <div class="tarjeta">
                     <div class="adelante card3"></div>
                     <div class="atras">
-                        <a href="#"><h1 class="display-4 text-white">Glosario</h1></a>
+                        <a href="#"></a><h1 class="display-4 text-white">Glosario</h1></a>
                     </div>
                 </div>
             </div>
         </div>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-6" id="divArbutus">
+                    a
+                </div>
+            </div>
+        </div>
+
         <!--Cierre de la seccion de mas info-->
         <div class="row section-header has-bottom-sep" data-aos="fade-up">
             <div class="col-full">
@@ -336,6 +346,7 @@
     <script src="js/bootstrap-datepicker.js"></script>
     <script src="js/scrollax.min.js"></script>
     <script src="js/main2.js"></script>
+    <script src="js/fetch.js"></script>
     <script>
         $(document).ready(function () {
             //funcion de cuando haga clik en cada una de las categorias de la pagina me desplase a esa parte pero de una manera lenta
