@@ -3678,8 +3678,7 @@ footer .row {
 .service-box{
     box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
     position: relative;
-    border-radius: 50px 0 50px 0 / 100px 0 100px 0; 
-    
+    border-radius: 10px !important;
 }
 
 .service-thumbnail img{
