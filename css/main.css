@@ -1968,7 +1968,6 @@ input::-moz-focus-inner {
 }
 
 .home-content__line {
-<<<<<<< HEAD
     display: block;
     width: 2px;
     height: 10.2rem;
@@ -1976,15 +1975,6 @@ input::-moz-focus-inner {
     position: absolute;
     right: 7.2rem;
     bottom: 0;
-=======
-  display: block;
-  width: 2px;
-  height: 10.2rem;
-  background-color: #39b54a;
-  position: absolute;
-  right: 7.2rem;
-  bottom: 0;
->>>>>>> 22dc3e6848240fa01ec7dc91dac41021492b82d8
 }
 
 /* ------------------------------------------------------------------- 
@@ -3682,7 +3672,6 @@ footer .row {
   }
 }
 
-<<<<<<< HEAD
 /*====================================================
     11. Filtros.
   ====================================================*/
@@ -3859,6 +3848,3 @@ p.gallery-info{
 
 
 /*# sourceMappingURL=main.css.map */
-=======
-/*# sourceMappingURL=main.css.map */
->>>>>>> 22dc3e6848240fa01ec7dc91dac41021492b82d8
