@@ -1330,6 +1330,17 @@ input::-moz-focus-inner {
   margin-top: 0;
   margin-bottom: 0;
 }
+
+.ssubhead {
+  font-family: "montserrat-bold", sans-serif;
+  font-size: 1.7rem;
+  line-height: 1.333;
+  text-transform: uppercase;
+  letter-spacing: 0.25rem;
+  color: #e3a402;
+  margin-top: 0;
+  margin-bottom: 0;
+}
 .subheadBG {
   font-family: "montserrat-bold", sans-serif;
   text-transform: uppercase;
@@ -3007,6 +3018,16 @@ html.no-csstransitions .home-content__main {
   color: rgba(255, 255, 255, 0.5);
   position: relative;
 }
+.b-contact {
+  background-color: #151515;
+  background-image: url("../img/Filtro/buscador_img.jpg");
+  background-repeat: repeat;
+  background-position: center, center;
+  padding-top: 15rem;
+  padding-bottom: 12rem;
+  color: rgba(255, 255, 255, 0.5);
+  position: relative;
+}
 
 .s-contact .overlay {
   position: absolute;
@@ -3058,7 +3079,7 @@ html.no-csstransitions .home-content__main {
   display: block;
   width: 2px;
   height: 20.4rem;
-  background-color: #39b54a;
+  background-color: #e3a402;
   position: absolute;
   left: 50%;
   top: -10.2rem;
