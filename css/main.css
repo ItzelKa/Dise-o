@@ -919,6 +919,16 @@ input[type="button"].bttn--prrimary:focus {
   border-color: #e3a402;
 }
 
+.bttn2.btn2--prrimary,
+button.btn2--prrimary,
+input[type="submit"].btn2--prrimary,
+input[type="reset"].btn2--prrimary,
+input[type="button"].btn2--prrimary {
+  background: #39b54a;
+  border-color: #39b54a;
+  color: #ffffff;
+}
+
 
 /* button modifiers
  * ------------------------------------------------- */
@@ -936,6 +946,11 @@ button.fulll-width {
 .bttn.fu-width,
 button.fu-width {
   width: 45%;
+  margin-right: 0;
+}
+.bttn2.fu-width2,
+button.fu-width2 {
+  width: 75%;
   margin-right: 0;
 }
 
@@ -2847,8 +2862,7 @@ html.no-csstransitions .home-content__main {
  *
  * ------------------------------------------------------------------- */
 .s-clients {
-  padding-top: 9.5rem;
-  padding-bottom: 16.8rem;
+  padding-top: 2rem;
   background-color: #e6e6e6;
   color: #757575;
   position: relative;
