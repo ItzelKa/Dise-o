@@ -895,6 +895,29 @@ input[type="button"].btn--primary:focus {
 }
 
 
+.bttn.bttn--prrimary,
+button.bttn--prrimary,
+input[type="submit"].bttn--prrimary,
+input[type="reset"].bttn--prrimary,
+input[type="button"].bttn--prrimary {
+  background: #39b54a;
+  border-color: #39b54a;
+  color: #ffffff;
+}
+
+.bttn.bttn--prrimary:hover,
+button.bttn--prrimary:hover,
+input[type="submit"].bttn--prrimary:hover,
+input[type="reset"].bttn--prrimary:hover,
+input[type="button"].bttn--prrimary:hover,
+.btn.bttn--prrimary:focus,
+button.bttn--prrimary:focus,
+input[type="submit"].bttn--prrimary:focus,
+input[type="reset"].bttn--prrimary:focus,
+input[type="button"].bttn--prrimary:focus {
+  background: #e3a402;
+  border-color: #e3a402;
+}
 
 
 /* button modifiers
@@ -903,6 +926,16 @@ input[type="button"].btn--primary:focus {
 .btn.full-width,
 button.full-width {
   width: 100%;
+  margin-right: 0;
+}
+.bttn.fulll-width,
+button.fulll-width {
+  width: 35%;
+  margin-right: 0;
+}
+.bttn.fu-width,
+button.fu-width {
+  width: 45%;
   margin-right: 0;
 }
 
