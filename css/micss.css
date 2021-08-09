@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Bree+Serif&family=EB+Garamond:ital,wght@0,500;1,800&display=swap");
+
 .wrap {
   width: 1000px;
   margin: 50px auto;
@@ -97,6 +99,195 @@
   border-radius: 10%;
 }
 
+/*---Comarostaphylis y Arbutus--------*/
+.cont-comarosta {
+  box-shadow: 0 15px 30px 1px gray;
+  background: rgba(255, 255, 255, 0.9);
+  text-align: center;
+  border-radius: 5px;
+  overflow: hidden;
+  margin-bottom: 10%;
+  height: 370px;
+  width: 560px;
+}
+.comarosta-details {
+  position: relative;
+  text-align: left;
+  overflow: hidden;
+  padding: 25px;
+  height: 100%;
+  float: left;
+  width: 50%;
+}
+.cont-comarosta .comarosta-details h1 {
+  font-family: "Arial";
+  display: inline-block;
+  position: relative;
+  font-size: 20px;
+  color: #344055;
+  margin: 0;
+}
+
+.cont-comarosta .comarosta-details h1:before {
+  position: absolute;
+  content: "";
+  right: 0%;
+  top: 0%;
+  transform: translate(25px, -15px);
+  font-family: "Sans Serif", serif;
+  display: inline-block;
+  background: #ffe6e6;
+  border-radius: 5px;
+  font-size: 14px;
+  color: white;
+  margin: 0;
+  animation: chan-sh 6s ease infinite;
+}
+
+.cont-comarosta .comarosta-details {
+  font-family: "EB Garamond", serif;
+  text-align: left;
+  font-size: 17px;
+  color: #7d7d7d;
+}
+
+.comarosta-img {
+  transition: all 0.3s ease-out;
+  display: inline-block;
+  position: relative;
+  overflow: hidden;
+  height: 100%;
+  float: right;
+  width: 45%;
+  display: inline-block;
+}
+
+.cont-comarosta img {
+  width: 100%;
+  height: 100%;
+}
+
+.info {
+  background: rgba(27, 26, 26, 0.9);
+  font-family: "Bree Serif", serif;
+  transition: all 0.3s ease-out;
+  transform: translateX(-100%);
+  position: absolute;
+  line-height: 1.8;
+  text-align: left;
+  font-size: 95%;
+  color: #fff;
+  height: 100%;
+  width: 100%;
+  left: 0;
+  top: 0;
+}
+
+.info h2 {
+  text-align: center;
+  font-family: "Bree Serif", serif;
+  font-size: 20px;
+  margin-top: 150px;
+  color: #fff;
+  cursor: pointer;
+}
+
+.info h2 {
+  transition: 0.3s ease;
+}
+
+.info h2:hover {
+  transform: translateX(0) scale(1.3);
+}
+
+.comarosta-img:hover .info {
+  transform: translateX(0);
+}
+
+.comarosta-img:hover img {
+  transition: all 0.3s ease-out;
+}
+
+.comarosta-img:hover img {
+  transform: scale(1.2, 1.2);
+}
+/*---Comarostaphylis y Arbutus--------*/
+
+/*-----Glosario----*/
+.cont-glosario {
+  box-shadow: 0 15px 30px 1px gray;
+  background: rgba(255, 255, 255, 0.9);
+  text-align: center;
+  border-radius: 5px;
+  overflow: hidden;
+  margin-left: 7%;
+  margin-bottom: 10%;
+  height: 300px;
+  width: 250px;
+}
+
+.glosario-img {
+  transition: all 0.3s ease-out;
+  display: inline-block;
+  position: relative;
+  overflow: hidden;
+  height: 100%;
+  float: right;
+  width: 100%;
+  display: inline-block;
+}
+
+.cont-glosario img {
+  width: 100%;
+  height: 100%;
+}
+
+.info {
+  background: rgba(27, 26, 26, 0.9);
+  font-family: "Bree Serif", serif;
+  transition: all 0.3s ease-out;
+  transform: translateX(-100%);
+  position: absolute;
+  line-height: 1.8;
+  text-align: left;
+  font-size: 95%;
+  color: #fff;
+  height: 100%;
+  width: 100%;
+  left: 0;
+  top: 0;
+}
+
+.info h2 {
+  text-align: center;
+  font-family: "Bree Serif", serif;
+  font-size: 20px;
+  margin-top: 150px;
+  color: #fff;
+  cursor: pointer;
+}
+
+.info h2 {
+  transition: 0.3s ease;
+}
+
+.info h2:hover {
+  transform: translateX(0) scale(1.3);
+}
+
+.glosario-img:hover .info {
+  transform: translateX(0);
+}
+
+.glosario-img:hover img {
+  transition: all 0.3s ease-out;
+}
+
+.glosario-img:hover img {
+  transform: scale(1.2, 1.2);
+}
+/*-----Glosario----*/
+
 .embed-container {
   position: relative;
   padding-bottom: 45rem;
@@ -112,4 +303,8 @@
   top: 0;
   width: 100%;
   height: 100%;
+}
+.imgcards {
+  width: 180px;
+  height: 286px;
 }

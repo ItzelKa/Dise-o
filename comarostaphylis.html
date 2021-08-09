@@ -22,6 +22,8 @@
     <link rel="stylesheet" href="css/main.css">
     <!-- CSSMenu -->
     <link rel="stylesheet" href="css/styleMen.css">
+    <!--CSS Cards de informacion-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <!--CSS Buscador-->
     <link href="css/mainB.css" rel="stylesheet" />
     <link rel="stylesheet" href="css/micss.css">
@@ -49,8 +51,9 @@
 
                 <div class="collapse navbar-collapse" id="ftco-nav">
                     <ul class="navbar-nav ml-auto">
-                        <li class="nav-item active"><a href="#busq" class="nav-link">Buscador</a></li>
-                        <li class="nav-item"><a href="#esp" class="nav-link">Especies</a></li>
+                        <li class="nav-item active"><a href="index.html" class="nav-link">Inicio</a></li>
+                        <li class="nav-item"><a href="#img" class="nav-link">Imagenes</a></li>
+                        <li class="nav-item"><a href="arbutus.html" class="nav-link">Arbutus</a></li>
                         <li class="nav-item"><a href="#cont" class="nav-link">Contacto</a></li>
                     </ul>
                 </div>
@@ -61,7 +64,7 @@
 
     <!-- home
     ================================================== -->
-    <section id="home" class="s-home target-section" data-parallax="scroll" data-image-src="img/hero-bg.jpg"
+    <section id="home" class="s-home target-section" data-parallax="scroll" data-image-src="img/Comarostaphylis/C.diversifolia/img1.jpg"
         data-natural-width=3000 data-natural-height=2000 data-position-y=center>
 
         <div class="overlay"></div>
@@ -69,11 +72,11 @@
         <div class="home-content">
             <div class="row home-content__main">
                 <h1>
-                    MADROÑOS <br>
+                    COMAROSTAPHYLIS<br>
                 </h1>
-                <h3>Arboles o arbustos de hojas<br>
-                    alternas, lanceoladas y <br>
-                    persistentes cuyo fruto es comestible
+                <h3>Vista general de la información de<br>
+                    todas las especies de la familia<br>
+                    Comarostaphylis
                 </h3>
             </div>
         </div> <!-- end home-content -->
@@ -82,98 +85,45 @@
 
     <!-- Busqueda Guiada
     ================================================== -->
-    <section id='busq' class="s-services">
+    <section id='img' class="s-services">
         <div class="row section-header has-bottom-sep" data-aos="fade-up">
             <div class="col-full">
-                <h1 class="display-3 subheadBG">-Busqueda Guiada-</h1>
+                <h1 class="display-3 subheadBG">-Comarostaphylis-</h1>
             </div>
         </div> <!-- end section-header -->
-        <div class="row services-list block-1-2 block-tab-full">
-            <div class="col-block service-item" data-aos="fade-up">
-                <div class="service-icon">
-                    <i class="icon-paint-brush"></i>
-                </div>
-                <div class="service-text">
-                    <h3 class="h2">Brand Identity</h3>
-                    <p>Nemo cupiditate ab quibusdam quaerat impedit magni. Earum suscipit ipsum laudantium.
-                        Quo delectus est. Maiores voluptas ab sit natus veritatis ut. Debitis nulla cumque veritatis.
-                        Sunt suscipit voluptas ipsa in tempora esse soluta sint.
-                    </p>
-                </div>
-            </div>
-        </div> <!-- end services-list -->
-    </section> <!-- end s-services -->
-
-    <!-- Mapas y listado de madroños
-    ================================================== -->
-    <section id="esp" class="s-clients">
-        <div class="row section-header has-bottom-sep" data-aos="fade-up">
-            <div class="col-full">
-                <h1 class="display-3 subheadBG">-Listado de Especies-</h1>
-            </div>
-        </div> <!-- end section-header -->
-        <!--Seccion de mas info-->
-        <div class="wrap">
-            <div class="tarjeta-wrap" data-aos="fade-right">
-                <div class="tarjeta">
-                    <div class="adelante card1"></div>
-                    <div class="atras">
-                        <a href="arbutus.html"><h2 class="display-4 text-white">Arbutus</h2></a>
-                    </div>
-                </div>
-            </div>
-            <div class="tarjeta-wrap" data-aos="fade-up">
-                <div class="tarjeta">
-                    <div class="adelante card2"></div>
-                    <div class="atras">
-                        <a href="comarostaphylis.html"><h2 class="display-4 text-white">Comarostaphylis</h2></a>
-                    </div>
-                </div>
-            </div>
-            <div class="tarjeta-wrap" data-aos="fade-left">
-                <div class="tarjeta">
-                    <div class="adelante card3"></div>
-                    <div class="atras">
-                        <a href="glosario.html"><h1 class="display-4 text-white">Glosario</h1></a>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!--Cierre de la seccion de mas info-->
-        <div class="row section-header has-bottom-sep" data-aos="fade-up">
-            <div class="col-full">
-                <span>Da click para obtener mas información</span>
-            </div>
-        </div>
-        <!--Mapa-->
         <div class="container-fluid">
-            <div class="w-70">
-                <div class="embed-container">
-                    <iframe width="500" height="400" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" title="Madroños en  México" src="https://kaxkhzaa6jbz4ylj.maps.arcgis.com/apps/Embed/index.html?webmap=aa715489865d4aee88c6af5a16517675&extent=-118.7437,14.4806,-86.2901,31.7498&home=true&zoom=true&previewImage=false&scale=true&search=true&searchextent=true&disable_scroll=true&theme=dark"></iframe>
+            <div class="row">
+                <div id="divComarosta">
+                    
                 </div>
-            </div>    
+            </div>
         </div>
-        <!--Cierre del mapa-->
-    </section> <!-- end s-clients -->
+    </section> <!-- end s-services -->
 
 
     <!-- contact
     ================================================== -->
     <section id="cont" class="s-contact">
+
         <div class="overlay"></div>
         <div class="contact__line"></div>
+
         <div class="row section-header" data-aos="fade-up">
             <div class="col-full">
                 <h3 class="subhead">Contáctenos</h3>
                 <h1 class="display-2 display-2--light">¿Dudas o mas información?</h1>
             </div>
         </div>
+
         <div class="row contact-content" data-aos="fade-up">
+
             <div class="contact-primary">
+
                 <h3 class="h6">Envianos un Mensaje</h3>
+
                 <form name="contactForm" id="contactForm" method="post" action="" novalidate="novalidate">
                     <fieldset>
+
                         <div class="form-field">
                             <input name="contactName" type="text" id="contactName" placeholder="Your Name" value=""
                                 minlength="2" required="" aria-required="true" class="full-width">
@@ -336,7 +286,6 @@
             //funcion de cuando haga clik en cada una de las categorias de la pagina me desplase a esa parte pero de una manera lenta
             //y con suabidad
             $(".navbar a, footer a[href='#myPage']").on('click', function (event) {
-                event.preventDefault();
                 var hash = this.hash;
                 $('html, body').animate({
                     scrollTop: $(hash).offset().top
