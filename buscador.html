@@ -14,7 +14,7 @@
     ================================================== -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- BOOTSTRAP FRAMEWORK STYLES -->
-        <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
     <!-- CSS
     ================================================== -->
     <link href="https://fonts.googleapis.com/css?family=Poppins:400,800" rel="stylesheet" />
@@ -30,7 +30,7 @@
     <!-- script
     ================================================== -->
     <script src="js/modernizr.js"></script>
-    
+
 
     <!-- favicons
     ================================================== -->
@@ -40,6 +40,7 @@
 </head>
 
 <body id="top">
+
 
     <!-- header
     ================================================== -->
@@ -59,145 +60,703 @@
         </nav>
     </header> <!-- end s-header -->
 
-<!--INICIO-->
+    <!--INICIO-->
 
-
-    <!-- contact
-    ================================================== -->
-    <section id="cont" class="b-contact">
-
+    <section class="b-contact">
         <div class="overlay"></div>
         <div class="contact__line"></div>
 
         <div class="row section-header" data-aos="fade-up">
             <div class="col-full">
                 <h1 class="display-2 display-2--light">Búsqueda guiada</h1>
-                <h3 class="ssubhead">La búsqueda guiada te permite encontrar de manera rapida y eficaz lo que estes buscando</h3>
+                <h3 class="ssubhead">La búsqueda guiada te permite encontrar de manera rapida y eficaz lo que estes
+                    buscando</h3>
             </div>
         </div>
+    </section>
+    <!--Fin de INICIO-->
 
-    </section> 
+    <!--EJEMPLO Filtro-->
+    <!--Ejem Filtro Caracteristicas-->
+    <section id="buscador" class="s-clients">
 
-<!--Fin de INICIO-->
-<!--EJEMPLO Filtro-->
-       <!--Ejem Filtro Caracteristicas-->
-       <section id="buscador" class="s-clients">
-           
         <div class="container">
-    <div class="section-tittle-alt">
-        <h2>Selecciona las caracteristicas que conoces</h2>
+            <!--Cont General-->
+            <div class="section-tittle-alt">
+                <h2>Selecciona las caracteristicas que conoces</h2>
+            </div>
+            <p class="gallery-info service-alt">En caso de no conocer alguna has click en siguiente</p>
+
+            <div class="row filtro hover-effects image-hover" id="habito">
+                <div class="section-tittle-alt">
+                    <h2>Habito</h2>
+                </div>
+                <!--ARBOL-->
+                <div class="col-md-6 col-lg-6">
+                    <div class="service-box">
+                        <figure class="service-thumbnail">
+                            <input type="checkbox" id="arbol" class="input-hidden habito2" />
+                            <label for="arbol">
+                                <img src="img/Filtro/arbol.jpg" alt="" />
+                            </label>
+                        </figure>
+                        <div class="sb-icon-box rounded-circle">
+                            <figure class="sb-icon"><img src="" alt=""></figure>
+                        </div>
+                        <div class="sb-caption">
+                            <h3>ARBOL</h3>
+                        </div>
+                    </div>
+                </div>
+                <!--ARBOL-->
+
+                <!--ARBUSTO-->
+                <div class="col-md-6 col-lg-6">
+                    <div class="service-box">
+                        <figure class="service-thumbnail">
+                            <input type="checkbox" name="" id="arbusto" class="input-hidden habito2" />
+                            <label for="arbusto">
+                                <img src="img/Filtro/arbol.jpg" alt="" />
+                            </label>
+                        </figure>
+                        <div class="sb-icon-box rounded-circle">
+                            <figure class="sb-icon"><img src="" alt=""></figure>
+                        </div>
+                        <div class="sb-caption">
+                            <h3>ARBUSTO</h3>
+                        </div>
+                    </div>
+                </div>
+                <!--ARBUSTO-->
+            </div>
+
+            <!-- ////// UBICACION -->
+            <div class="row  filtro hover-effects image-hover" id="ubicacion" hidden>
+                <div class="section-tittle-alt">
+                    <h2>Ubicacion</h2>
+                </div>
+                <!--Ags-->
+                <div class="col-md-6 col-lg-3">
+                    <div class="service-box">
+                        <figure class="service-thumbnail">
+                            <input type="checkbox" name="" id="Aguascalientes" class="input-hidden ubi" />
+                            <label for="Aguascalientes">
+                                <img src="img/Filtro/arbol.jpg" alt="" />
+                            </label>
+                        </figure>
+                        <div class="sb-icon-box rounded-circle">
+                            <figure class="sb-icon"><img src="" alt=""></figure>
+                        </div>
+                        <div class="sb-caption">
+                            <h3>AGUASCALIENTES</h3>
+                        </div>
+                    </div>
+                </div>
+                <!--Ags-->
+                <!--Baja California-->
+                <div class="col-md-6 col-lg-3">
+                    <div class="service-box">
+                        <figure class="service-thumbnail">
+                            <input type="checkbox" name="" id="Baja California" class="input-hidden ubi" />
+                            <label for="Baja California">
+                                <img src="img/Filtro/arbol.jpg" alt="" />
+                            </label>
+                        </figure>
+                        <div class="sb-icon-box rounded-circle">
+                            <figure class="sb-icon"><img src="" alt=""></figure>
+                        </div>
+                        <div class="sb-caption">
+                            <h3>Baja California</h3>
+                        </div>
+                    </div>
+                </div>
+                <!--Baja California-->
+                <!--Baja California Sur-->
+                <div class="col-md-6 col-lg-3">
+                    <div class="service-box">
+                        <figure class="service-thumbnail">
+                            <input type="checkbox" name="" id="Baja California Sur" class="input-hidden ubi" />
+                            <label for="Baja California Sur">
+                                <img src="img/Filtro/arbol.jpg" alt="" />
+                            </label>
+                        </figure>
+                        <div class="sb-icon-box rounded-circle">
+                            <figure class="sb-icon"><img src="" alt=""></figure>
+                        </div>
+                        <div class="sb-caption">
+                            <h3>Baja California Sur</h3>
+                        </div>
+                    </div>
+                </div>
+                <!--Baja California Sur-->
+                <!--Campeche-->
+                <div class="col-md-6 col-lg-3">
+                    <div class="service-box">
+                        <figure class="service-thumbnail">
+                            <input type="checkbox" name="" id="Campeche" class="input-hidden ubi" />
+                            <label for="Campeche">
+                                <img src="img/Filtro/arbol.jpg" alt="" />
+                            </label>
+                        </figure>
+                        <div class="sb-icon-box rounded-circle">
+                            <figure class="sb-icon"><img src="" alt=""></figure>
+                        </div>
+                        <div class="sb-caption">
+                            <h3>Campeche</h3>
+                        </div>
+                    </div>
+                </div>
+                <!--Campeche-->
+                <!--Chiapas-->
+                <div class="col-md-6 col-lg-3">
+                    <div class="service-box">
+                        <figure class="service-thumbnail">
+                            <input type="checkbox" name="" id="Chiapas" class="input-hidden ubi" />
+                            <label for="Chiapas">
+                                <img src="img/Filtro/arbol.jpg" alt="" />
+                            </label>
+                        </figure>
+                        <div class="sb-icon-box rounded-circle">
+                            <figure class="sb-icon"><img src="" alt=""></figure>
+                        </div>
+                        <div class="sb-caption">
+                            <h3>Chiapas</h3>
+                        </div>
+                    </div>
+                </div>
+                <!--Chiapas-->
+                <!--Chihuahua-->
+                <div class="col-md-6 col-lg-3">
+                    <div class="service-box">
+                        <figure class="service-thumbnail">
+                            <input type="checkbox" name="" id="Chihuahua" class="input-hidden ubi" />
+                            <label for="Chihuahua">
+                                <img src="img/Filtro/arbol.jpg" alt="" />
+                            </label>
+                        </figure>
+                        <div class="sb-icon-box rounded-circle">
+                            <figure class="sb-icon"><img src="" alt=""></figure>
+                        </div>
+                        <div class="sb-caption">
+                            <h3>Chihuahua</h3>
+                        </div>
+                    </div>
+                </div>
+                <!--Chihuahua-->
+                <!--Cuidad de Mexico-->
+                <div class="col-md-6 col-lg-3">
+                    <div class="service-box">
+                        <figure class="service-thumbnail">
+                            <input type="checkbox" name="" id="Cuidad de Mexico" class="input-hidden ubi" />
+                            <label for="Cuidad de Mexico">
+                                <img src="img/Filtro/arbol.jpg" alt="" />
+                            </label>
+                        </figure>
+                        <div class="sb-icon-box rounded-circle">
+                            <figure class="sb-icon"><img src="" alt=""></figure>
+                        </div>
+                        <div class="sb-caption">
+                            <h3>Cuidad de Mexico</h3>
+                        </div>
+                    </div>
+                </div>
+                <!--Cuidad de Mexico-->
+                <!--Coahuila-->
+                <div class="col-md-6 col-lg-3">
+                    <div class="service-box">
+                        <figure class="service-thumbnail">
+                            <input type="checkbox" name="" id="Coahuila" class="input-hidden ubi" />
+                            <label for="Coahuila">
+                                <img src="img/Filtro/arbol.jpg" alt="" />
+                            </label>
+                        </figure>
+                        <div class="sb-icon-box rounded-circle">
+                            <figure class="sb-icon"><img src="" alt=""></figure>
+                        </div>
+                        <div class="sb-caption">
+                            <h3>Coahuila</h3>
+                        </div>
+                    </div>
+                </div>
+                <!--Coahuila-->
+                <!--Colima-->
+                <div class="col-md-6 col-lg-3">
+                    <div class="service-box">
+                        <figure class="service-thumbnail">
+                            <input type="checkbox" name="" id="Colima" class="input-hidden ubi" />
+                            <label for="Colima">
+                                <img src="img/Filtro/arbol.jpg" alt="" />
+                            </label>
+                        </figure>
+                        <div class="sb-icon-box rounded-circle">
+                            <figure class="sb-icon"><img src="" alt=""></figure>
+                        </div>
+                        <div class="sb-caption">
+                            <h3>Colima</h3>
+                        </div>
+                    </div>
+                </div>
+                <!--Colima-->
+                <!--Durango-->
+                <div class="col-md-6 col-lg-3">
+                    <div class="service-box">
+                        <figure class="service-thumbnail">
+                            <input type="checkbox" name="" id="Durango" class="input-hidden ubi" />
+                            <label for="Durango">
+                                <img src="img/Filtro/arbol.jpg" alt="" />
+                            </label>
+                        </figure>
+                        <div class="sb-icon-box rounded-circle">
+                            <figure class="sb-icon"><img src="" alt=""></figure>
+                        </div>
+                        <div class="sb-caption">
+                            <h3>Durango</h3>
+                        </div>
+                    </div>
+                </div>
+                <!--Durango-->
+                <!--Estado de Mexico-->
+                <div class="col-md-6 col-lg-3">
+                    <div class="service-box">
+                        <figure class="service-thumbnail">
+                            <input type="checkbox" name="" id="Estado de Mexico" class="input-hidden ubi" />
+                            <label for="Estado de Mexico">
+                                <img src="img/Filtro/arbol.jpg" alt="" />
+                            </label>
+                        </figure>
+                        <div class="sb-icon-box rounded-circle">
+                            <figure class="sb-icon"><img src="" alt=""></figure>
+                        </div>
+                        <div class="sb-caption">
+                            <h3>Estado de Mexico</h3>
+                        </div>
+                    </div>
+                </div>
+                <!--Estado de Mexico-->
+                <!--Guanajuato-->
+                <div class="col-md-6 col-lg-3">
+                    <div class="service-box">
+                        <figure class="service-thumbnail">
+                            <input type="checkbox" name="" id="Guanajuato" class="input-hidden ubi" />
+                            <label for="Guanajuato">
+                                <img src="img/Filtro/arbol.jpg" alt="" />
+                            </label>
+                        </figure>
+                        <div class="sb-icon-box rounded-circle">
+                            <figure class="sb-icon"><img src="" alt=""></figure>
+                        </div>
+                        <div class="sb-caption">
+                            <h3>Guanajuato</h3>
+                        </div>
+                    </div>
+                </div>
+                <!--Guanajuato-->
+                <!--Guerrero-->
+                <div class="col-md-6 col-lg-3">
+                    <div class="service-box">
+                        <figure class="service-thumbnail">
+                            <input type="checkbox" name="" id="Guerrero" class="input-hidden ubi" />
+                            <label for="Guerrero">
+                                <img src="img/Filtro/arbol.jpg" alt="" />
+                            </label>
+                        </figure>
+                        <div class="sb-icon-box rounded-circle">
+                            <figure class="sb-icon"><img src="" alt=""></figure>
+                        </div>
+                        <div class="sb-caption">
+                            <h3>Guerrero</h3>
+                        </div>
+                    </div>
+                </div>
+                <!--Guerrero-->
+                <!--Hidalgo-->
+                <div class="col-md-6 col-lg-3">
+                    <div class="service-box">
+                        <figure class="service-thumbnail">
+                            <input type="checkbox" name="" id="Hidalgo" class="input-hidden ubi" />
+                            <label for="Hidalgo">
+                                <img src="img/Filtro/arbol.jpg" alt="" />
+                            </label>
+                        </figure>
+                        <div class="sb-icon-box rounded-circle">
+                            <figure class="sb-icon"><img src="" alt=""></figure>
+                        </div>
+                        <div class="sb-caption">
+                            <h3>Hidalgo</h3>
+                        </div>
+                    </div>
+                </div>
+                <!--Hidalgo-->
+                <!--Jalisco-->
+                <div class="col-md-6 col-lg-3">
+                    <div class="service-box">
+                        <figure class="service-thumbnail">
+                            <input type="checkbox" name="" id="Jalisco" class="input-hidden ubi" />
+                            <label for="Jalisco">
+                                <img src="img/Filtro/arbol.jpg" alt="" />
+                            </label>
+                        </figure>
+                        <div class="sb-icon-box rounded-circle">
+                            <figure class="sb-icon"><img src="" alt=""></figure>
+                        </div>
+                        <div class="sb-caption">
+                            <h3>Jalisco</h3>
+                        </div>
+                    </div>
+                </div>
+                <!--Jalisco-->
+                <!--Michoacan-->
+                <div class="col-md-6 col-lg-3">
+                    <div class="service-box">
+                        <figure class="service-thumbnail">
+                            <input type="checkbox" name="" id="Michoacan" class="input-hidden ubi" />
+                            <label for="Michoacan">
+                                <img src="img/Filtro/arbol.jpg" alt="" />
+                            </label>
+                        </figure>
+                        <div class="sb-icon-box rounded-circle">
+                            <figure class="sb-icon"><img src="" alt=""></figure>
+                        </div>
+                        <div class="sb-caption">
+                            <h3>Michoacan</h3>
+                        </div>
+                    </div>
+                </div>
+                <!--Michoacan-->
+                <!--Morelos-->
+                <div class="col-md-6 col-lg-3">
+                    <div class="service-box">
+                        <figure class="service-thumbnail">
+                            <input type="checkbox" name="" id="Morelos" class="input-hidden ubi" />
+                            <label for="Morelos">
+                                <img src="img/Filtro/arbol.jpg" alt="" />
+                            </label>
+                        </figure>
+                        <div class="sb-icon-box rounded-circle">
+                            <figure class="sb-icon"><img src="" alt=""></figure>
+                        </div>
+                        <div class="sb-caption">
+                            <h3>Morelos</h3>
+                        </div>
+                    </div>
+                </div>
+                <!--Morelos-->
+                <!--Nayarit-->
+                <div class="col-md-6 col-lg-3">
+                    <div class="service-box">
+                        <figure class="service-thumbnail">
+                            <input type="checkbox" name="" id="Nayarit" class="input-hidden ubi" />
+                            <label for="Nayarit">
+                                <img src="img/Filtro/arbol.jpg" alt="" />
+                            </label>
+                        </figure>
+                        <div class="sb-icon-box rounded-circle">
+                            <figure class="sb-icon"><img src="" alt=""></figure>
+                        </div>
+                        <div class="sb-caption">
+                            <h3>Nayarit</h3>
+                        </div>
+                    </div>
+                </div>
+                <!--Nayarit-->
+                <!--Nuevo Leon-->
+                <div class="col-md-6 col-lg-3">
+                    <div class="service-box">
+                        <figure class="service-thumbnail">
+                            <input type="checkbox" name="" id="Nuevo Leon" class="input-hidden ubi" />
+                            <label for="Nuevo Leon">
+                                <img src="img/Filtro/arbol.jpg" alt="" />
+                            </label>
+                        </figure>
+                        <div class="sb-icon-box rounded-circle">
+                            <figure class="sb-icon"><img src="" alt=""></figure>
+                        </div>
+                        <div class="sb-caption">
+                            <h3>Nuevo Leon</h3>
+                        </div>
+                    </div>
+                </div>
+                <!--Nuevo Leon-->
+                <!--OaxacaOaxaca-->
+                <div class="col-md-6 col-lg-3">
+                    <div class="service-box">
+                        <figure class="service-thumbnail">
+                            <input type="checkbox" name="" id="Oaxaca" class="input-hidden ubi" />
+                            <label for="Oaxaca">
+                                <img src="img/Filtro/arbol.jpg" alt="" />
+                            </label>
+                        </figure>
+                        <div class="sb-icon-box rounded-circle">
+                            <figure class="sb-icon"><img src="" alt=""></figure>
+                        </div>
+                        <div class="sb-caption">
+                            <h3>Oaxaca</h3>
+                        </div>
+                    </div>
+                </div>
+                <!--Oaxaca-->
+                <!--Puebla-->
+                <div class="col-md-6 col-lg-3">
+                    <div class="service-box">
+                        <figure class="service-thumbnail">
+                            <input type="checkbox" name="" id="Puebla" class="input-hidden ubi" />
+                            <label for="Puebla">
+                                <img src="img/Filtro/arbol.jpg" alt="" />
+                            </label>
+                        </figure>
+                        <div class="sb-icon-box rounded-circle">
+                            <figure class="sb-icon"><img src="" alt=""></figure>
+                        </div>
+                        <div class="sb-caption">
+                            <h3>Puebla</h3>
+                        </div>
+                    </div>
+                </div>
+                <!--Puebla-->
+                <!--Queretaro-->
+                <div class="col-md-6 col-lg-3">
+                    <div class="service-box">
+                        <figure class="service-thumbnail">
+                            <input type="checkbox" name="" id="Queretaro" class="input-hidden ubi" />
+                            <label for="Queretaro">
+                                <img src="img/Filtro/arbol.jpg" alt="" />
+                            </label>
+                        </figure>
+                        <div class="sb-icon-box rounded-circle">
+                            <figure class="sb-icon"><img src="" alt=""></figure>
+                        </div>
+                        <div class="sb-caption">
+                            <h3>Queretaro</h3>
+                        </div>
+                    </div>
+                </div>
+                <!--Queretaro-->
+                <!--Quintana Roo-->
+                <div class="col-md-6 col-lg-3">
+                    <div class="service-box">
+                        <figure class="service-thumbnail">
+                            <input type="checkbox" name="" id="Quintana Roo" class="input-hidden ubi" />
+                            <label for="Quintana Roo">
+                                <img src="img/Filtro/arbol.jpg" alt="" />
+                            </label>
+                        </figure>
+                        <div class="sb-icon-box rounded-circle">
+                            <figure class="sb-icon"><img src="" alt=""></figure>
+                        </div>
+                        <div class="sb-caption">
+                            <h3>Quintana Roo</h3>
+                        </div>
+                    </div>
+                </div>
+                <!--Quintana Roo-->
+                <!--San Luis Potosil-->
+                <div class="col-md-6 col-lg-3">
+                    <div class="service-box">
+                        <figure class="service-thumbnail">
+                            <input type="checkbox" name="" id="San Luis Potosil" class="input-hidden ubi" />
+                            <label for="San Luis Potosil">
+                                <img src="img/Filtro/arbol.jpg" alt="" />
+                            </label>
+                        </figure>
+                        <div class="sb-icon-box rounded-circle">
+                            <figure class="sb-icon"><img src="" alt=""></figure>
+                        </div>
+                        <div class="sb-caption">
+                            <h3>San Luis Potosil</h3>
+                        </div>
+                    </div>
+                </div>
+                <!--San Luis Potosil-->
+                <!--Sinaloa-->
+                <div class="col-md-6 col-lg-3">
+                    <div class="service-box">
+                        <figure class="service-thumbnail">
+                            <input type="checkbox" name="" id="Sinaloa" class="input-hidden ubi" />
+                            <label for="Sinaloa">
+                                <img src="img/Filtro/arbol.jpg" alt="" />
+                            </label>
+                        </figure>
+                        <div class="sb-icon-box rounded-circle">
+                            <figure class="sb-icon"><img src="" alt=""></figure>
+                        </div>
+                        <div class="sb-caption">
+                            <h3>Sinaloa</h3>
+                        </div>
+                    </div>
+                </div>
+                <!--Sinaloa-->
+                <!--Sonora-->
+                <div class="col-md-6 col-lg-3">
+                    <div class="service-box">
+                        <figure class="service-thumbnail">
+                            <input type="checkbox" name="" id="Sonora" class="input-hidden ubi" />
+                            <label for="Sonora">
+                                <img src="img/Filtro/arbol.jpg" alt="" />
+                            </label>
+                        </figure>
+                        <div class="sb-icon-box rounded-circle">
+                            <figure class="sb-icon"><img src="" alt=""></figure>
+                        </div>
+                        <div class="sb-caption">
+                            <h3>Sonora</h3>
+                        </div>
+                    </div>
+                </div>
+                <!--Sonora-->
+                <!--Tabasco-->
+                <div class="col-md-6 col-lg-3">
+                    <div class="service-box">
+                        <figure class="service-thumbnail">
+                            <input type="checkbox" name="" id="Tabasco" class="input-hidden ubi" />
+                            <label for="Tabasco">
+                                <img src="img/Filtro/arbol.jpg" alt="" />
+                            </label>
+                        </figure>
+                        <div class="sb-icon-box rounded-circle">
+                            <figure class="sb-icon"><img src="" alt=""></figure>
+                        </div>
+                        <div class="sb-caption">
+                            <h3>Tabasco</h3>
+                        </div>
+                    </div>
+                </div>
+                <!--Tabasco-->
+                <!--Tamaulipas-->
+                <div class="col-md-6 col-lg-3">
+                    <div class="service-box">
+                        <figure class="service-thumbnail">
+                            <input type="checkbox" name="" id="Tamaulipas" class="input-hidden ubi" />
+                            <label for="Tamaulipas">
+                                <img src="img/Filtro/arbol.jpg" alt="" />
+                            </label>
+                        </figure>
+                        <div class="sb-icon-box rounded-circle">
+                            <figure class="sb-icon"><img src="" alt=""></figure>
+                        </div>
+                        <div class="sb-caption">
+                            <h3>Tamaulipas</h3>
+                        </div>
+                    </div>
+                </div>
+                <!--Tamaulipas-->
+                <!--Tlaxcala-->
+                <div class="col-md-6 col-lg-3">
+                    <div class="service-box">
+                        <figure class="service-thumbnail">
+                            <input type="checkbox" name="" id="Tlaxcala" class="input-hidden ubi" />
+                            <label for="Tlaxcala">
+                                <img src="img/Filtro/arbol.jpg" alt="" />
+                            </label>
+                        </figure>
+                        <div class="sb-icon-box rounded-circle">
+                            <figure class="sb-icon"><img src="" alt=""></figure>
+                        </div>
+                        <div class="sb-caption">
+                            <h3>Tlaxcala</h3>
+                        </div>
+                    </div>
+                </div>
+                <!--Tlaxcala-->
+                <!--Veracruz-->
+                <div class="col-md-6 col-lg-3">
+                    <div class="service-box">
+                        <figure class="service-thumbnail">
+                            <input type="checkbox" name="" id="Veracruz" class="input-hidden ubi" />
+                            <label for="Veracruz">
+                                <img src="img/Filtro/arbol.jpg" alt="" />
+                            </label>
+                        </figure>
+                        <div class="sb-icon-box rounded-circle">
+                            <figure class="sb-icon"><img src="" alt=""></figure>
+                        </div>
+                        <div class="sb-caption">
+                            <h3>Veracruz</h3>
+                        </div>
+                    </div>
+                </div>
+                <!--Veracruz-->
+                <!--Yucatan-->
+                <div class="col-md-6 col-lg-3">
+                    <div class="service-box">
+                        <figure class="service-thumbnail">
+                            <input type="checkbox" name="" id="Yucatan" class="input-hidden ubi" />
+                            <label for="Yucatan">
+                                <img src="img/Filtro/arbol.jpg" alt="" />
+                            </label>
+                        </figure>
+                        <div class="sb-icon-box rounded-circle">
+                            <figure class="sb-icon"><img src="" alt=""></figure>
+                        </div>
+                        <div class="sb-caption">
+                            <h3>Yucatan</h3>
+                        </div>
+                    </div>
+                </div>
+                <!--Yucatan-->
+                <!--Zacatecas-->
+                <div class="col-md-6 col-lg-3">
+                    <div class="service-box">
+                        <figure class="service-thumbnail">
+                            <input type="checkbox" name="" id="Zacatecas" class="input-hidden ubi" />
+                            <label for="Zacatecas">
+                                <img src="img/Filtro/arbol.jpg" alt="" />
+                            </label>
+                        </figure>
+                        <div class="sb-icon-box rounded-circle">
+                            <figure class="sb-icon"><img src="" alt=""></figure>
+                        </div>
+                        <div class="sb-caption">
+                            <h3>Zacatecas</h3>
+                        </div>
+                    </div>
+                </div>
+                <!--Zacatecas-->
+            </div>
+            <!--Fin UBI-->
+
+            <!-- ////// HOJAS -->
+            
+
+        </div>
+    </section>
+    <!--FILTROS-->
+
+    <!-- CONTROLES DE DESPLAZAMIENTO -->
+
+    <div class="container w-75 bg-light">
+        <div class="row pt-5 pb-4">
+            <div class="col-6 text-left">
+                <button type="button" class="btn btn-primary" hidden id="reinicio">Iniciar nuevamente</button>
+            </div>
+            <div class="col-6 text-right">
+                <button type="button" class="btn btn-primary" id="prev" hidden>Anterior</button>
+                <button type="button" class="btn btn-primary" id="next">Siguiente</button>
+            </div>
+        </div>
     </div>
-    <p class="gallery-info service-alt">En caso de no conocer alguna has click en siguiente</p>
-    
-    <div class="row hover-effects image-hover">
 
-      <div class="col-md-6 col-lg-4">
-        <div class="service-box">
-            <figure class="service-thumbnail"><img src="img/grow-green.jpg"></figure> 
-            <div class="sb-icon-box rounded-circle">
-                <figure class="sb-icon"><img src="" alt=""></figure>
-            </div>
-            <div class="sb-caption">
-                <h3>Ejemplo</h3>
-                <p>Este es un ejemplo de texto</p>
-                <h5><a href="#">LEARN MORE</a></h5>
-            </div>
-        </div>
-      </div>
-
-      <div class="col-md-6 col-lg-4 sb-movil-view">
-        <div class="service-box">
-            <figure class="service-thumbnail"><img src="img/grow-green.jpg"></figure> 
-            <div class="sb-icon-box rounded-circle">
-                <figure class="sb-icon"><img src="img/master/barrel-white.svg" alt=""></figure>
-            </div>
-            <div class="sb-caption">
-                <h3>Ejemplo</h3>
-                <p>Este es un ejemplo de texto</p>
-                <h5><a href="#">LEARN MORE</a></h5>
-            </div>
-        </div>
-      </div>
-
-      <div class="col-md-6 col-lg-4 sb-tablet-view">
-        <div class="service-box">
-            <figure class="service-thumbnail"><img src="img/grow-green.jpg"></figure> 
-            <div class="sb-icon-box rounded-circle">
-                <figure class="sb-icon"><img src="img/master/chains.svg" alt=""></figure>
-            </div>
-            <div class="sb-caption">
-               <h3>Ejemplo</h3>
-                <p>Este es un ejemplo de texto</p>
-                <h5><a href="#">LEARN MORE</a></h5>
-            </div>
-        </div>
-      </div>
-
-      <div class="col-md-6 col-lg-4 sb-desktop-view sb-tablet-view">
-        <div class="service-box">
-            <figure class="service-thumbnail"><img src="img/grow-green.jpg"></figure> 
-            <div class="sb-icon-box rounded-circle">
-                <figure class="sb-icon"><img src="img/master/mechanic.svg" alt=""></figure>
-            </div>
-            <div class="sb-caption">
-                <h3>Ejemplo</h3>
-                <p>Este es un ejemplo de texto</p>
-                <h5><a href="#">LEARN MORE</a></h5>
-            </div>
-        </div>
-      </div>
-
-      <div class="col-md-6 col-lg-4 sb-desktop-view sb-tablet-view">
-        <div class="service-box">
-            <figure class="service-thumbnail"><img src="img/grow-green.jpg"></figure> 
-            <div class="sb-icon-box rounded-circle">
-                <figure class="sb-icon"><img src="img/master/eolic-white.svg" alt=""></figure>
-            </div>
-            <div class="sb-caption">
-                <h3>Ejemplo</h3>
-                <p>Este es un ejemplo de texto</p>
-                <h5><a href="#">LEARN MORE</a></h5>
-            </div>
-        </div>
-      </div>
-
-      <div class="col-md-6 col-lg-4 sb-desktop-view sb-tablet-view">
-        <div class="service-box">
-            <figure class="service-thumbnail"><img src="img/grow-green.jpg"></figure> 
-            <div class="sb-icon-box rounded-circle">
-                <figure class="sb-icon"><img src="img/master/farm.svg" alt=""></figure>
-            </div>
-            <div class="sb-caption">
-                <h3>Ejemplo</h3>
-                <p>Este es un ejemplo de texto</p>
-                <h5><a href="#">LEARN MORE</a></h5>
-            </div>
-        </div>
-      </div>
-
-    </div>
-</div>      
-</section>
-<!--FILTROS-->   
 
     <!-- Mapa
     ================================================== -->
-    <section id="esp" class="s-clients">        
+    <section id="esp" class="s-clients">
         <div class="row section-header has-bottom-sep" data-aos="fade-up">
             <div class="col-full">
                 <span>Da click para obtener mas información</span>
             </div>
-        </div><!--Cierre de la seccion de mas info-->
+        </div>
+        <!--Cierre de la seccion de mas info-->
         <!--Mapa-->
         <div class="container-fluid">
             <div class="w-70">
                 <div class="embed-container">
-                    <iframe width="500" height="400" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" title="Madroños en  México" src="https://kaxkhzaa6jbz4ylj.maps.arcgis.com/apps/Embed/index.html?webmap=aa715489865d4aee88c6af5a16517675&extent=-118.7437,14.4806,-86.2901,31.7498&home=true&zoom=true&previewImage=false&scale=true&search=true&searchextent=true&disable_scroll=true&theme=dark"></iframe>
+                    <iframe width="500" height="400" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"
+                        title="Madroños en  México"
+                        src="https://kaxkhzaa6jbz4ylj.maps.arcgis.com/apps/Embed/index.html?webmap=aa715489865d4aee88c6af5a16517675&extent=-118.7437,14.4806,-86.2901,31.7498&home=true&zoom=true&previewImage=false&scale=true&search=true&searchextent=true&disable_scroll=true&theme=dark"></iframe>
                 </div>
-            </div>    
+            </div>
         </div>
         <!--Cierre del mapa-->
-    </section> 
+    </section>
 
 
     <!-- contact
@@ -307,7 +866,7 @@
                         <li>
                             <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
                         </li>
-        
+
                     </ul> <!-- end contact-social -->
 
                 </div> <!-- end contact-info -->
