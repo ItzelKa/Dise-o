@@ -3766,6 +3766,15 @@ footer .row {
     margin-top: -40px;
     transition: 0.3s;
 }
+.sb-icon-box2{
+  width: 60px;
+  height: 60px;
+  background: #FFA600;
+  position: relative;
+  float: right;
+  margin-top: -40px;
+  transition: 0.3s;
+}
     
 .sb-icon-box .sb-icon{
     width: 45px;
