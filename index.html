@@ -7,7 +7,7 @@
     <!--- basic page needs
     ================================================== -->
     <meta charset="utf-8">
-    <title>Glint</title>
+    <title>Madroños</title>
     <meta name="description" content="">
     <meta name="author" content="">
 
@@ -52,7 +52,7 @@
 
                 <div class="collapse navbar-collapse" id="ftco-nav">
                     <ul class="navbar-nav ml-auto">
-                        <li class="nav-item active"><a href="#busq" class="nav-link">Buscador</a></li>
+                        <li class="nav-item active"><a href="./buscador.html" class="nav-link">Buscador</a></li>
                         <li class="nav-item"><a href="#esp" class="nav-link">Especies</a></li>
                         <li class="nav-item"><a href="#cont" class="nav-link">Contacto</a></li>
                     </ul>
@@ -63,7 +63,7 @@
 
 
     <!-- home
-    ================================================== -->
+    ================================================== -->  
     <section id="home" class="s-home target-section" data-parallax="scroll" data-image-src="img/hero-bg.jpg"
         data-natural-width=3000 data-natural-height=2000 data-position-y=center>
 
@@ -315,7 +315,7 @@
             //funcion de cuando haga clik en cada una de las categorias de la pagina me desplase a esa parte pero de una manera lenta
             //y con suabidad
             $(".navbar a, footer a[href='#myPage']").on('click', function (event) {
-                event.preventDefault();
+               
                 var hash = this.hash;
                 $('html, body').animate({
                     scrollTop: $(hash).offset().top

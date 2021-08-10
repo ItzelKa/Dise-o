@@ -894,12 +894,63 @@ input[type="button"].btn--primary:focus {
   border-color: #e3a402;
 }
 
+
+.bttn.bttn--prrimary,
+button.bttn--prrimary,
+input[type="submit"].bttn--prrimary,
+input[type="reset"].bttn--prrimary,
+input[type="button"].bttn--prrimary {
+  background: #39b54a;
+  border-color: #39b54a;
+  color: #ffffff;
+}
+
+.bttn.bttn--prrimary:hover,
+button.bttn--prrimary:hover,
+input[type="submit"].bttn--prrimary:hover,
+input[type="reset"].bttn--prrimary:hover,
+input[type="button"].bttn--prrimary:hover,
+.btn.bttn--prrimary:focus,
+button.bttn--prrimary:focus,
+input[type="submit"].bttn--prrimary:focus,
+input[type="reset"].bttn--prrimary:focus,
+input[type="button"].bttn--prrimary:focus {
+  background: #e3a402;
+  border-color: #e3a402;
+}
+
+.bttn2.btn2--prrimary,
+button.btn2--prrimary,
+input[type="submit"].btn2--prrimary,
+input[type="reset"].btn2--prrimary,
+input[type="button"].btn2--prrimary {
+  background: #39b54a;
+  border-color: #39b54a;
+  color: #ffffff;
+}
+
+
 /* button modifiers
  * ------------------------------------------------- */
 
 .btn.full-width,
 button.full-width {
   width: 100%;
+  margin-right: 0;
+}
+.bttn.fulll-width,
+button.fulll-width {
+  width: 35%;
+  margin-right: 0;
+}
+.bttn.fu-width,
+button.fu-width {
+  width: 45%;
+  margin-right: 0;
+}
+.bttn2.fu-width2,
+button.fu-width2 {
+  width: 75%;
   margin-right: 0;
 }
 
@@ -1327,6 +1378,17 @@ input::-moz-focus-inner {
   text-transform: uppercase;
   letter-spacing: 0.25rem;
   color: #39b54a;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.ssubhead {
+  font-family: "montserrat-bold", sans-serif;
+  font-size: 1.7rem;
+  line-height: 1.333;
+  text-transform: uppercase;
+  letter-spacing: 0.25rem;
+  color: #e3a402;
   margin-top: 0;
   margin-bottom: 0;
 }
@@ -2800,8 +2862,7 @@ html.no-csstransitions .home-content__main {
  *
  * ------------------------------------------------------------------- */
 .s-clients {
-  padding-top: 9.5rem;
-  padding-bottom: 16.8rem;
+  padding-top: 2rem;
   background-color: #e6e6e6;
   color: #757575;
   position: relative;
@@ -3007,6 +3068,16 @@ html.no-csstransitions .home-content__main {
   color: rgba(255, 255, 255, 0.5);
   position: relative;
 }
+.b-contact {
+  background-color: #151515;
+  background-image: url("../img/Filtro/buscador_img.jpg");
+  background-repeat: repeat;
+  background-position: center, center;
+  padding-top: 15rem;
+  padding-bottom: 12rem;
+  color: rgba(255, 255, 255, 0.5);
+  position: relative;
+}
 
 .s-contact .overlay {
   position: absolute;
@@ -3058,7 +3129,7 @@ html.no-csstransitions .home-content__main {
   display: block;
   width: 2px;
   height: 20.4rem;
-  background-color: #39b54a;
+  background-color: #e3a402;
   position: absolute;
   left: 50%;
   top: -10.2rem;
@@ -3677,8 +3748,7 @@ footer .row {
 .service-box{
     box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
     position: relative;
-    border-radius: 50px 0 50px 0 / 100px 0 100px 0; 
-    
+    border-radius: 10px !important;
 }
 
 .service-thumbnail img{
@@ -3694,6 +3764,15 @@ footer .row {
     float: right;
     margin-top: -40px;
     transition: 0.3s;
+}
+.sb-icon-box2{
+  width: 60px;
+  height: 60px;
+  background: #FFA600;
+  position: relative;
+  float: right;
+  margin-top: -40px;
+  transition: 0.3s;
 }
     
 .sb-icon-box .sb-icon{
@@ -3755,7 +3834,7 @@ footer .row {
 }
     
 .service-box:hover .sb-icon-box{
-    background-color: #002642;
+    background-color: #38550f;
 }
     
 .image-hover .service-thumbnail {
@@ -3810,7 +3889,7 @@ footer .row {
 }
 
 .wide-banner{
-    background-color: #002642;
+    background-color: #155724;
     padding: 3rem 3rem 12rem;
     text-align: center;
 }
