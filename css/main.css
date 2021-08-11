@@ -894,7 +894,6 @@ input[type="button"].btn--primary:focus {
   border-color: #e3a402;
 }
 
-
 .bttn.bttn--prrimary,
 button.bttn--prrimary,
 input[type="submit"].bttn--prrimary,
@@ -928,7 +927,6 @@ input[type="button"].btn2--prrimary {
   border-color: #39b54a;
   color: #ffffff;
 }
-
 
 /* button modifiers
  * ------------------------------------------------- */
@@ -2030,13 +2028,13 @@ input::-moz-focus-inner {
 }
 
 .home-content__line {
-    display: block;
-    width: 2px;
-    height: 10.2rem;
-    background-color: #e3a402   ;
-    position: absolute;
-    right: 7.2rem;
-    bottom: 0;
+  display: block;
+  width: 2px;
+  height: 10.2rem;
+  background-color: #e3a402;
+  position: absolute;
+  right: 7.2rem;
+  bottom: 0;
 }
 
 /* ------------------------------------------------------------------- 
@@ -3745,189 +3743,187 @@ footer .row {
 /*====================================================
     11. Filtros.
   ====================================================*/
-.service-box{
-    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
-    position: relative;
-    border-radius: 10px !important;
+.service-box {
+  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+  position: relative;
+  border-radius: 10px !important;
 }
 
-.service-thumbnail img{
-    width: 100%;
-    cursor: pointer;
-}  
-    
-.sb-icon-box{
-    width: 70px;
-    height: 70px;
-    background: #FFA600;
-    position: relative;
-    float: right;
-    margin-top: -40px;
-    transition: 0.3s;
+.service-thumbnail img {
+  width: 100%;
+  cursor: pointer;
 }
-.sb-icon-box2{
-  width: 60px;
-  height: 60px;
-  background: #FFA600;
+
+.sb-icon-box {
+  width: 70px;
+  height: 70px;
+  background: #ffa600;
   position: relative;
   float: right;
   margin-top: -40px;
   transition: 0.3s;
 }
-    
-.sb-icon-box .sb-icon{
-    width: 45px;
-    height: 45px;
-    position: absolute;
-    margin: auto;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
+.sb-icon-box2 {
+  width: 60px;
+  height: 60px;
+  background: #ffa600;
+  position: relative;
+  float: right;
+  margin-top: -40px;
+  transition: 0.3s;
 }
 
-.sb-icon img{
-    width: 100%;
+.sb-icon-box .sb-icon {
+  width: 45px;
+  height: 45px;
+  position: absolute;
+  margin: auto;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
 }
 
-.sb-caption{
-    background-color: #FFF;
-    padding: 1rem 1rem 1rem;
-    margin-top: 0px;
-    margin-bottom: 14px;
-    
+.sb-icon img {
+  width: 100%;
 }
-    
-.sb-caption h3{
-    font-weight: 500;
-    text-transform: uppercase;
-    font-size: 18px;
-    margin-top: 0px;
-    margin-bottom: 14px;
-}   
-    
-.sb-caption p{
-    line-height: 1.7;
-} 
-    
-.sb-caption h5{
-    font-size: 14px;
-    line-height: 1.7;
-    margin-top: 15px;
-    margin-bottom: 0px; 
+
+.sb-caption {
+  background-color: #fff;
+  padding: 1rem 1rem 1rem;
+  margin-top: 0px;
+  margin-bottom: 14px;
 }
-    
+
+.sb-caption h3 {
+  font-weight: 500;
+  text-transform: uppercase;
+  font-size: 18px;
+  margin-top: 0px;
+  margin-bottom: 14px;
+}
+
+.sb-caption p {
+  line-height: 1.7;
+}
+
+.sb-caption h5 {
+  font-size: 14px;
+  line-height: 1.7;
+  margin-top: 15px;
+  margin-bottom: 0px;
+}
+
 .sb-caption a {
-    text-decoration: none;
-    position: relative;
-    color: #FFA600;
-    transition: 0.3s;
-}   
-    
+  text-decoration: none;
+  position: relative;
+  color: #ffa600;
+  transition: 0.3s;
+}
+
 .sb-caption a:hover {
-    color: #000;
+  color: #000;
 }
-    
+
 .sb-caption a:after {
-    content: '';
-    width: 100%;
-    position: absolute;
-    left: 0;
-    bottom: -2px;
-    border-width: 0 0 2px;
-    border-style: solid;
+  content: "";
+  width: 100%;
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  border-width: 0 0 2px;
+  border-style: solid;
 }
-    
-.service-box:hover .sb-icon-box{
-    background-color: #38550f;
+
+.service-box:hover .sb-icon-box {
+  background-color: #38550f;
 }
-    
+
 .image-hover .service-thumbnail {
-    width: 100%;
-    height: 100%;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
 }
-    
-.image-hover .service-thumbnail:hover+span {
-    bottom: -36px;
-    opacity: 1;
+
+.image-hover .service-thumbnail:hover + span {
+  bottom: -36px;
+  opacity: 1;
 }
 
 .hover-effects .service-thumbnail img {
-    -webkit-transform: scale(1);
-    transform: scale(1);
-    -webkit-transition: .3s ease-in-out;
-    transition: .3s ease-in-out;
+  -webkit-transform: scale(1);
+  transform: scale(1);
+  -webkit-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
 }
-    
+
 .hover-effects .service-thumbnail:hover img {
-    -webkit-transform: scale(1.1);
-    transform: scale(1.1);
-}
-    
-.sb-desktop-view{
-    margin-top: 2rem;
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
 }
 
-.section-tittle-alt{
-    width: 100%;
-    margin-bottom: 20px;
-    border-left: solid 6px #FFA600;
+.sb-desktop-view {
+  margin-top: 2rem;
 }
 
-.section-tittle-alt h2{
-    margin-left: 20px;
-    margin-bottom: 10px;
+.section-tittle-alt {
+  width: 100%;
+  margin-bottom: 20px;
+  border-left: solid 6px #ffa600;
 }
 
-.section-tittle-alt p{
-    margin-left: 20px;
-    line-height: 1.6;
+.section-tittle-alt h2 {
+  margin-left: 20px;
+  margin-bottom: 10px;
 }
 
-.section-tittle-alt h5{
-    color: #8C8C9E;
-    margin-left: 20px;
-    margin-bottom: 5px;
+.section-tittle-alt p {
+  margin-left: 20px;
+  line-height: 1.6;
 }
 
-.wide-banner{
-    background-color: #155724;
-    padding: 3rem 3rem 12rem;
-    text-align: center;
+.section-tittle-alt h5 {
+  color: #8c8c9e;
+  margin-left: 20px;
+  margin-bottom: 5px;
 }
 
-.wide-banner h5{
-    color: #FFA600;
-}
-    
-.wide-banner h2{
-    color: #FFF;
-}  
-    
-.wide-banner p{
-    color: #FFF;
+.wide-banner {
+  background-color: #155724;
+  padding: 3rem 3rem 12rem;
+  text-align: center;
 }
 
-.wide-banner-content{
-    width: 60%;
-    margin: auto;
-    padding: 0% 10%;
+.wide-banner h5 {
+  color: #ffa600;
 }
 
-.popup-video-section{
-    margin-top: -160px;
+.wide-banner h2 {
+  color: #fff;
 }
 
-p.gallery-info{
-    width: 60%;
+.wide-banner p {
+  color: #fff;
 }
 
-.service-alt{
-    margin-bottom: 1.5rem;
+.wide-banner-content {
+  width: 60%;
+  margin: auto;
+  padding: 0% 10%;
 }
 
+.popup-video-section {
+  margin-top: -160px;
+}
+
+p.gallery-info {
+  width: 60%;
+}
+
+.service-alt {
+  margin-bottom: 1.5rem;
+}
 
 /*# sourceMappingURL=main.css.map */

@@ -5,7 +5,7 @@ $(document).ready(function() {
 	}
 
     function arbutusConsulta(dato) {
-		fetch('http://localhost:8080/arbutus',{method: 'GET'})
+		fetch('http://localhost:3000/arbutus',{method: 'GET'})
 		.then(res => res.json())
 		.then(function(data) {
 			var cont="";
@@ -72,7 +72,7 @@ $(document).ready(function() {
 	}
 
     function comarostaConsulta(dato) {
-		fetch('http://localhost:8080/comarosta', {method: 'GET'})
+		fetch('http://localhost:3000/comarosta', {method: 'GET'})
 		.then(res => res.json())
 		.then(function(data) {
 			var cont="";
