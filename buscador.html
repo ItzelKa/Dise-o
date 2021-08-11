@@ -6,7 +6,7 @@
     <!--- basic page needs
     ================================================== -->
     <meta charset="utf-8">
-    <title>Glint</title>
+    <title>Buscador</title>
     <meta name="description" content="">
     <meta name="TechnoGenesis" content="">
 
@@ -34,8 +34,8 @@
 
     <!-- favicons
     ================================================== -->
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="img/logo2.ico" type="image/x-icon">
+    <link rel="icon" href="img/logo2.ico" type="image/x-icon">
 
 </head>
 
@@ -58,8 +58,8 @@
 
                 <div class="collapse navbar-collapse" id="ftco-nav">
                     <ul class="navbar-nav ml-auto">
+                        <li class="nav-item"><a href="./index.html" class="nav-link">Inicio</a></li>
                         <li class="nav-item active"><a href="#busq" class="nav-link">Buscador</a></li>
-                        <li class="nav-item"><a href="#esp" class="nav-link">Especies</a></li>
                         <li class="nav-item"><a href="#cont" class="nav-link">Contacto</a></li>
                     </ul>
                 </div>
@@ -105,7 +105,7 @@
                         <figure class="service-thumbnail">
                             <input type="checkbox" id="arbol" class="input-hidden habito2" />
                             <label for="arbol">
-                                <img src="img/Filtro/arbol.jpg" alt="" />
+                                <img src="img/Filtro/arbol.png" alt="" />
                             </label>
                         </figure>
                         <div class="sb-icon-box rounded-circle">
@@ -124,7 +124,7 @@
                         <figure class="service-thumbnail">
                             <input type="checkbox" name="" id="arbusto" class="input-hidden habito2" />
                             <label for="arbusto">
-                                <img src="img/Filtro/arbol.jpg" alt="" />
+                                <img src="img/Filtro/arbusto.png" alt="" />
                             </label>
                         </figure>
                         <div class="sb-icon-box rounded-circle">
@@ -149,7 +149,7 @@
                         <figure class="service-thumbnail">
                             <input type="checkbox" name="" id="Aguascalientes" class="input-hidden ubi" />
                             <label for="Aguascalientes">
-                                <img src="img/Filtro/arbol.jpg" alt="" />
+                                <img src="img/Filtro/estados/Ags2.png" alt="" />
                             </label>
                         </figure>
                         <div class="sb-icon-box2 rounded-circle">
@@ -1576,7 +1576,6 @@ aria-hidden="true" id="ver2">
             //funcion de cuando haga clik en cada una de las categorias de la pagina me desplase a esa parte pero de una manera lenta
             //y con suabidad
             $(".navbar a, footer a[href='#myPage']").on('click', function (event) {
-                event.preventDefault();
                 var hash = this.hash;
                 $('html, body').animate({
                     scrollTop: $(hash).offset().top
