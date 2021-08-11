@@ -84,8 +84,6 @@
     </section> <!-- end s-home -->
 
 
-    <!-- Mapas y listado de madroños
-    ================================================== -->
     <section id="esp" class="s-clients">
         <div class="row section-header has-bottom-sep" data-aos="fade-up">
             <div class="col-full">
@@ -127,7 +125,7 @@
             </div>
         </div>
         <!--Mapa-->
-        <div class="container-fluid">
+        <div class="container-fluid map-cont">
             <div class="w-70">
                 <div class="embed-container">
                     <iframe width="500" height="400" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" title="Madroños en  México" src="https://kaxkhzaa6jbz4ylj.maps.arcgis.com/apps/Embed/index.html?webmap=aa715489865d4aee88c6af5a16517675&extent=-118.7437,14.4806,-86.2901,31.7498&home=true&zoom=true&previewImage=false&scale=true&search=true&searchextent=true&disable_scroll=true&theme=dark"></iframe>
@@ -316,7 +314,6 @@
             //funcion de cuando haga clik en cada una de las categorias de la pagina me desplase a esa parte pero de una manera lenta
             //y con suabidad
             $(".navbar a, footer a[href='#myPage']").on('click', function (event) {
-               
                 var hash = this.hash;
                 $('html, body').animate({
                     scrollTop: $(hash).offset().top
