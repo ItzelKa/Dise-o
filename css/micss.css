@@ -242,7 +242,7 @@
   height: 100%;
 }
 
-.info {
+.infogl {
   background: rgba(27, 26, 26, 0.9);
   font-family: "Bree Serif", serif;
   transition: all 0.3s ease-out;
@@ -258,24 +258,41 @@
   top: 0;
 }
 
-.info h2 {
+.infogl h1 {
   text-align: center;
   font-family: "Bree Serif", serif;
-  font-size: 20px;
-  margin-top: 150px;
+  font-size: 25px;
+  margin-top: 30px;
+  color: #fff;
+}
+
+.infogl p {
+  text-align: center;
+  font-family: "Bree Serif", serif;
+  font-size: 15px;
+  color: #fff;
+  word-wrap: break-word;
+}
+
+.infogl h2 {
+  text-align: center;
+  font-family: "Bree Serif", serif;
+  font-size: 13px;
+  margin-top: 5px;
   color: #fff;
   cursor: pointer;
 }
 
-.info h2 {
+.infogl h2 {
   transition: 0.3s ease;
 }
 
-.info h2:hover {
-  transform: translateX(0) scale(1.3);
+.infogl h2:hover {
+  transform: translateX(0) scale(1.2);
+  color: yellow;
 }
 
-.glosario-img:hover .info {
+.glosario-img:hover .infogl {
   transform: translateX(0);
 }
 
