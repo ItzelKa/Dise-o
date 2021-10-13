@@ -1,147 +1,383 @@
-<!doctype html>
-<html lang="es">
+    <!DOCTYPE html>
+    <html class="no-js" lang="en">
 
     <head>
-        <title>Title</title>
-        <!-- Required meta tags -->
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-        <!-- Bootstrap CSS -->
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-            integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <!--- basic page needs
+        ================================================== -->
+        <meta charset="utf-8">
+        <title>Arbutus</title>
+        <meta name="description" content="">
+        <meta name="TechnoGenesis" content="">
+
+        <!-- mobile specific metas
+        ================================================== -->
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- BOOTSTRAP FRAMEWORK STYLES -->
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <!-- CSS
+        ================================================== -->
+        <link href="https://fonts.googleapis.com/css?family=Poppins:400,800" rel="stylesheet" />
+        <link rel="stylesheet" href="css/base.css">
+        <link rel="stylesheet" href="css/vendor.css">
+        <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="css/navigation.css">
+        <link rel="stylesheet" href="css/responsive.css">
+        <link rel="stylesheet" href="css/micss.css">
+        <!-- CSSMenu -->
+        <link rel="stylesheet" href="css/styleMen.css">
+
+        <!-- script
+        ================================================== -->
+        <script src="js/modernizr.js"></script>
+
+
+        <!-- favicons
+        ================================================== -->
+        <link rel="shortcut icon" href="img/logo2.ico" type="image/x-icon">
+        <link rel="icon" href="img/logo2.ico" type="image/x-icon">
+
     </head>
 
-    <body>
+    <body id="top">
+        <style>
+            .input-hidden {
+                position: absolute;
+                left: -9999px;
+            }
 
-        <div class="container w-75 bg-light pt-4">
-            <div class="row">
-                <div class="col-12">
-                    <h1 class="display-4 text-info text-center">Arbutus</h1>
+        </style>
+
+        <!-- header
+        ================================================== -->
+        <header class="s-header">
+            <!--MENU-->
+            <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
+                <div class="container">
+
+                    <div class="collapse navbar-collapse" id="ftco-nav">
+                        <ul class="navbar-nav ml-auto">
+                            <li class="nav-item"><a href="./index.html" class="nav-link">Inicio</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </header> <!-- end s-header -->
+
+        <!--INICIO-->
+
+        <section class="b-arbutus">
+            <div class="overlay"></div>
+            <div class="contact__line"></div>
+
+            <div class="row section-header" data-aos="fade-up">
+                <div class="col-full">
+                    <h1 class="display-2 display-2--light">Arbutus</h1>
+
                 </div>
             </div>
-            <div class="row pt-5">
-                <div class="col-12">
-                    <span class="d-inline-flex">
-                        <h4 class="pr-4">Agregar nuevo:</h4>
-                        <button type="button" class="btn btn-primary btn-lg" data-toggle="modal"
-                            data-target=".bd-example-modal-xl">Nuevo</button>
-                    </span>
-                </div>
-            </div>
-            <div class="row pt-5">
-                <div class="col-12">
-                    <table class="table table-dark">
-                        <thead>
-                            <tr>
-                                <th>No.</th>
-                                <th>Nombre</th>
-                                <th>Acciones</th>
-                            </tr>
-                        </thead>
-                        <tbody id="espa">
-                            <tr>
-                                <td scope="row">1</td>
-                                <td>arv</td>
-                                <td><button type="button" class="btn btn-success">Editar</button>
-                                    <button type="button" class="btn btn-danger">Eliminar</button>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-            </div>
+        </section>
+    
+
+
+        <!-- contact
+        ================================================== -->
+
+    <!-- PRUEBAS
+        ================================================== -->
+    <!-- AQUI--> <!--div class="row">
+    
+                    <div class="col-12 bg-dark ">
+                        <h1 class="display-4 text-info text-center">Arbutus</h1>
+                    </div>
+            
+                </div-->
+
+                <!-- xD-->
+    <div id="cont" class="container w-75  pt-4">
+    <!--div id="cont" class=".a-contact w-75 bg-light pt-4"-->
+        <div class="col-12 bg-dark text-center">
+            <span class="d-inline-flex">
+                <h3 class="pr-4 display-2--light ">Agregar un nuevo arbutus:
+                    <button type="button" class=" btn--primary" data-toggle="modal"
+                    data-target=".bd-example-modal-xl ">Nuevo</button>
+
+                <!--button type="button" class="btn btn-primary btn-lg" data-toggle="modal"
+                    data-target=".bd-example-modal-xl ">Nuevo</button--></h3>
+            </span>
         </div>
 
-        <div class="container">
-            <h1 id="estado"></h1>
-        </div>
+                <!-- xD-->
+<div class="row  mt-4">
+                    <!-- xD-->
+    <div id="cont" class="container w-75  pt-4 ">
+            
+                <!--div class="row pt-5">
+                    <div class="col-12">
+                        <span class="d-inline-flex">
+                            <h4 class="pr-4">Agregar nuevo:
+                            <button type="button" class="btn btn-primary btn-lg" data-toggle="modal"
+                                data-target=".bd-example-modal-xl">Nuevo</button></h4>
+                        </span>
+                    </div>
+                </div-->
+                <div class="row pt-5">
+                    <div class="col-12">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th>No.</th>
+                                    <th>Nombre</th>
+                                    <th>Acciones</th>
+                                </tr>
+                            </thead>
+                            <tbody id="espa">
+                                <tr>
+                                    <td scope="row">1</td>
+                                    <td>arv</td>
+                                    <td><button type="button" class="btn">Editar</button>
+                                        <button type="button" class="btn ">Eliminar</button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <div class="container">
+                <h1 id="estado"></h1>
+            </div>
 
 
-        <!-- //MODAL Insertar Arbutus -->
+            <!-- //MODAL Insertar Arbutus -->
 
-        <div class="modal fade bd-example-modal-xl" tabindex="-1" role="dialog" aria-labelledby="myExtraLargeModalLabel"
-            aria-hidden="true" id="insert">
+            <div class="modal fade bd-example-modal-xl" tabindex="-1" role="dialog" aria-labelledby="myExtraLargeModalLabel"
+                aria-hidden="true" id="insert">
+                <div class="modal-dialog modal-xl">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h2 class="offset-4  newtext ">Agrega nuevo Arbutus</h2>
+                        </div>
+                        <div class="modal-body">
+                            <div class="container pl-4 pr-4">
+                                <div class="row">
+                                    <div class="col-12">
+                                        <div class="container">
+                                            <form id="formarbu" enctype="multipart/form-data">
+                                                <div class="form-row pt-">
+                                                    <div class="col-4">
+                                                        <input type="text" class="form-control form-control-lg" name="nombre"
+                                                            id="nombre" placeholder="Nombre">
+                                                    </div>
+                                                    <div class="col-4">
+                                                        <input type="text" class="form-control form-control-lg" name="habito"
+                                                            id="habito" placeholder="Habito">
+                                                    </div>
+                                                    <div class="col-4">
+                                                        <input type="text" class="form-control form-control-lg" name="cortezar"
+                                                            id="cortezar" placeholder="Corteza Ramas">
+                                                    </div>
+                                                </div>
+
+                                                <div class="form-row pt-3">
+                                                    <div class="col-4">
+                                                        <input type="text" class="form-control form-control-lg" name="cortezars"
+                                                            id="cortezars" placeholder="Corteza
+                                                        Ramillas">
+                                                    </div>
+                                                    <div class="col-4">
+                                                        <input type="text" class="form-control form-control-lg" name="peciolos"
+                                                            id="peciolos" placeholder="Peciolos">
+                                                    </div>
+                                                    <div class="col-4">
+                                                        <input type="text" class="form-control form-control-lg" name="hojas"
+                                                            id="hojas" placeholder="Hojas">
+                                                    </div>
+                                                </div>
+
+                                                <div class="form-row pt-3">
+                                                    <div class="col-4">
+                                                        <input type="text" class="form-control form-control-lg" name="haz"
+                                                            id="haz" placeholder="Haz">
+                                                    </div>
+                                                    <div class="col-4">
+                                                        <input type="text" class="form-control form-control-lg" name="enves"
+                                                            id="enves" placeholder="Enves">
+                                                    </div>
+                                                    <div class="col-4">
+                                                        <input type="text" class="form-control form-control-lg" name="flores"
+                                                            id="flores" placeholder="Flores">
+                                                    </div>
+                                                </div>
+
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="form-row pt-4">
+                                    <div class="col-3"></div>
+                                    <div class="col-6">
+                                            <div class="custom-file">
+                                                <input type="file" class="custom-file-input form-control-lg" name="files" id="img" lang="es" multiple>
+                                                <label class="custom-file-label form-control-lg" for="img">Seleccione max 3 Imagenes:</label>
+                                            </div>
+                                    </div>
+                                    <div class="col-3"></div>
+                                </div>
+                                
+                                <div class="row pt-4">
+                                    <div class="col-3 text-right">
+                                        <label for="ubicacion" class="offset-4 col-6 col-form-label-lg">Ubicación</label>
+                                    </div>
+                                    <div class="col-7">
+                                        <select class="form-control form-control-lg" name="ubica"
+                                            id="ubicacion" multiple="multiple">
+                                            <option value="Aguascalientes" selected>Aguascalientes</option>
+                                            <option value="Baja California">Baja California</option>
+                                            <option value="Baja California Sur">Baja California Sur</option>
+                                            <option value="Campeche">Campeche</option>
+                                            <option value="Chiapas">Chiapas</option>
+                                            <option value="Chihuahua">Chihuahua</option>
+                                            <option value="Ciudad de México">Cd.México</option>
+                                            <option value="Coahuila">Coahuila</option>
+                                            <option value="Colima">Colima</option>
+                                            <option value="Durango">Durango</option>
+                                            <option value="Estado de México">Edo.México</option>
+                                            <option value="Guanajuato">Guanajuato</option>
+                                            <option value="Guerrero">Guerrero</option>
+                                            <option value="Hidalgo">Hidalgo</option>
+                                            <option value="Jalisco">Jalisco</option>
+                                            <option value="Michoacán">Michoacán</option>
+                                            <option value="Morelos">Morelos</option>
+                                            <option value="Nayarit">Nayarit</option>
+                                            <option value="Nuevo León">Nuevo León</option>
+                                            <option value="Oaxaca">Oaxaca</option>
+                                            <option value="Puebla">Puebla</option>
+                                            <option value="Querétaro">Querétaro</option>
+                                            <option value="Quintana Roo">Quintana Roo</option>
+                                            <option value="San Luis Potosí">San Luis Potosí</option>
+                                            <option value="Sinaloa">Sinaloa</option>
+                                            <option value="Sonora">Sonora</option>
+                                            <option value="Tabasco">Tabasco</option>
+                                            <option value="Tamaulipas">Tamaulipas</option>
+                                            <option value="Tlaxcala">Tlaxcala</option>
+                                            <option value="Veracruz">Veracruz</option>
+                                            <option value="Yucatán">Yucatán</option>
+                                            <option value="Zacatecas">Zacatecas</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+
+                            </div>
+                        </div>
+                        <div class="modal-footer text-center">
+                            <button type="button" class="btn btn-sm" id="limpia">Limpiar</button>
+                            <button type="button" class="btn btn-sm" id="inserta">Insertar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- //MODAL Actualizar Arbutus -->
+
+            <div class="modal fade bd-example-modal-xl" tabindex="-1" role="dialog" aria-labelledby="myExtraLargeModalLabel"
+            aria-hidden="true" id="edit">
             <div class="modal-dialog modal-xl">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h2 class="offset-4">Agrega nuevo Arbutus</h2>
+                        <h2 class="offset-4">Actualiza Arbutus</h2>
                     </div>
                     <div class="modal-body">
                         <div class="container pl-4 pr-4">
                             <div class="row">
                                 <div class="col-12">
                                     <div class="container">
-                                        <form id="formarbu" enctype="multipart/form-data">
+                                        <form id="formarbu2" enctype="multipart/form-data">
                                             <div class="form-row pt-">
                                                 <div class="col-4">
+                                                    <input type="text" id="id" hidden>
                                                     <input type="text" class="form-control form-control-lg" name="nombre"
-                                                        id="nombre" placeholder="Nombre">
+                                                        id="nom" placeholder="Nombre">
                                                 </div>
                                                 <div class="col-4">
                                                     <input type="text" class="form-control form-control-lg" name="habito"
-                                                        id="habito" placeholder="Habito">
+                                                        id="hab" placeholder="Habito">
                                                 </div>
                                                 <div class="col-4">
-                                                    <input type="text" class="form-control form-control-lg" name="cortezar"
-                                                        id="cortezar" placeholder="Corteza Ramas">
+                                                    <input type="text" class="form-control form-control-lg" name="cortezar2"
+                                                        id="cor1" placeholder="Corteza Ramas">
                                                 </div>
                                             </div>
 
                                             <div class="form-row pt-3">
                                                 <div class="col-4">
-                                                    <input type="text" class="form-control form-control-lg" name="cortezars"
-                                                        id="cortezars" placeholder="Corteza
-                                                    Ramillas">
+                                                    <input type="text" class="form-control form-control-lg" name="cortezars2"
+                                                        id="cor2" placeholder="Corteza Ramillas">
                                                 </div>
                                                 <div class="col-4">
                                                     <input type="text" class="form-control form-control-lg" name="peciolos"
-                                                        id="peciolos" placeholder="Peciolos">
+                                                        id="pec" placeholder="Peciolos">
                                                 </div>
                                                 <div class="col-4">
                                                     <input type="text" class="form-control form-control-lg" name="hojas"
-                                                        id="hojas" placeholder="Hojas">
+                                                        id="hoj" placeholder="Hojas">
                                                 </div>
                                             </div>
 
                                             <div class="form-row pt-3">
                                                 <div class="col-4">
                                                     <input type="text" class="form-control form-control-lg" name="haz"
-                                                        id="haz" placeholder="Haz">
+                                                        id="haz2" placeholder="Haz">
                                                 </div>
                                                 <div class="col-4">
                                                     <input type="text" class="form-control form-control-lg" name="enves"
-                                                        id="enves" placeholder="Enves">
+                                                        id="env" placeholder="Enves">
                                                 </div>
                                                 <div class="col-4">
                                                     <input type="text" class="form-control form-control-lg" name="flores"
-                                                        id="flores" placeholder="Flores">
+                                                        id="flo" placeholder="Flores">
                                                 </div>
                                             </div>
-
                                         </form>
                                     </div>
                                 </div>
                             </div>
 
-                            <div class="form-row pt-4">
-                                <div class="col-3"></div>
-                                <div class="col-6">
-                                        <div class="custom-file">
-                                            <input type="file" class="custom-file-input form-control-lg" name="files" id="img" lang="es" multiple>
-                                            <label class="custom-file-label form-control-lg" for="img">Seleccione max 3 Imagenes:</label>
-                                        </div>
+                            <div class="row pt-4">
+                                <div class="col-4 text-center">
+                                    <img src="" alt="" id="foto1" class="pb-1" style="width: 200px;height:200px">
+                                    <div class="custom-file">
+                                        <input type="file" class="custom-file-input form-control-lg" name="file1" id="img1" lang="es">
+                                        <label class="custom-file-label form-control-lg" for="img">Image1:</label>
+                                    </div>
                                 </div>
-                                <div class="col-3"></div>
+                                <div class="col-4 text-center">
+                                    <img src="" alt="" id="foto2" class="pb-1" style="width: 200px;height:200px">
+                                    <div class="custom-file">
+                                        <input type="file" class="custom-file-input form-control-lg" name="file2" id="img2" lang="es">
+                                        <label class="custom-file-label form-control-lg" for="img">Imagen2:</label>
+                                    </div>
+                                </div>
+                                <div class="col-4 text-center">
+                                    <img src="" alt="" id="foto3" class="pb-1" style="width: 200px;height:200px">
+                                    <div class="custom-file">
+                                        <input type="file" class="custom-file-input form-control-lg" name="file3" id="img3" lang="es">
+                                        <label class="custom-file-label form-control-lg" for="img">Imagen3:</label>
+                                    </div>
+                                </div>
                             </div>
                             
                             <div class="row pt-4">
                                 <div class="col-3 text-right">
-                                    <label for="ubicacion" class="col-6 col-form-label-lg">Ubicacion</label>
+                                    <label for="ubi" class="col-6 col-form-label-lg">Ubicación</label>
                                 </div>
                                 <div class="col-7">
-                                    <select class="form-control form-control-lg" name="ubica"
-                                        id="ubicacion" multiple="multiple">
+                                    <select class="form-control form-control-lg" name="ubicacion"
+                                        id="ubi" multiple="multiple">
                                         <option value="Aguascalientes" selected>Aguascalientes</option>
                                         <option value="Baja California">Baja California</option>
                                         <option value="Baja California Sur">Baja California Sur</option>
@@ -178,173 +414,51 @@
                                 </div>
                             </div>
 
-
                         </div>
                     </div>
                     <div class="modal-footer text-center">
-                        <button type="button" class="btn btn-lg btn-warning" id="limpia">Limpiar</button>
-                        <button type="button" class="btn btn-lg btn-success" id="inserta">Insertar</button>
+                        <button type="button" class="btn btn-lg btn-warning" id="editar">Guardar Cambios</button>
                     </div>
-                </div>
-            </div>
-        </div>
-
-
-        <!-- //MODAL Actualizar Arbutus -->
-
-        <div class="modal fade bd-example-modal-xl" tabindex="-1" role="dialog" aria-labelledby="myExtraLargeModalLabel"
-        aria-hidden="true" id="edit">
-        <div class="modal-dialog modal-xl">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h2 class="offset-4">Actualiza Arbutus</h2>
-                </div>
-                <div class="modal-body">
-                    <div class="container pl-4 pr-4">
-                        <div class="row">
-                            <div class="col-12">
-                                <div class="container">
-                                    <form id="formarbu2" enctype="multipart/form-data">
-                                        <div class="form-row pt-">
-                                            <div class="col-4">
-                                                <input type="text" id="id" hidden>
-                                                <input type="text" class="form-control form-control-lg" name="nombre"
-                                                    id="nom" placeholder="Nombre">
-                                            </div>
-                                            <div class="col-4">
-                                                <input type="text" class="form-control form-control-lg" name="habito"
-                                                    id="hab" placeholder="Habito">
-                                            </div>
-                                            <div class="col-4">
-                                                <input type="text" class="form-control form-control-lg" name="cortezar2"
-                                                    id="cor1" placeholder="Corteza Ramas">
-                                            </div>
-                                        </div>
-
-                                        <div class="form-row pt-3">
-                                            <div class="col-4">
-                                                <input type="text" class="form-control form-control-lg" name="cortezars2"
-                                                    id="cor2" placeholder="Corteza
-                                                Ramillas">
-                                            </div>
-                                            <div class="col-4">
-                                                <input type="text" class="form-control form-control-lg" name="peciolos"
-                                                    id="pec" placeholder="Peciolos">
-                                            </div>
-                                            <div class="col-4">
-                                                <input type="text" class="form-control form-control-lg" name="hojas"
-                                                    id="hoj" placeholder="Hojas">
-                                            </div>
-                                        </div>
-
-                                        <div class="form-row pt-3">
-                                            <div class="col-4">
-                                                <input type="text" class="form-control form-control-lg" name="haz"
-                                                    id="haz2" placeholder="Haz">
-                                            </div>
-                                            <div class="col-4">
-                                                <input type="text" class="form-control form-control-lg" name="enves"
-                                                    id="env" placeholder="Enves">
-                                            </div>
-                                            <div class="col-4">
-                                                <input type="text" class="form-control form-control-lg" name="flores"
-                                                    id="flo" placeholder="Flores">
-                                            </div>
-                                        </div>
-                                    </form>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="row pt-4">
-                            <div class="col-4 text-center">
-                                <img src="" alt="" id="foto1" class="pb-1" style="width: 200px;height:200px">
-                                <div class="custom-file">
-                                    <input type="file" class="custom-file-input form-control-lg" name="file1" id="img1" lang="es">
-                                    <label class="custom-file-label form-control-lg" for="img">Image1:</label>
-                                </div>
-                            </div>
-                            <div class="col-4 text-center">
-                                <img src="" alt="" id="foto2" class="pb-1" style="width: 200px;height:200px">
-                                <div class="custom-file">
-                                    <input type="file" class="custom-file-input form-control-lg" name="file2" id="img2" lang="es">
-                                    <label class="custom-file-label form-control-lg" for="img">Imagen2:</label>
-                                </div>
-                            </div>
-                            <div class="col-4 text-center">
-                                <img src="" alt="" id="foto3" class="pb-1" style="width: 200px;height:200px">
-                                <div class="custom-file">
-                                    <input type="file" class="custom-file-input form-control-lg" name="file3" id="img3" lang="es">
-                                    <label class="custom-file-label form-control-lg" for="img">Imagen3:</label>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div class="row pt-4">
-                            <div class="col-3 text-right">
-                                <label for="ubi" class="col-6 col-form-label-lg">Ubicacion</label>
-                            </div>
-                            <div class="col-7">
-                                <select class="form-control form-control-lg" name="ubicacion"
-                                    id="ubi" multiple="multiple">
-                                    <option value="Aguascalientes" selected>Aguascalientes</option>
-                                    <option value="Baja California">Baja California</option>
-                                    <option value="Baja California Sur">Baja California Sur</option>
-                                    <option value="Campeche">Campeche</option>
-                                    <option value="Chiapas">Chiapas</option>
-                                    <option value="Chihuahua">Chihuahua</option>
-                                    <option value="Ciudad de México">Cd.México</option>
-                                    <option value="Coahuila">Coahuila</option>
-                                    <option value="Colima">Colima</option>
-                                    <option value="Durango">Durango</option>
-                                    <option value="Estado de México">Edo.México</option>
-                                    <option value="Guanajuato">Guanajuato</option>
-                                    <option value="Guerrero">Guerrero</option>
-                                    <option value="Hidalgo">Hidalgo</option>
-                                    <option value="Jalisco">Jalisco</option>
-                                    <option value="Michoacán">Michoacán</option>
-                                    <option value="Morelos">Morelos</option>
-                                    <option value="Nayarit">Nayarit</option>
-                                    <option value="Nuevo León">Nuevo León</option>
-                                    <option value="Oaxaca">Oaxaca</option>
-                                    <option value="Puebla">Puebla</option>
-                                    <option value="Querétaro">Querétaro</option>
-                                    <option value="Quintana Roo">Quintana Roo</option>
-                                    <option value="San Luis Potosí">San Luis Potosí</option>
-                                    <option value="Sinaloa">Sinaloa</option>
-                                    <option value="Sonora">Sonora</option>
-                                    <option value="Tabasco">Tabasco</option>
-                                    <option value="Tamaulipas">Tamaulipas</option>
-                                    <option value="Tlaxcala">Tlaxcala</option>
-                                    <option value="Veracruz">Veracruz</option>
-                                    <option value="Yucatán">Yucatán</option>
-                                    <option value="Zacatecas">Zacatecas</option>
-                                </select>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-                <div class="modal-footer text-center">
-                    <button type="button" class="btn btn-lg btn-warning" id="editar">Guardar Cambios</button>
                 </div>
             </div>
         </div>
     </div>
-
-
-
-
+        <!-- Java Script
+        ================================================== -->
         <!-- Optional JavaScript -->
-        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-        <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-            integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-            crossorigin="anonymous"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-            integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-            crossorigin="anonymous"></script>
-        <script src="js/arbutusABC.js"></script>
-    </body>
 
-</html>
+        <script src="js/jquery-3.2.1.min.js"></script>
+        <script src="js/plugins.js"></script>
+        <script src="js/main.js"></script>
+
+        <script src="js/jquery.min.js"></script>
+        <script src="js/jquery-migrate-3.0.1.min.js"></script>
+        <script src="js/popper.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/jquery.easing.1.3.js"></script>
+        <script src="js/jquery.waypoints.min.js"></script>
+        <script src="js/jquery.stellar.min.js"></script>
+        <script src="js/owl.carousel.min.js"></script>
+        <script src="js/jquery.magnific-popup.min.js"></script>
+        <script src="js/jquery.animateNumber.min.js"></script>
+        <script src="js/bootstrap-datepicker.js"></script>
+        <script src="js/scrollax.min.js"></script>
+        <script src="js/main2.js"></script>
+        <script src="js/arbutusABC.js"></script>
+        <script>
+            $(document).ready(function () {
+                //funcion de cuando haga clik en cada una de las categorias de la pagina me desplase a esa parte pero de una manera lenta
+                //y con suabidad
+                $(".navbar a, footer a[href='#myPage']").on('click', function (event) {
+                    var hash = this.hash;
+                    $('html, body').animate({
+                        scrollTop: $(hash).offset().top
+                    }, 900, function () {
+                        window.location.hash = hash;
+                    });
+                });
+            })
+        </script>
+
+    </body>
+    </html>
