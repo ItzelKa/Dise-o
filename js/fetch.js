@@ -2,16 +2,29 @@ $(document).ready(function() {
 
 	for (var i = 1; i <=1; i++) {
 		arbutusConsulta(i);
+		
+	}
+	const  generateRandomString = (num) => {
+		const characters ='ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz';
+		let result1= '';
+		const charactersLength = characters.length;
+		for ( let i = 0; i < num; i++ ) {
+			result1 += characters.charAt(Math.floor(Math.random() * charactersLength));
+		}
+	
+		return result1;
 	}
 
     function arbutusConsulta(dato) {
-		fetch('http://localhost:8080/arbutus',{method: 'GET'})
+		fetch('http://localhost:3000/arbutus',{method: 'GET'})
 		.then(res => res.json())
 		.then(function(data) {
 			var cont="";
 			var img="";
 			console.log(data);
 			data.arbutus.forEach(function(dato){ 
+				let rand = generateRandomString(15);
+				console.log(rand);
 				cont=dato.nombre;
 				img=dato.imagenes.imagen1;
 				document.getElementById('divArbutus').innerHTML+=`
@@ -29,18 +42,18 @@ $(document).ready(function() {
 						<div class="comarosta-img">
 							<img src="${img}" alt="">
 							<div class="info text-center">
-								<a type="button" data-toggle="modal" data-target="#exampleModalCenter">
+								<a type="button" data-toggle="modal" data-target="#${rand}">
 									<h2>click para ver mas</h2>
 								</a>
 							</div>
 						</div>
 					</div>
 				</div>
-				<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+				<div class="modal fade" id="${rand}" tabindex="-1" role="dialog" aria-labelledby="${rand}" aria-hidden="true">
 					<div class="modal-dialog modal-dialog-centered" role="document">
 						<div class="modal-content">
 							<div class="modal-header">
-								<h5 class="modal-title" id="exampleModalCenterTitle">${cont}</h5>
+								<h5 class="modal-title" id="${rand}">${cont}</h5>
 								<button type="button" class="close" data-dismiss="modal" aria-label="Close">
 								<span aria-hidden="true">&times;</span>
 								</button>
@@ -72,13 +85,15 @@ $(document).ready(function() {
 	}
 
     function comarostaConsulta(dato) {
-		fetch('http://localhost:8080/comarosta', {method: 'GET'})
+		fetch('http://localhost:3000/comarosta', {method: 'GET'})
 		.then(res => res.json())
 		.then(function(data) {
 			var cont="";
 			var img="";
 			console.log(data);
 			data.comarosta.forEach(function(dato){ 
+				let rand = generateRandomString(15);
+				console.log(rand);
 				cont=dato.nombre;
 				img=dato.imagenes.imagen1;
 				document.getElementById('divComarosta').innerHTML+=`
@@ -96,18 +111,18 @@ $(document).ready(function() {
 						<div class="comarosta-img">
 							<img src="${img}" alt="">
 							<div class="info text-center">
-								<a type="button" data-toggle="modal" data-target="#exampleModalCenter">
+								<a type="button" data-toggle="modal" data-target="#${rand}">
 									<h2>click para ver mas</h2>
 								</a>
 							</div>
 						</div>
 					</div>
 				</div>
-				<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+				<div class="modal fade" id="${rand}" tabindex="-1" role="dialog" aria-labelledby="${rand}" aria-hidden="true">
 					<div class="modal-dialog modal-dialog-centered" role="document">
 						<div class="modal-content">
 							<div class="modal-header">
-								<h5 class="modal-title" id="exampleModalCenterTitle">${cont}</h5>
+								<h5 class="modal-title" id="${rand}">${cont}</h5>
 								<button type="button" class="close" data-dismiss="modal" aria-label="Close">
 								<span aria-hidden="true">&times;</span>
 								</button>
