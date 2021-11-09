@@ -26,7 +26,7 @@ $(document).ready(function () {
 	/////FUNCIONES FETCH
 
 	function fetch1() {
-		fetch('http://localhost:3000/arbutus', {
+		fetch('http://localhost:8080/arbutus', {
 			method: 'GET',
 			//body: JSON.stringify(data)
 		}).then(res => res.json())
@@ -47,7 +47,7 @@ $(document).ready(function () {
 	}
 
 	function fetch2() {
-		fetch('http://localhost:3000/comarosta', {
+		fetch('http://localhost:8080/comarosta', {
 			method: 'GET',
 			//body: JSON.stringify(data)
 		}).then(res => res.json())
@@ -70,7 +70,7 @@ $(document).ready(function () {
 	function fetchpost(dato) {
 		var err1 = 0;
 		var err2 = 0;
-		fetch('http://localhost:3000/arbutus', {
+		fetch('http://localhost:8080/arbutus', {
 			method: "POST",
 			body: JSON.stringify(dato),
 			headers: {
@@ -95,7 +95,7 @@ $(document).ready(function () {
 				//console.log(error);
 			});
 
-		fetch('http://localhost:3000/comarosta', {
+		fetch('http://localhost:8080/comarosta', {
 			method: "POST",
 			body: JSON.stringify(dato),
 			headers: {
@@ -122,7 +122,7 @@ $(document).ready(function () {
 	}
 
 	function fetchfinala(nombre) {
-		fetch('http://localhost:3000/arbutus/nombre/' + nombre, {
+		fetch('http://localhost:8080/arbutus/nombre/' + nombre, {
 			method: 'GET',
 		}).then(res => res.json())
 			.then(function (data) {
@@ -143,7 +143,7 @@ $(document).ready(function () {
 	}
 
 	function fetchfinalc(nombre) {
-		fetch('http://localhost:3000/comarosta/nombre/' + nombre, {
+		fetch('http://localhost:8080/comarosta/nombre/' + nombre, {
 			method: 'GET',
 		}).then(res => res.json())
 			.then(function (data) {
