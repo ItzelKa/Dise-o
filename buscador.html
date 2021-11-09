@@ -287,100 +287,117 @@
             </div>
 
             <!-- ////// UBICACION -->
-            <div id="map" style="width: 60%; height: 497px;">
-                <script type="text/javascript">
-                    AmCharts.makeChart("map",{
-                            "type": "map",
-                            "pathToImages": "http://www.amcharts.com/lib/3/images/",
-                            "addClassNames": true,
-                            "fontSize": 15,
-                            "color": "#000000",
-                            "projection": "mercator",
-                            "backgroundAlpha": 1,
-                            "backgroundColor": "rgba(245,243,243,1)",
-                            "dataProvider": {
-                                "map": "mexicoLow",
-                                "getAreasFromMap": true,
-                                "images": [
-                                    {
-                                        "top": 40,
-                                        "left": 60,
-                                        "width": 80,
-                                        "height": 40,
-                                        "pixelMapperLogo": true,
-                                        "imageURL": "http://pixelmap.amcharts.com/static/img/logo-black.svg",
-                                        "url": "http://www.amcharts.com"
-                                    }
-                                ],
-                                "areas": [
-                                    {
-                                        "id": "MX-AGU",
-                                        "title": "Aguascalientes",
-                                    },
-                                    {
-                                        "id": "MX-BCN",
-                                        "title": "Baja California",	
-                                    },
-                                    {
-                                        "id": "MX-BCS",
-                                        "title": "Baja California Sur",	
-                                    },
-                                    {
-                                        "id": "MX-DIF",
-                                        "title": "Distrito Federal",	
-                                    },
-                                    
-                                ]
-                            },
-                            "balloon": {
-                                "horizontalPadding": 15,
-                                "borderAlpha": 0,
-                                "borderThickness": 1,
-                                "verticalPadding": 15
-                            },
-                            "areasSettings": {
-                                "color": "rgba(138,227,74,1)",
-                                "outlineColor": "rgba(245,243,243,1)",
-                                "rollOverOutlineColor": "rgba(245,243,243,1)",
-                                "rollOverBrightness": 20,
-                                "selectedBrightness": 20,
-                                "selectable": true,
-                                "unlistedAreasAlpha": 0,
-                                "unlistedAreasOutlineAlpha": 0
-                            },
-                            "imagesSettings": {
-                                "alpha": 1,
-                                "color": "rgba(138,227,74,1)",
-                                "outlineAlpha": 0,
-                                "rollOverOutlineAlpha": 0,
-                                "outlineColor": "rgba(245,243,243,1)",
-                                "rollOverBrightness": 20,
-                                "selectedBrightness": 20,
-                                "selectable": true
-                            },
-                            "linesSettings": {
-                                "color": "rgba(138,227,74,1)",
-                                "selectable": true,
-                                "rollOverBrightness": 20,
-                                "selectedBrightness": 20
-                            },
-                            "zoomControl": {
-                                "zoomControlEnabled": true,
-                                "homeButtonEnabled": false,
-                                "panControlEnabled": false,
-                                "right": 38,
-                                "bottom": 30,
-                                "minZoomLevel": 0.25,
-                                "gridHeight": 100,
-                                "gridAlpha": 0.1,
-                                "gridBackgroundAlpha": 0,
-                                "gridColor": "#FFFFFF",
-                                "draggerAlpha": 1,
-                                "buttonCornerRadius": 2
-                            }
-                        });
-                </script>
+            <div class="row">
+                <div class="col-12">
+                    <div class="collapse" id="ubicacion">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-12">
+                                    <h2 class="text-center p-4">Ubicacion</h2>
+                                </div>
+                            </div>
+                            
+                            <div id="map" style="width: 60%; height: 497px;">
+                                <script type="text/javascript">
+                                    AmCharts.makeChart("map",{
+                                            "type": "map",
+                                            "pathToImages": "http://www.amcharts.com/lib/3/images/",
+                                            "addClassNames": true,
+                                            "fontSize": 15,
+                                            "color": "#000000",
+                                            "projection": "mercator",
+                                            "backgroundAlpha": 1,
+
+                                            "dataProvider": {
+                                                "map": "mexicoLow",
+                                                "getAreasFromMap": true,
+                                                "images": [
+                                                    {
+                                                        "top": 40,
+                                                        "left": 60,
+                                                        "width": 80,
+                                                        "height": 40,
+                                                        "url": "http://www.amcharts.com"
+                                                    }
+                                                ],
+                                                "areas": [
+                                                    {
+                                                        "id": "MX-AGU",
+                                                        "class":"ubi",
+                                                        "title": "Aguascalientes",
+                                                    },
+                                                    {
+                                                        "id": "MX-BCN",
+                                                        "title": "Baja California",	
+                                                    },
+                                                    {
+                                                        "id": "MX-BCS",
+                                                        "title": "Baja California Sur",	
+                                                    },
+                                                    {
+                                                        "id": "MX-DIF",
+                                                        "title": "Distrito Federal",	
+                                                    },
+                                                    
+                                                ]
+                                            },
+                                            "balloon": {
+                                                "horizontalPadding": 15,
+                                                "borderAlpha": 0,
+                                                "borderThickness": 1,
+                                                "verticalPadding": 15
+                                            },
+                                            "areasSettings": {
+                                                "color": "rgba(138,227,74,1)",
+                                                "outlineColor": "rgba(245,243,243,1)",
+                                                "rollOverOutlineColor": "rgba(245,243,243,1)",
+                                                "rollOverBrightness": 20,
+                                                "selectedBrightness": 20,
+                                                "selectable": true,
+                                                "unlistedAreasAlpha": 0,
+                                                "unlistedAreasOutlineAlpha": 0
+                                            },
+                                            "imagesSettings": {
+                                                "alpha": 1,
+                                                "color": "rgba(138,227,74,1)",
+                                                "outlineAlpha": 0,
+                                                "rollOverOutlineAlpha": 0,
+                                                "outlineColor": "rgba(245,243,243,1)",
+                                                "rollOverBrightness": 20,
+                                                "selectedBrightness": 20,
+                                                "selectable": true
+                                            },
+                                            "linesSettings": {
+                                                "color": "rgba(138,227,74,1)",
+                                                "selectable": true,
+                                                "rollOverBrightness": 20,
+                                                "selectedBrightness": 20
+                                            },
+                                            "zoomControl": {
+                                                "zoomControlEnabled": true,
+                                                "homeButtonEnabled": false,
+                                                "panControlEnabled": false,
+                                                "right": 38,
+                                                "bottom": 30,
+                                                "minZoomLevel": 0.25,
+                                                "gridHeight": 100,
+                                                "gridAlpha": 0.1,
+                                                "gridBackgroundAlpha": 0,
+                                                "gridColor": "#000000",
+                                                "draggerAlpha": 1,
+                                                "buttonCornerRadius": 2
+                                            }
+                                        });
+                                </script>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
+
+
+            
             
             <!--Fin UBI-->
 
@@ -2013,14 +2030,17 @@
     <script src="js/bootstrap-datepicker.js"></script>
     <script src="js/scrollax.min.js"></script>
     <script src="js/main2.js"></script>
-    <<<<<<< HEAD <script src="js/filtro.js">
-        </script>
-        <!--<script src="js/fetch.js"></script>
+    <script src="js/filtro.js"></script>
+    <script src="js/mapa.js"></script>
+
+        
+    <script src="js/fetch.js"></script>
     <script src="js/fetchBusqueda.js"></script>-->
         <script type="text/javascript" src="https://www.amcharts.com/lib/3/ammap.js"></script>
         <script type="text/javascript" src="https://www.amcharts.com/lib/3/maps/js/mexicoLow.js"></script>
         =======
         <script src="js/fetchBusqueda.js"></script>
+
         >>>>>>> 7f3cb6f63bac23cafefde3b64fbd853bc3e36a0c
         <script>
             $(document).ready(function () {
