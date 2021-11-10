@@ -1,0 +1,15 @@
+.izq{
+    height: 100vh;
+    width: 60%;
+    background-position: center;
+    
+
+}
+.dere{
+    height: 100vh;
+    width: 40%;
+    background-size: cover;
+}
+#pant-dividida{
+    display: flex;
+}
