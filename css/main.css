@@ -930,20 +930,24 @@ input[type="button"].btn2--prrimary {
 
 /* button modifiers
  * ------------------------------------------------- */
+ .btn.fuu-width,
+ button.fuu-width {
+   width: 30%;
 
+ }
 .btn.full-width,
 button.full-width {
-  width: 100%;
+  width: 150%;
   margin-right: 0;
 }
 .bttn.fulll-width,
 button.fulll-width {
-  width: 35%;
+  width: 150%;
   margin-right: 0;
 }
 .bttn.fu-width,
 button.fu-width {
-  width: 45%;
+  width: 150%;
   margin-right: 0;
 }
 .bttn2.fu-width2,
