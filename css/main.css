@@ -904,6 +904,29 @@ input[type="button"].bttn--prrimary {
   color: #ffffff;
 }
 
+.bttnn.bttnn--prrimary:hover,
+button.bttn--prrimary:hover,
+input[type="submit"].bttnn--prrimary:hover,
+input[type="reset"].bttnn--prrimary:hover,
+input[type="button"].bttnn--prrimary:hover,
+.btn.bttnn--prrimary:focus,
+button.bttnn--prrimary:focus,
+input[type="submit"].bttnn--prrimary:focus,
+input[type="reset"].bttnn--prrimary:focus,
+input[type="button"].bttnn--prrimary:focus {
+  background: #39b54a;
+  border-color: #39b54a;
+}
+.bttnn.bttnn--prrimary,
+button.bttnn--prrimary,
+input[type="submit"].bttnn--prrimary,
+input[type="reset"].bttnn--prrimary,
+input[type="button"].bttnn--prrimary {
+  background: #e3a402;
+  border-color: #e3a402;
+  color: #ffffff;
+}
+
 .bttn.bttn--prrimary:hover,
 button.bttn--prrimary:hover,
 input[type="submit"].bttn--prrimary:hover,
@@ -918,6 +941,7 @@ input[type="button"].bttn--prrimary:focus {
   border-color: #e3a402;
 }
 
+
 .bttn2.btn2--prrimary,
 button.btn2--prrimary,
 input[type="submit"].btn2--prrimary,
@@ -930,11 +954,7 @@ input[type="button"].btn2--prrimary {
 
 /* button modifiers
  * ------------------------------------------------- */
- .btn.fuu-width,
- button.fuu-width {
-   width: 30%;
 
- }
 .btn.full-width,
 button.full-width {
   width: 150%;
@@ -947,7 +967,7 @@ button.fulll-width {
 }
 .bttn.fu-width,
 button.fu-width {
-  width: 150%;
+
   margin-right: 0;
 }
 .bttn2.fu-width2,
