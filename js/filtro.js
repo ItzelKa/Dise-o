@@ -394,8 +394,6 @@ $(document).ready(function () {
 					"left": 60,
 					"width": 80,
 					"height": 40,
-					"pixelMapperLogo": true,
-					"imageURL": "http://pixelmap.amcharts.com/static/img/logo-black.svg",
 					"url": "http://www.amcharts.com"
 				}
 				],

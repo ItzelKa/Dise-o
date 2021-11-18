@@ -32,7 +32,6 @@
     <!-- script
     ================================================== -->
     <script src="js/modernizr.js"></script>
-    <script src="js/filtro.js"></script>
 
     <!-- MAPA -->
     <script type="text/javascript" src="https://www.amcharts.com/lib/3/ammap.js"></script>
@@ -188,12 +187,7 @@
                         <div class="section-tittle-alt">
                             <h2>Ubicacion</h2>
                         </div>
-                        <div id="map" style="width: 50%; height: 120px;"></div>
-                        <div class="row">
-                            <div class="col">
-                                <button onclick="crear()">Limpiar estado</button>
-                            </div>
-                        </div>
+                        <div id="map" style="width: 650px; height: 520px;"></div>
 
                     </div>
                     <!--Fin UBI-->
@@ -1474,6 +1468,11 @@
                                     aria-controls="collapseExample">
                                     Ubicacion
                                 </button>
+                                <button onclick="crear()" class="fuu-width bttn--prrimary" type="button" data-toggle="collapse"
+                                    data-target="#ubicacion" aria-expanded="false" id="btnubi"
+                                    aria-controls="collapseExample">
+                                    Limpiar estado
+                                </button>
                             </p>
 
                             <p id="btn-arbutus">
@@ -1951,7 +1950,7 @@
     <script src="js/scrollax.min.js"></script>
     <script src="js/main2.js"></script>
     <script src="js/mapa.js"></script>
-
+    <script src="js/filtro.js"></script>
 
     <script src="js/fetch.js"></script>
     <script src="js/fetchBusqueda.js"></script>-->
