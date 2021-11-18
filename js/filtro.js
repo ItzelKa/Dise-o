@@ -370,17 +370,105 @@ $(document).ready(function () {
 	$('.ubi').on('click', function () {
 		var ubi = $(this).prop('name');
 		$('.ubi').not(this).prop('checked', false);
-		if ($(this).prop('checked') == false) {
-			obj.ubicacion = "";
-			color('#btnubi', 0);
-		} else {
-			color('#btnubi', 1);
-			obj.ubicacion = ubi;
-			setTimeout(fetchpost, 500, obj);
-		}
 		selecciones();
 		console.log(obj);
 	});
+
+    window.addEventListener('load',crear())
+	    function crear(){
+	    	var mapa = AmCharts.makeChart("map",{
+			"type": "map",
+			"pathToImages": "http://www.amcharts.com/lib/3/images/",
+			"addClassNames": true,
+			"fontSize": 15,
+			"color": "#000000",
+			"projection": "mercator",
+			"backgroundAlpha": 1,
+			"backgroundColor": "rgba(245,243,243,1)",
+			"dataProvider": {
+				"map": "mexicoLow",
+				"getAreasFromMap": true,
+				"images": [
+				{
+					"top": 40,
+					"left": 60,
+					"width": 80,
+					"height": 40,
+					"pixelMapperLogo": true,
+					"imageURL": "http://pixelmap.amcharts.com/static/img/logo-black.svg",
+					"url": "http://www.amcharts.com"
+				}
+				],
+				"areas": [
+				{
+					"id": "MX-AGU",
+					"title": "Aguascalientes",
+				},
+				]
+			},
+			"balloon": {
+				"horizontalPadding": 15,
+				"borderAlpha": 0,
+				"borderThickness": 1,
+				"verticalPadding": 15
+			},
+			"areasSettings": {
+				"color": "rgba(138,227,74,1)",
+				"outlineColor": "rgba(245,243,243,1)",
+				"rollOverOutlineColor": "rgba(245,243,243,1)",
+				"rollOverBrightness": 20,
+				"selectedBrightness": 20,
+				"selectable": true,
+				"unlistedAreasAlpha": 0,
+				"unlistedAreasOutlineAlpha": 0
+			},
+			"imagesSettings": {
+				"alpha": 1,
+				"color": "rgba(138,227,74,1)",
+				"outlineAlpha": 0,
+				"rollOverOutlineAlpha": 0,
+				"outlineColor": "rgba(245,243,243,1)",
+				"rollOverBrightness": 20,
+				"selectedBrightness": 20,
+				"selectable": true
+			},
+			"linesSettings": {
+				"color": "rgba(138,227,74,1)",
+				"selectable": true,
+				"rollOverBrightness": 20,
+				"selectedBrightness": 20
+			},
+			"zoomControl": {
+				"zoomControlEnabled": true,
+				"homeButtonEnabled": false,
+				"panControlEnabled": false,
+				"right": 38,
+				"bottom": 30,
+				"minZoomLevel": 0.25,
+				"gridHeight": 100,
+				"gridAlpha": 0.1,
+				"gridBackgroundAlpha": 0,
+				"gridColor": "#FFFFFF",
+				"draggerAlpha": 1,
+				"buttonCornerRadius": 2
+			}
+		});
+
+		mapa.addListener("clickMapObject", function(event){
+			//var ags= event.chart.dataProvider.areas[0].id;
+			//console.log(ags)
+			alert(event.mapObject.enTitle);
+            color('#btnubi',1);
+            obj.ubicacion = event.mapObject.enTitle;
+            selcciones();
+		});
+        
+		color('#btnubi',0);
+		obj.ubicacion ="";
+		selecciones();
+}
+
+
 
 	//FLORES
 	$('.flor').on('click', function () {
