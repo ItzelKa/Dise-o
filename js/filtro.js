@@ -111,12 +111,12 @@ $(document).ready(function () {
 				$('#en').html(data.arbutus[0].enves);
 				$('#flo').html(data.arbutus[0].flores);
 				$('#ub').html(data.arbutus[0].ubicacion.join(', '));
-				$('#imga1').attr('src',"");
-				$('#imga2').attr('src',"");
-				$('#imga3').attr('src',"");
-				$('#imga1').attr('src',data.arbutus[0].imagenes.imagen1);
-				$('#imga2').attr('src',data.arbutus[0].imagenes.imagen2);
-				$('#imga3').attr('src',data.arbutus[0].imagenes.imagen3);
+				$('#imga1').attr('src', "");
+				$('#imga2').attr('src', "");
+				$('#imga3').attr('src', "");
+				$('#imga1').attr('src', data.arbutus[0].imagenes.imagen1);
+				$('#imga2').attr('src', data.arbutus[0].imagenes.imagen2);
+				$('#imga3').attr('src', data.arbutus[0].imagenes.imagen3);
 			}).catch(function (error) {
 				console.log(error);
 			});
@@ -139,12 +139,12 @@ $(document).ready(function () {
 				$('#inf').html(data.comarosta[0].inflorescencia);
 				$('#fl').html(data.comarosta[0].flores);
 				$('#ubi').html(data.comarosta[0].ubicacion.join(', '));
-				$('#imgc1').attr('src',"");
-				$('#imgc2').attr('src',"");
-				$('#imgc3').attr('src',"");
-				$('#imgc1').attr('src',data.comarosta[0].imagenes.imagen1);
-				$('#imgc2').attr('src',data.comarosta[0].imagenes.imagen2);
-				$('#imgc3').attr('src',data.comarosta[0].imagenes.imagen3);
+				$('#imgc1').attr('src', "");
+				$('#imgc2').attr('src', "");
+				$('#imgc3').attr('src', "");
+				$('#imgc1').attr('src', data.comarosta[0].imagenes.imagen1);
+				$('#imgc2').attr('src', data.comarosta[0].imagenes.imagen2);
+				$('#imgc3').attr('src', data.comarosta[0].imagenes.imagen3);
 			}).catch(function (error) {
 				console.log(error);
 			});
@@ -218,6 +218,7 @@ $(document).ready(function () {
 			$('#filtro').prop('hidden', true);
 			$('.tables').prop('hidden', true);
 		}
+		$('#habito').collapse('show');
 
 	});
 
@@ -379,6 +380,103 @@ $(document).ready(function () {
 	});
 
 	//UBICACION
+
+	window.addEventListener('load', crear())
+	function crear() {
+		var mapa = AmCharts.makeChart("map", {
+			"type": "map",
+
+			"addClassNames": true,
+			"fontSize": 15,
+			"color": "#000000",
+			"projection": "mercator",
+			"backgroundAlpha": 1,
+			"backgroundColor": "#E7E3E2",
+			"dataProvider": {
+				"map": "mexicoLow",
+				"getAreasFromMap": true,
+				"images": [
+					{
+						"top": 40,
+						"left": 60,
+						"width": 80,
+						"height": 40,
+					}
+				],
+				"areas": [
+					{
+						"id": "MX-AGU",
+						"title": "Aguascalientes",
+					},
+				]
+			},
+			"balloon": {
+				"horizontalPadding": 15,
+				"borderAlpha": 0,
+				"borderThickness": 1,
+				"verticalPadding": 15
+			},
+			"areasSettings": {
+				"color": "rgba(138,227,74,1)",
+				"outlineColor": "rgba(245,243,243,1)",
+				"rollOverOutlineColor": "rgba(245,243,243,1)",
+				"rollOverBrightness": 20,
+				"selectedBrightness": 20,
+				"selectable": true,
+				"unlistedAreasAlpha": 0,
+				"unlistedAreasOutlineAlpha": 0
+			},
+			"imagesSettings": {
+				"alpha": 1,
+				"color": "rgba(138,227,74,1)",
+				"outlineAlpha": 0,
+				"rollOverOutlineAlpha": 0,
+				"outlineColor": "rgba(245,243,243,1)",
+				"rollOverBrightness": 20,
+				"selectedBrightness": 20,
+				"selectable": true
+			},
+			"linesSettings": {
+				"color": "rgba(138,227,74,1)",
+				"selectable": true,
+				"rollOverBrightness": 20,
+				"selectedBrightness": 20
+			},
+			"zoomControl": {
+				"zoomControlEnabled": true,
+				"homeButtonEnabled": false,
+				"panControlEnabled": false,
+				"right": 38,
+				"bottom": 30,
+				"minZoomLevel": 0.25,
+				"gridHeight": 100,
+				"gridAlpha": 0.1,
+				"gridBackgroundAlpha": 0,
+				"gridColor": "#FFFFFF",
+				"draggerAlpha": 1,
+				"buttonCornerRadius": 2
+			}
+		});
+
+		mapa.addListener("clickMapObject", function (event) {
+			//var ags= event.chart.dataProvider.areas[0].id;
+			//console.log(ags)
+			color('#btnubi', 1);
+			obj.ubicacion = event.mapObject.enTitle;
+			selecciones();
+		});
+        
+		color('#btnubi', 0);
+		obj.ubicacion = "";
+		selecciones();
+
+		//$('#ubicacion').collapse('show');
+	}
+	$('#limpiarMapa').on('click', function () {
+        crear();
+	});
+
+	/*
 	$('.ubi').on('click', function () {
 		var ubi = $(this).prop('name');
 		$('.ubi').not(this).prop('checked', false);
@@ -392,8 +490,9 @@ $(document).ready(function () {
 		}
 		selecciones();
 		console.log(obj);
+    
 	});
-
+*/
 	//FLORES
 	$('.flor').on('click', function () {
 		var flores = $(this).prop('name');
