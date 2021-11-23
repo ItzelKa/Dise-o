@@ -13,6 +13,8 @@
     <!-- mobile specific metas
     ================================================== -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
     <!-- BOOTSTRAP FRAMEWORK STYLES -->
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <!-- CSS
@@ -24,29 +26,36 @@
     <link rel="stylesheet" href="css/navigation.css">
     <link rel="stylesheet" href="css/responsive.css">
     <link rel="stylesheet" href="css/micss.css">
+    <link rel="stylesheet" href="css/pantalla.css">
     <!-- CSSMenu -->
     <link rel="stylesheet" href="css/styleMen.css">
+    <link rel="stylesheet" href="mapaP1.html">
 
     <!-- script
     ================================================== -->
     <script src="js/modernizr.js"></script>
 
 
+    <!-- MAPA -->
+    <script type="text/javascript" src="https://www.amcharts.com/lib/3/ammap.js"></script>
+    <script type="text/javascript" src="https://www.amcharts.com/lib/3/maps/js/mexicoLow.js"></script>
     <!-- favicons
     ================================================== -->
     <link rel="shortcut icon" href="img/logo2.ico" type="image/x-icon">
     <link rel="icon" href="img/logo2.ico" type="image/x-icon">
 
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="js/filtro.js"></script>
+
 </head>
 
 <body id="top">
     <style>
-		.input-hidden {
-			position: absolute;
-			left: -9999px;
-		}
-
-	</style>
+        .input-hidden {
+            position: absolute;
+            left: -9999px;
+        }
+    </style>
 
     <!-- header
     ================================================== -->
@@ -82,1311 +91,1704 @@
     </section>
     <!--Fin de INICIO-->
 
-    <!--EJEMPLO Filtro-->
-    <!--Ejem Filtro Caracteristicas-->
-    <section id="buscador" class="s-clients">
+    <!-- GENEROS-->
+    <div class="container pt-5" id="generos">
+        <div class="section-tittle-alt">
+            <h2>Elige algun genero de madroño para iniciar tu busqueda</h2>
+        </div>
+        <div class="col-md-6 col-lg-6">
+            <div class="service-box">
+                <figure class="service-thumbnail">
+                    <input type="checkbox" name="Arbutus" id="Arbutus" class="input-hidden genero" />
+                    <label for="Arbutus">
+                        <img src="img/Filtro/arbol.png" alt="" />
+                    </label>
+                </figure>
+                <div class="sb-icon-box rounded-circle">
+                    <figure class="sb-icon"><img src="" alt=""></figure>
+                </div>
+                <div class="sb-caption">
+                    <h3>Arbutus</h3>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6 col-lg-6">
+            <div class="service-box">
+                <figure class="service-thumbnail">
+                    <input type="checkbox" name="Comarostaphylis" id="Comarostaphylis" class="input-hidden genero" />
+                    <label for="Comarostaphylis">
+                        <img src="img/Filtro/arbol.png" alt="" />
+                    </label>
+                </figure>
+                <div class="sb-icon-box rounded-circle">
+                    <figure class="sb-icon"><img src="" alt=""></figure>
+                </div>
+                <div class="sb-caption">
+                    <h3>Comarostaphilys</h3>
+                </div>
+            </div>
+        </div>
+    </div>
 
+    <!--fin GENEROS-->
+
+    <section class="s-clients" id="filtro" hidden>
         <div class="container">
             <!--Cont General-->
-            <div class="section-tittle-alt">
-                <h2>Selecciona las caracteristicas que conoces</h2>
+            <div class="section-tittle-alt mt-1">
+                <h2 id="titu">Genero</h2>
             </div>
-            <p class="gallery-info service-alt">En caso de no conocer alguna has click en siguiente</p>
-           
-            <!--HABITO-->
-            <div class="row filtro hover-effects image-hover" id="habito">
-                <div class="section-tittle-alt">
-                    <h2>Habito</h2>
-                </div>
-                <!--ARBOL-->
-                <div class="col-md-6 col-lg-6">
-                    <div class="service-box">
-                        <figure class="service-thumbnail">
-                            <input type="checkbox" id="arbol" class="input-hidden habito2" />
-                            <label for="arbol">
-                                <img src="img/Filtro/arbol.png" alt="" />
-                            </label>
-                        </figure>
-                        <div class="sb-icon-box rounded-circle">
-                            <figure class="sb-icon"><img src="" alt=""></figure>
-                        </div>
-                        <div class="sb-caption">
-                            <h3>ARBOL</h3>
-                        </div>
-                    </div>
-                </div>
-                <!--ARBOL-->
+            <p class="gallery-info service-alt mb-1">Selecciona las caracteristicas que conoces</p>
 
-                <!--ARBUSTO-->
-                <div class="col-md-6 col-lg-6">
-                    <div class="service-box">
-                        <figure class="service-thumbnail">
-                            <input type="checkbox" name="" id="arbusto" class="input-hidden habito2" />
-                            <label for="arbusto">
-                                <img src="img/Filtro/arbusto.png" alt="" />
-                            </label>
-                        </figure>
-                        <div class="sb-icon-box rounded-circle">
-                            <figure class="sb-icon"><img src="" alt=""></figure>
-                        </div>
-                        <div class="sb-caption">
-                            <h3>ARBUSTO</h3>
+                <div class="container-fluid mt-1">
+                    <div class="row mt-1">
+                        <div class="col-12">
+                            <!-- //HISTORIAL DEL FILTRO -->
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-12">
+                                        <h4 class="">Historial de Busqueda</h4>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-12">
+                                        <ul id="selecciones">
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <!--ARBUSTO-->
-            </div>
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-12">
+                                <!-- //BOTONES DE FILTROS -->
+                            <div class="row pt-2" id="conteni">
+                                <div class="col-7">
+                                    <div class="btn-group">
+                                        <button class="fulll-width bttn--prrimary" type="button" data-toggle="collapse"
+                                            data-target="#habito" aria-expanded="false" id="btnhab"
+                                            aria-controls="collapseExample">
+                                            Habito
+                                        </button>
+                                        <button class="fulll-width bttn--prrimary" type="button" data-toggle="collapse"
+                                            data-target="#ubicacion" aria-expanded="false" id="btnubi"
+                                            aria-controls="collapseExample">
+                                            Ubicacion
+                                        </button>
+                                    </div>
+                                    <div id="btn-arbutus">
+                                        <div class="btn-group">
+                                            <button class="fulll-width bttnn--prrimary" type="button"
+                                                data-toggle="collapse" data-target="#cortrm" aria-expanded="false"
+                                                id="btncortrm" aria-controls="collapseExample">
+                                                Corteza de Ramas
+                                            </button>
+                                            <button class="fulll-width bttnn--prrimary" type="button"
+                                                data-toggle="collapse" data-target="#cortrll" aria-expanded="false"
+                                                id="btncortrll" aria-controls="collapseExample">
+                                                Corteza de Ramillas
+                                            </button>
+                                            <button class="fulll-width bttnn--prrimary btnpec" type="button"
+                                                data-toggle="collapse" data-target="#peciolos" aria-expanded="false"
+                                                aria-controls="collapseExample">
+                                                Peciolos
+                                            </button>
+                                            <button class="fulll-width bttnn--prrimary btnhoj" type="button"
+                                                data-toggle="collapse" data-target="#hojasa" aria-expanded="false"
+                                                id="btnhojasa" aria-controls="collapseExample">
+                                                Hojas
+                                            </button>
+                                        
+                                            <button class="fulll-width bttnn--prrimary btnhaz" type="button"
+                                                data-toggle="collapse" data-target="#haza" aria-expanded="false"
+                                                aria-controls="collapseExample">
+                                                Haz
+                                            </button>
+                                            <button class="fulll-width bttnn--prrimary btnenv" type="button"
+                                                data-toggle="collapse" data-target="#envesa" aria-expanded="false"
+                                                aria-controls="collapseExample">
+                                                Enves
+                                            </button>
+                                            <button class="fulll-width bttnn--prrimary btnflo" type="button"
+                                                data-toggle="collapse" data-target="#floresa" aria-expanded="false"
+                                                aria-controls="collapseExample">
+                                                Flores
+                                            </button>
+                                        </div>
 
-            <!-- ////// UBICACION -->
-            <div class="row  filtro hover-effects image-hover" id="ubicacion" hidden>
-                <div class="section-tittle-alt">
-                    <h2>Ubicacion</h2>
-                </div>
-                <!--Ags-->
-                <div class="col-md-6 col-lg-3">
-                    <div class="service-box">
-                        <figure class="service-thumbnail">
-                            <input type="checkbox" name="" id="Aguascalientes" class="input-hidden ubi" />
-                            <label for="Aguascalientes">
-                                <img src="img/Filtro/estados/Ags2.png" alt="" />
-                            </label>
-                        </figure>
-                        <div class="sb-icon-box2 rounded-circle">
-                            <figure class="sb-icon"><img src="" alt=""></figure>
-                        </div>
-                        <div class="sb-caption">
-                            <h3>AGUASCALIENTES</h3>
-                        </div>
-                    </div>
-                </div></br><br>
-                <!--Ags-->
-                <!--Baja California-->
-                <div class="col-md-6 col-lg-3">
-                    <div class="service-box">
-                        <figure class="service-thumbnail">
-                            <input type="checkbox" name="" id="Baja California" class="input-hidden ubi" />
-                            <label for="Baja California">
-                                <img src="img/Filtro/estados/bc.png" alt="" />
-                            </label>
-                        </figure>
-                        <div class="sb-icon-box2 rounded-circle">
-                            <figure class="sb-icon"><img src="" alt=""></figure>
-                        </div>
-                        <div class="sb-caption">
-                            <h3>Baja California</h3>
-                        </div>
-                    </div>
-                </div></br><br>
-                <!--Baja California-->
-                <!--Baja California Sur-->
-                <div class="col-md-6 col-lg-3">
-                    <div class="service-box">
-                        <figure class="service-thumbnail">
-                            <input type="checkbox" name="" id="Baja California Sur" class="input-hidden ubi" />
-                            <label for="Baja California Sur">
-                                <img src="img/Filtro/estados/bcs.png" alt="" />
-                            </label>
-                        </figure>
-                        <div class="sb-icon-box2 rounded-circle">
-                            <figure class="sb-icon"><img src="" alt=""></figure>
-                        </div>
-                        <div class="sb-caption">
-                            <h3>Baja California Sur</h3>
-                        </div>
-                    </div>
-                </div></br><br>
-                <!--Baja California Sur-->
-                <!--Campeche-->
-                <div class="col-md-6 col-lg-3">
-                    <div class="service-box">
-                        <figure class="service-thumbnail">
-                            <input type="checkbox" name="" id="Campeche" class="input-hidden ubi" />
-                            <label for="Campeche">
-                                <img src="img/Filtro/estados/campeche.png" alt="" />
-                            </label>
-                        </figure>
-                        <div class="sb-icon-box2 rounded-circle">
-                            <figure class="sb-icon"><img src="" alt=""></figure>
-                        </div>
-                        <div class="sb-caption">
-                            <h3>Campeche</h3>
-                        </div>
-                    </div>
-                </div>
-                <!--Campeche-->
-                <!--Chiapas-->
-                <div class="col-md-6 col-lg-3">
-                    <div class="service-box">
-                        <figure class="service-thumbnail">
-                            <input type="checkbox" name="" id="Chiapas" class="input-hidden ubi" />
-                            <label for="Chiapas">
-                                <img src="img/Filtro/estados/chiapas.png" alt="" />
-                            </label>
-                        </figure>
-                        <div class="sb-icon-box2 rounded-circle">
-                            <figure class="sb-icon"><img src="" alt=""></figure>
-                        </div>
-                        <div class="sb-caption">
-                            <h3>Chiapas</h3>
-                        </div>
-                    </div>
-                </div>
-                <!--Chiapas-->
-                <!--Chihuahua-->
-                <div class="col-md-6 col-lg-3">
-                    <div class="service-box">
-                        <figure class="service-thumbnail">
-                            <input type="checkbox" name="" id="Chihuahua" class="input-hidden ubi" />
-                            <label for="Chihuahua">
-                                <img src="img/Filtro/estados/chihuahua.png" alt="" />
-                            </label>
-                        </figure>
-                        <div class="sb-icon-box2 rounded-circle">
-                            <figure class="sb-icon"><img src="" alt=""></figure>
-                        </div>
-                        <div class="sb-caption">
-                            <h3>Chihuahua</h3>
-                        </div>
-                    </div>
-                </div>
-                <!--Chihuahua-->
-                <!--Cuidad de Mexico-->
-                <div class="col-md-6 col-lg-3">
-                    <div class="service-box">
-                        <figure class="service-thumbnail">
-                            <input type="checkbox" name="" id="Cuidad de Mexico" class="input-hidden ubi" />
-                            <label for="Cuidad de Mexico">
-                                <img src="img/Filtro/estados/cdmx.png" alt="" />
-                            </label>
-                        </figure>
-                        <div class="sb-icon-box2 rounded-circle">
-                            <figure class="sb-icon"><img src="" alt=""></figure>
-                        </div>
-                        <div class="sb-caption">
-                            <h3>Cuidad de Mexico</h3>
-                        </div>
-                    </div>
-                </div>
-                <!--Cuidad de Mexico-->
-                <!--Coahuila-->
-                <div class="col-md-6 col-lg-3">
-                    <div class="service-box">
-                        <figure class="service-thumbnail">
-                            <input type="checkbox" name="" id="Coahuila" class="input-hidden ubi" />
-                            <label for="Coahuila">
-                                <img src="img/Filtro/estados/coahuila.png" alt="" />
-                            </label>
-                        </figure>
-                        <div class="sb-icon-box2 rounded-circle">
-                            <figure class="sb-icon"><img src="" alt=""></figure>
-                        </div>
-                        <div class="sb-caption">
-                            <h3>Coahuila</h3>
-                        </div>
-                    </div>
-                </div>
-                <!--Coahuila-->
-                <!--Colima-->
-                <div class="col-md-6 col-lg-3">
-                    <div class="service-box">
-                        <figure class="service-thumbnail">
-                            <input type="checkbox" name="" id="Colima" class="input-hidden ubi" />
-                            <label for="Colima">
-                                <img src="img/Filtro/estados/colima.png" alt="" />
-                            </label>
-                        </figure>
-                        <div class="sb-icon-box2 rounded-circle">
-                            <figure class="sb-icon"><img src="" alt=""></figure>
-                        </div>
-                        <div class="sb-caption">
-                            <h3>Colima</h3>
-                        </div>
-                    </div>
-                </div>
-                <!--Colima-->
-                <!--Durango-->
-                <div class="col-md-6 col-lg-3">
-                    <div class="service-box">
-                        <figure class="service-thumbnail">
-                            <input type="checkbox" name="" id="Durango" class="input-hidden ubi" />
-                            <label for="Durango">
-                                <img src="img/Filtro/estados/durango.png" alt="" />
-                            </label>
-                        </figure>
-                        <div class="sb-icon-box2 rounded-circle">
-                            <figure class="sb-icon"><img src="" alt=""></figure>
-                        </div>
-                        <div class="sb-caption">
-                            <h3>Durango</h3>
-                        </div>
-                    </div>
-                </div>
-                <!--Durango-->
-                <!--Estado de Mexico-->
-                <div class="col-md-6 col-lg-3">
-                    <div class="service-box">
-                        <figure class="service-thumbnail">
-                            <input type="checkbox" name="" id="Estado de Mexico" class="input-hidden ubi" />
-                            <label for="Estado de Mexico">
-                                <img src="img/Filtro/estados/edmx.png" alt="" />
-                            </label>
-                        </figure>
-                        <div class="sb-icon-box2 rounded-circle">
-                            <figure class="sb-icon"><img src="" alt=""></figure>
-                        </div>
-                        <div class="sb-caption">
-                            <h3>Estado de Mexico</h3>
-                        </div>
-                    </div>
-                </div>
-                <!--Estado de Mexico-->
-                <!--Guanajuato-->
-                <div class="col-md-6 col-lg-3">
-                    <div class="service-box">
-                        <figure class="service-thumbnail">
-                            <input type="checkbox" name="" id="Guanajuato" class="input-hidden ubi" />
-                            <label for="Guanajuato">
-                                <img src="img/Filtro/estados/guanajuato.png" alt="" />
-                            </label>
-                        </figure>
-                        <div class="sb-icon-box2 rounded-circle">
-                            <figure class="sb-icon"><img src="" alt=""></figure>
-                        </div>
-                        <div class="sb-caption">
-                            <h3>Guanajuato</h3>
-                        </div>
-                    </div>
-                </div>
-                <!--Guanajuato-->
-                <!--Guerrero-->
-                <div class="col-md-6 col-lg-3">
-                    <div class="service-box">
-                        <figure class="service-thumbnail">
-                            <input type="checkbox" name="" id="Guerrero" class="input-hidden ubi" />
-                            <label for="Guerrero">
-                                <img src="img/Filtro/estados/guerrero.png" alt="" />
-                            </label>
-                        </figure>
-                        <div class="sb-icon-box2 rounded-circle">
-                            <figure class="sb-icon"><img src="" alt=""></figure>
-                        </div>
-                        <div class="sb-caption">
-                            <h3>Guerrero</h3>
-                        </div>
-                    </div>
-                </div>
-                <!--Guerrero-->
-                <!--Hidalgo-->
-                <div class="col-md-6 col-lg-3">
-                    <div class="service-box">
-                        <figure class="service-thumbnail">
-                            <input type="checkbox" name="" id="Hidalgo" class="input-hidden ubi" />
-                            <label for="Hidalgo">
-                                <img src="img/Filtro/estados/hidalgo.png" alt="" />
-                            </label>
-                        </figure>
-                        <div class="sb-icon-box2 rounded-circle">
-                            <figure class="sb-icon"><img src="" alt=""></figure>
-                        </div>
-                        <div class="sb-caption">
-                            <h3>Hidalgo</h3>
-                        </div>
-                    </div>
-                </div>
-                <!--Hidalgo-->
-                <!--Jalisco-->
-                <div class="col-md-6 col-lg-3">
-                    <div class="service-box">
-                        <figure class="service-thumbnail">
-                            <input type="checkbox" name="" id="Jalisco" class="input-hidden ubi" />
-                            <label for="Jalisco">
-                                <img src="img/Filtro/estados/jalisco.png" alt="" />
-                            </label>
-                        </figure>
-                        <div class="sb-icon-box2 rounded-circle">
-                            <figure class="sb-icon"><img src="" alt=""></figure>
-                        </div>
-                        <div class="sb-caption">
-                            <h3>Jalisco</h3>
-                        </div>
-                    </div>
-                </div>
-                <!--Jalisco-->
-                <!--Michoacan-->
-                <div class="col-md-6 col-lg-3">
-                    <div class="service-box">
-                        <figure class="service-thumbnail">
-                            <input type="checkbox" name="" id="Michoacan" class="input-hidden ubi" />
-                            <label for="Michoacan">
-                                <img src="img/Filtro/estados/michoacan.png" alt="" />
-                            </label>
-                        </figure>
-                        <div class="sb-icon-box2 rounded-circle">
-                            <figure class="sb-icon"><img src="" alt=""></figure>
-                        </div>
-                        <div class="sb-caption">
-                            <h3>Michoacan</h3>
-                        </div>
-                    </div>
-                </div>
-                <!--Michoacan-->
-                <!--Morelos-->
-                <div class="col-md-6 col-lg-3">
-                    <div class="service-box">
-                        <figure class="service-thumbnail">
-                            <input type="checkbox" name="" id="Morelos" class="input-hidden ubi" />
-                            <label for="Morelos">
-                                <img src="img/Filtro/estados/morelos.png" alt="" />
-                            </label>
-                        </figure>
-                        <div class="sb-icon-box2 rounded-circle">
-                            <figure class="sb-icon"><img src="" alt=""></figure>
-                        </div>
-                        <div class="sb-caption">
-                            <h3>Morelos</h3>
-                        </div>
-                    </div>
-                </div>
-                <!--Morelos-->
-                <!--Nayarit-->
-                <div class="col-md-6 col-lg-3">
-                    <div class="service-box">
-                        <figure class="service-thumbnail">
-                            <input type="checkbox" name="" id="Nayarit" class="input-hidden ubi" />
-                            <label for="Nayarit">
-                                <img src="img/Filtro/estados/nayarit.png" alt="" />
-                            </label>
-                        </figure>
-                        <div class="sb-icon-box2 rounded-circle">
-                            <figure class="sb-icon"><img src="" alt=""></figure>
-                        </div>
-                        <div class="sb-caption">
-                            <h3>Nayarit</h3>
-                        </div>
-                    </div>
-                </div>
-                <!--Nayarit-->
-                <!--Nuevo Leon-->
-                <div class="col-md-6 col-lg-3">
-                    <div class="service-box">
-                        <figure class="service-thumbnail">
-                            <input type="checkbox" name="" id="Nuevo Leon" class="input-hidden ubi" />
-                            <label for="Nuevo Leon">
-                                <img src="img/Filtro/estados/nl.png" alt="" />
-                            </label>
-                        </figure>
-                        <div class="sb-icon-box2 rounded-circle">
-                            <figure class="sb-icon"><img src="" alt=""></figure>
-                        </div>
-                        <div class="sb-caption">
-                            <h3>Nuevo Leon</h3>
-                        </div>
-                    </div>
-                </div>
-                <!--Nuevo Leon-->
-                <!--OaxacaOaxaca-->
-                <div class="col-md-6 col-lg-3">
-                    <div class="service-box">
-                        <figure class="service-thumbnail">
-                            <input type="checkbox" name="" id="Oaxaca" class="input-hidden ubi" />
-                            <label for="Oaxaca">
-                                <img src="img/Filtro/estados/oaxaca.png" alt="" />
-                            </label>
-                        </figure>
-                        <div class="sb-icon-box2 rounded-circle">
-                            <figure class="sb-icon"><img src="" alt=""></figure>
-                        </div>
-                        <div class="sb-caption">
-                            <h3>Oaxaca</h3>
-                        </div>
-                    </div>
-                </div>
-                <!--Oaxaca-->
-                <!--Puebla-->
-                <div class="col-md-6 col-lg-3">
-                    <div class="service-box">
-                        <figure class="service-thumbnail">
-                            <input type="checkbox" name="" id="Puebla" class="input-hidden ubi" />
-                            <label for="Puebla">
-                                <img src="img/Filtro/estados/puebla.png" alt="" />
-                            </label>
-                        </figure>
-                        <div class="sb-icon-box2 rounded-circle">
-                            <figure class="sb-icon"><img src="" alt=""></figure>
-                        </div>
-                        <div class="sb-caption">
-                            <h3>Puebla</h3>
-                        </div>
-                    </div>
-                </div>
-                <!--Puebla-->
-                <!--Queretaro-->
-                <div class="col-md-6 col-lg-3">
-                    <div class="service-box">
-                        <figure class="service-thumbnail">
-                            <input type="checkbox" name="" id="Queretaro" class="input-hidden ubi" />
-                            <label for="Queretaro">
-                                <img src="img/Filtro/estados/queretaro.png" alt="" />
-                            </label>
-                        </figure>
-                        <div class="sb-icon-box2 rounded-circle">
-                            <figure class="sb-icon"><img src="" alt=""></figure>
-                        </div>
-                        <div class="sb-caption">
-                            <h3>Queretaro</h3>
-                        </div>
-                    </div>
-                </div>
-                <!--Queretaro-->
-                <!--Quintana Roo-->
-                <div class="col-md-6 col-lg-3">
-                    <div class="service-box">
-                        <figure class="service-thumbnail">
-                            <input type="checkbox" name="" id="Quintana Roo" class="input-hidden ubi" />
-                            <label for="Quintana Roo">
-                                <img src="img/Filtro/estados/qr.png" alt="" />
-                            </label>
-                        </figure>
-                        <div class="sb-icon-box2 rounded-circle">
-                            <figure class="sb-icon"><img src="" alt=""></figure>
-                        </div>
-                        <div class="sb-caption">
-                            <h3>Quintana Roo</h3>
-                        </div>
-                    </div>
-                </div>
-                <!--Quintana Roo-->
-                <!--San Luis Potosil-->
-                <div class="col-md-6 col-lg-3">
-                    <div class="service-box">
-                        <figure class="service-thumbnail">
-                            <input type="checkbox" name="" id="San Luis Potosil" class="input-hidden ubi" />
-                            <label for="San Luis Potosil">
-                                <img src="img/Filtro/estados/slp.png" alt="" />
-                            </label>
-                        </figure>
-                        <div class="sb-icon-box2 rounded-circle">
-                            <figure class="sb-icon"><img src="" alt=""></figure>
-                        </div>
-                        <div class="sb-caption">
-                            <h3>San Luis Potosil</h3>
-                        </div>
-                    </div>
-                </div>
-                <!--San Luis Potosil-->
-                <!--Sinaloa-->
-                <div class="col-md-6 col-lg-3">
-                    <div class="service-box">
-                        <figure class="service-thumbnail">
-                            <input type="checkbox" name="" id="Sinaloa" class="input-hidden ubi" />
-                            <label for="Sinaloa">
-                                <img src="img/Filtro/estados/sinaloa.png" alt="" />
-                            </label>
-                        </figure>
-                        <div class="sb-icon-box2 rounded-circle">
-                            <figure class="sb-icon"><img src="" alt=""></figure>
-                        </div>
-                        <div class="sb-caption">
-                            <h3>Sinaloa</h3>
-                        </div>
-                    </div>
-                </div>
-                <!--Sinaloa-->
-                <!--Sonora-->
-                <div class="col-md-6 col-lg-3">
-                    <div class="service-box">
-                        <figure class="service-thumbnail">
-                            <input type="checkbox" name="" id="Sonora" class="input-hidden ubi" />
-                            <label for="Sonora">
-                                <img src="img/Filtro/estados/sonora.png" alt="" />
-                            </label>
-                        </figure>
-                        <div class="sb-icon-box2 rounded-circle">
-                            <figure class="sb-icon"><img src="" alt=""></figure>
-                        </div>
-                        <div class="sb-caption">
-                            <h3>Sonora</h3>
-                        </div>
-                    </div>
-                </div>
-                <!--Sonora-->
-                <!--Tabasco-->
-                <div class="col-md-6 col-lg-3">
-                    <div class="service-box">
-                        <figure class="service-thumbnail">
-                            <input type="checkbox" name="" id="Tabasco" class="input-hidden ubi" />
-                            <label for="Tabasco">
-                                <img src="img/Filtro/estados/tabasco.png" alt="" />
-                            </label>
-                        </figure>
-                        <div class="sb-icon-box2 rounded-circle">
-                            <figure class="sb-icon"><img src="" alt=""></figure>
-                        </div>
-                        <div class="sb-caption">
-                            <h3>Tabasco</h3>
-                        </div>
-                    </div>
-                </div>
-                <!--Tabasco-->
-                <!--Tamaulipas-->
-                <div class="col-md-6 col-lg-3">
-                    <div class="service-box">
-                        <figure class="service-thumbnail">
-                            <input type="checkbox" name="" id="Tamaulipas" class="input-hidden ubi" />
-                            <label for="Tamaulipas">
-                                <img src="img/Filtro/estados/tamaulipas.png" alt="" />
-                            </label>
-                        </figure>
-                        <div class="sb-icon-box2 rounded-circle">
-                            <figure class="sb-icon"><img src="" alt=""></figure>
-                        </div>
-                        <div class="sb-caption">
-                            <h3>Tamaulipas</h3>
-                        </div>
-                    </div>
-                </div>
-                <!--Tamaulipas-->
-                <!--Tlaxcala-->
-                <div class="col-md-6 col-lg-3">
-                    <div class="service-box">
-                        <figure class="service-thumbnail">
-                            <input type="checkbox" name="" id="Tlaxcala" class="input-hidden ubi" />
-                            <label for="Tlaxcala">
-                                <img src="img/Filtro/estados/tlaxcala.png" alt="" />
-                            </label>
-                        </figure>
-                        <div class="sb-icon-box2 rounded-circle">
-                            <figure class="sb-icon"><img src="" alt=""></figure>
-                        </div>
-                        <div class="sb-caption">
-                            <h3>Tlaxcala</h3>
-                        </div>
-                    </div>
-                </div>
-                <!--Tlaxcala-->
-                <!--Veracruz-->
-                <div class="col-md-6 col-lg-3">
-                    <div class="service-box">
-                        <figure class="service-thumbnail">
-                            <input type="checkbox" name="" id="Veracruz" class="input-hidden ubi" />
-                            <label for="Veracruz">
-                                <img src="img/Filtro/estados/veracruz.png" alt="" />
-                            </label>
-                        </figure>
-                        <div class="sb-icon-box2 rounded-circle">
-                            <figure class="sb-icon"><img src="" alt=""></figure>
-                        </div>
-                        <div class="sb-caption">
-                            <h3>Veracruz</h3>
-                        </div>
-                    </div>
-                </div>
-                <!--Veracruz-->
-                <!--Yucatan-->
-                <div class="col-md-6 col-lg-3">
-                    <div class="service-box">
-                        <figure class="service-thumbnail">
-                            <input type="checkbox" name="" id="Yucatan" class="input-hidden ubi" />
-                            <label for="Yucatan">
-                                <img src="img/Filtro/estados/yucatan.png" alt="" />
-                            </label>
-                        </figure>
-                        <div class="sb-icon-box2 rounded-circle">
-                            <figure class="sb-icon"><img src="" alt=""></figure>
-                        </div>
-                        <div class="sb-caption">
-                            <h3>Yucatan</h3>
-                        </div>
-                    </div>
-                </div>
-                <!--Yucatan-->
-                <!--Zacatecas-->
-                <div class="col-md-6 col-lg-3">
-                    <div class="service-box">
-                        <figure class="service-thumbnail">
-                            <input type="checkbox" name="" id="Zacatecas" class="input-hidden ubi" />
-                            <label for="Zacatecas">
-                                <img src="img/Filtro/estados/zacatecas.png" alt="" />
-                            </label>
-                        </figure>
-                        <div class="sb-icon-box2 rounded-circle">
-                            <figure class="sb-icon"><img src="" alt=""></figure>
-                        </div>
-                        <div class="sb-caption">
-                            <h3>Zacatecas</h3>
-                        </div>
-                    </div>
-                </div>
-                <!--Zacatecas-->
-            </div>
-            <!--Fin UBI-->
+                                    </div>
+                                    <div id="btn-comaros">
+                                        <div class="btn-group">
+                                            <button class="fulll-width bttnn--prrimary" type="button"
+                                                data-toggle="collapse" data-target="#margen" aria-expanded="false"
+                                                id="btnmarg" aria-controls="collapseExample">
+                                                Margen
+                                            </button>
+                                            <button class="fulll-width bttnn--prrimary" type="button"
+                                                data-toggle="collapse" data-target="#inflore" aria-expanded="false"
+                                                id="btninflo" aria-controls="collapseExample">
+                                                Inflorescencia
+                                            </button>
+                                            <button class="fulll-width bttnn--prrimary btnpec" type="button"
+                                                data-toggle="collapse" data-target="#peciolosrll" aria-expanded="false"
+                                                aria-controls="collapseExample">
+                                                Peciolos y Ramillas
+                                            </button>
+                                            <button class="fulll-width bttnn--prrimary btnhaz" type="button"
+                                                data-toggle="collapse" data-target="#hazc" aria-expanded="false"
+                                                aria-controls="collapseExample">
+                                                Haz
+                                            </button>
+                                            <button class="fulll-width bttnn--prrimary btnenv" type="button"
+                                                data-toggle="collapse" data-target="#envesc" aria-expanded="false"
+                                                aria-controls="collapseExample">
+                                                Enves
+                                            </button>
+                                            <button class="fulll-width bttnn--prrimary btnflo" type="button"
+                                                data-toggle="collapse" data-target="#floresc" aria-expanded="false"
+                                                aria-controls="collapseExample">
+                                                Flores
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="btn-group">
 
-            <!-- ////// HOJAS -->
-            <div class="row filtro hover-effects image-hover" id="hojas" hidden>
-                <div class="section-tittle-alt">
-                    <h2>Hojas</h2>
-                </div>
-                <!--Glabras-->
-                <div class="col-md-6 col-lg-3">
-                    <div class="service-box">
-                        <figure class="service-thumbnail">
-                            <input type="checkbox" id="glabras" class="input-hidden hoja" />
-                            <label for="glabras">
-                                <img src="img/Filtro/hojas/glabra.png" alt="" />
-                            </label>
-                        </figure>
-                        <div class="sb-icon-box2 rounded-circle">
-                            <figure class="sb-icon"><img src="" alt=""></figure>
-                        </div>
-                        <div class="sb-caption">
-                            <h3>Glabras</h3>
+                                        <button class="fu-width bttn--prrimary" type="button" id="reiniciar">
+                                            REINICIAR FILTRO</button>
+                                        <button class="fu-width bttn--prrimary" type="button" id="btngeneros">
+                                            VOLVER A GENEROS</button>
+                                    </div>
+                                </div>
+                            </div>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <!--Glabras-->
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-8">
+    
+                                <!--HABITO-->
+                                <div class="row filtro hover-effects image-hover collapse" id="habito">
+                                    <div class="section-tittle-alt">
+                                        <h2>Habito</h2>
+                                    </div>
+                                    <!--ARBOL-->
+                                    <div class="col-md-6 col-lg-6">
+                                        <div class="service-box">
+                                            <figure class="service-thumbnail">
+                                                <input type="checkbox" name="arbol" id="arbol"
+                                                    class="input-hidden habito2" />
+                                                <label for="arbol">
+                                                    <img src="img/Filtro/arbol.png" alt="" />
+                                                </label>
+                                            </figure>
+                                            <div class="sb-icon-box rounded-circle">
+                                                <figure class="sb-icon"><img src="" alt=""></figure>
+                                            </div>
+                                            <div class="sb-caption">
+                                                <h3>ARBOL</h3>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--ARBOL-->
+    
+                                    <!--ARBUSTO-->
+                                    <div class="col-md-6 col-lg-6">
+                                        <div class="service-box">
+                                            <figure class="service-thumbnail">
+                                                <input type="checkbox" name="arbusto" id="arbusto"
+                                                    class="input-hidden habito2" />
+                                                <label for="arbusto">
+                                                    <img src="img/Filtro/arbusto.png" alt="" />
+                                                </label>
+                                            </figure>
+                                            <div class="sb-icon-box rounded-circle">
+                                                <figure class="sb-icon"><img src="" alt=""></figure>
+                                            </div>
+                                            <div class="sb-caption">
+                                                <h3>ARBUSTO</h3>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--ARBUSTO-->
+                                </div>
+    
+                                <!-- ////// UBICACION -->
+                                <div class="row  filtro hover-effects image-hover collapse" id="ubicacion">
+                                    <div class="section-tittle-alt">
+                                        <h2>Ubicacion</h2>
+                                    </div>
+                                    <button id="limpiarMapa" class="fu-width bttn--prrimary" type="button">
+                                        Limpiar estado
+                                    </button>
+    
+                                    <div id="map" style="width: 670px; height: 530px;"></div>
+    
+    
+                                </div>
+                                <!--Fin UBI-->
+    
+                                <!--CORTEZA DE RAMAS ARBUTUS-->
+                                <div class="row filtro hover-effects image-hover collapse" id="cortrm">
+                                    <div class="section-tittle-alt">
+                                        <h2>Corteza de Ramas</h2>
+                                    </div>
+                                    <!--Persistente-->
+                                    <div class="col-md-4 col-lg-4">
+                                        <div class="service-box">
+                                            <figure class="service-thumbnail">
+                                                <input type="checkbox" name="persistente" id="persistente"
+                                                    class="input-hidden corm" />
+                                                <label for="persistente">
+                                                    <img src="img/Filtro/haz/glabro.jpg" alt="" />
+                                                </label>
+                                            </figure>
+                                            <div class="sb-icon-box rounded-circle">
+                                                <figure class="sb-icon"><img src="" alt=""></figure>
+                                            </div>
+                                            <div class="sb-captiion">
+                                                <h3>persistente</h3>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--persistente-->
+    
+                                    <!--lisa-->
+                                    <div class="col-md-4 col-lg-4">
+                                        <div class="service-box">
+                                            <figure class="service-thumbnail">
+                                                <input type="checkbox" name="lisa" id="lisa" class="input-hidden corm" />
+                                                <label for="lisa">
+                                                    <img src="img/Filtro/haz/lustr.jpg" alt="" />
+                                                </label>
+                                            </figure>
+                                            <div class="sb-icon-box rounded-circle">
+                                                <figure class="sb-icon"><img src="" alt=""></figure>
+                                            </div>
+                                            <div class="sb-captiion">
+                                                <h3>Corteza Interior Lisa</h3>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--lisa-->
+                                    <!--exfoliantee-->
+                                    <div class="col-md-4 col-lg-4">
+                                        <div class="service-box">
+                                            <figure class="service-thumbnail">
+                                                <input type="checkbox" name="exfoliante" id="exfoliante"
+                                                    class="input-hidden corm" />
+                                                <label for="exfoliante">
+                                                    <img src="img/Filtro/haz/pube.jpg" alt="" />
+                                                </label>
+                                            </figure>
+                                            <div class="sb-icon-box rounded-circle">
+                                                <figure class="sb-icon"><img src="" alt=""></figure>
+                                            </div>
+                                            <div class="sb-captiion">
+                                                <h3>exfoliante</h3>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--exfoliante-->
+                                </div>
+                                <!-- //CORTEZA DE RAMILLAS ARBUTUS -->
+                                <div class="row filtro hover-effects image-hover collapse" id="cortrll">
+                                    <div class="section-tittle-alt">
+                                        <h2>Corteza de Ramas</h2>
+                                    </div>
+                                    <!--Persistente-->
+                                    <div class="col-md-4 col-lg-5">
+                                        <div class="service-box">
+                                            <figure class="service-thumbnail">
+                                                <input type="checkbox" name="persistente" id="persistente2"
+                                                    class="input-hidden corll" />
+                                                <label for="persistente2">
+                                                    <img src="img/Filtro/haz/glabro.jpg" alt="" />
+                                                </label>
+                                            </figure>
+                                            <div class="sb-icon-box rounded-circle">
+                                                <figure class="sb-icon"><img src="" alt=""></figure>
+                                            </div>
+                                            <div class="sb-captiion">
+                                                <h3>Persistente</h3>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--persistente-->
+                                    <!--lisa-->
+                                    <div class="col-md-4 col-lg-5">
+                                        <div class="service-box">
+                                            <figure class="service-thumbnail">
+                                                <input type="checkbox" name="lisa" id="lisa2" class="input-hidden corll" />
+                                                <label for="lisa2">
+                                                    <img src="img/Filtro/haz/lustr.jpg" alt="" />
+                                                </label>
+                                            </figure>
+                                            <div class="sb-icon-box rounded-circle">
+                                                <figure class="sb-icon"><img src="" alt=""></figure>
+                                            </div>
+                                            <div class="sb-captiion">
+                                                <h3>Lisa</h3>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--lisa-->
+                                    <!--exfoliantee-->
+                                    <div class="col-md-4 col-lg-5">
+                                        <div class="service-box">
+                                            <figure class="service-thumbnail">
+                                                <input type="checkbox" name="exfoliante" id="exfoliante2"
+                                                    class="input-hidden corll" />
+                                                <label for="exfoliante2">
+                                                    <img src="img/Filtro/haz/pube.jpg" alt="" />
+                                                </label>
+                                            </figure>
+                                            <div class="sb-icon-box rounded-circle">
+                                                <figure class="sb-icon"><img src="" alt=""></figure>
+                                            </div>
+                                            <div class="sb-captiion">
+                                                <h3>Exfoliante</h3>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--exfoliante-->
+                                </div>
+    
+                                <!--PECIOLOS ARBUTUS-->
+                                <div class="row filtro hover-effects image-hover collapse" id="peciolos">
+                                    <div class="section-tittle-alt">
+                                        <h2>Peciolos</h2>
+                                    </div>
+                                    <!--Glabros-->
+                                    <div class="col-md-4 col-lg-6">
+                                        <div class="service-box">
+                                            <figure class="service-thumbnail">
+                                                <input type="checkbox" name="lisos" id="glabros (lisos)"
+                                                    class="input-hidden peci" />
+                                                <label for="glabros (lisos)">
+                                                    <img src="img/Filtro/enves/glab.png" alt="" />
+                                                </label>
+                                            </figure>
+                                            <div class="sb-icon-box rounded-circle">
+                                                <figure class="sb-icon"><img src="" alt=""></figure>
+                                            </div>
+                                            <div class="sb-captiion">
+                                                <h3>Glabros (lisos)</h3>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--glabr-->
+    
+                                    <!--Pelos cortos-->
+                                    <div class="col-md-4 col-lg-6">
+                                        <div class="service-box">
+                                            <figure class="service-thumbnail">
+                                                <input type="checkbox" name="cortos" id="cortos"
+                                                    class="input-hidden peci" />
+                                                <label for="cortos">
+                                                    <img src="img/Filtro/enves/dento.png" alt="" />
+                                                </label>
+                                            </figure>
+                                            <div class="sb-icon-box rounded-circle">
+                                                <figure class="sb-icon"><img src="" alt=""></figure>
+                                            </div>
+                                            <div class="sb-captiion">
+                                                <h3>Pelos cortos</h3>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--Pelos cortos-->
+                                    <!--Pelos largos-->
+                                    <div class="col-md-4 col-lg-6">
+                                        <div class="service-box">
+                                            <figure class="service-thumbnail">
+                                                <input type="checkbox" name="largos" id="largos"
+                                                    class="input-hidden peci" />
+                                                <label for="largos">
+                                                    <img src="img/Filtro/enves/pues.png" alt="" />
+                                                </label>
+                                            </figure>
+                                            <div class="sb-icon-box rounded-circle">
+                                                <figure class="sb-icon"><img src="" alt=""></figure>
+                                            </div>
+                                            <div class="sb-captiion">
+                                                <h3>Pelos largos</h3>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--Pelos largos-->
+                                    <!--Rosas-->
+                                    <div class="col-md-4 col-lg-6">
+                                        <div class="service-box">
+                                            <figure class="service-thumbnail">
+                                                <input type="checkbox" name="rosa" id="rosa" class="input-hidden peci" />
+                                                <label for="rosa">
+                                                    <img src="img/Filtro/enves/pelos.png" alt="" />
+                                                </label>
+                                            </figure>
+                                            <div class="sb-icon-box rounded-circle">
+                                                <figure class="sb-icon"><img src="" alt=""></figure>
+                                            </div>
+                                            <div class="sb-captiion">
+                                                <h3>Rosas</h3>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--Rosas-->
+                                    <!--rojos-->
+                                    <div class="col-md-4 col-lg-6">
+                                        <div class="service-box">
+                                            <figure class="service-thumbnail">
+                                                <input type="checkbox" name="rojo" id="roj" class="input-hidden peci" />
+                                                <label for="roj">
+                                                    <img src="img/Filtro/enves/puebe.png" alt="" />
+                                                </label>
+                                            </figure>
+                                            <div class="sb-icon-box rounded-circle">
+                                                <figure class="sb-icon"><img src="" alt=""></figure>
+                                            </div>
+                                            <div class="sb-captiion">
+                                                <h3>Rojos</h3>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--rojos-->
+                                    <!--Pube-->
+                                    <div class="col-md-4 col-lg-6">
+                                        <div class="service-box">
+                                            <figure class="service-thumbnail">
+                                                <input type="checkbox" name="con pubescencia" id="con pubescencia"
+                                                    class="input-hidden peci" />
+                                                <label for="con pubescencia">
+                                                    <img src="img/Filtro/enves/puebe.png" alt="" />
+                                                </label>
+                                            </figure>
+                                            <div class="sb-icon-box rounded-circle">
+                                                <figure class="sb-icon"><img src="" alt=""></figure>
+                                            </div>
+                                            <div class="sb-captiion">
+                                                <h3>Con Pubescencia</h3>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--pube-->
+                                </div>
+    
+                                <!-- ////// HOJAS -->
+                                <div class="row filtro hover-effects image-hover collapse" id="hojasa">
+                                    <div class="section-tittle-alt">
+                                        <h2>Hojas</h2>
+                                    </div>
+                                    <!--Glabras-->
+                                    <div class="col-md-2 col-lg-6">
+                                        <div class="service-box">
+                                            <figure class="service-thumbnail">
+                                                <input type="checkbox" name="glabras" id="glabras"
+                                                    class="input-hidden hoja" />
+                                                <label for="glabras">
+                                                    <img src="img/Filtro/hojas/glabra.png" alt="" />
+                                                </label>
+                                            </figure>
+                                            <div class="sb-icon-box2 rounded-circle">
+                                                <figure class="sb-icon"><img src="" alt=""></figure>
+                                            </div>
+                                            <div class="sb-captiion">
+                                                <h3>Glabras</h3>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--Glabras-->
+                                    <!--elípticas-->
+                                    <div class="col-md-2 col-lg-6">
+                                        <div class="service-box">
+                                            <figure class="service-thumbnail">
+                                                <input type="checkbox" name="elípticas" id="elípticas"
+                                                    class="input-hidden hoja" />
+                                                <label for="elípticas">
+                                                    <img src="img/Filtro/hojas/elipica.png" alt="" />
+                                                </label>
+                                            </figure>
+                                            <div class="sb-icon-box2 rounded-circle">
+                                                <figure class="sb-icon"><img src="" alt=""></figure>
+                                            </div>
+                                            <div class="sb-captiion">
+                                                <h3>Elípticas</h3>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--elípticas-->
+                                    <!--oblongas-->
+                                    <div class="col-md-2 col-lg-6">
+                                        <div class="service-box">
+                                            <figure class="service-thumbnail">
+                                                <input type="checkbox" name="oblongas" id="oblongas"
+                                                    class="input-hidden hoja" />
+                                                <label for="oblongas">
+                                                    <img src="img/Filtro/hojas/oblongas.png" alt="" />
+                                                </label>
+                                            </figure>
+                                            <div class="sb-icon-box2 rounded-circle">
+                                                <figure class="sb-icon"><img src="" alt=""></figure>
+                                            </div>
+                                            <div class="sb-captiion">
+                                                <h3>Oblongas</h3>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--oblongas-->
+                                    <!--Herbáceas-->
+                                    <div class="col-md-2 col-lg-6">
+                                        <div class="service-box">
+                                            <figure class="service-thumbnail">
+                                                <input type="checkbox" name="herbáceas" id="herbáceas"
+                                                    class="input-hidden hoja" />
+                                                <label for="herbáceas">
+                                                    <img src="img/Filtro/hojas/herbacea.png" alt="" />
+                                                </label>
+                                            </figure>
+                                            <div class="sb-icon-box2 rounded-circle">
+                                                <figure class="sb-icon"><img src="" alt=""></figure>
+                                            </div>
+                                            <div class="sb-captiion">
+                                                <h3>Herbáceas</h3>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--herbáceas-->
+                                    <!--subcoriáceas-->
+                                    <div class="col-md-2 col-lg-6">
+                                        <div class="service-box">
+                                            <figure class="service-thumbnail">
+                                                <input type="checkbox" name="subcoriáceas" id="subcoriáceas"
+                                                    class="input-hidden hoja" />
+                                                <label for="subcoriáceas">
+                                                    <img src="img/Filtro/hojas/subcor.png" alt="" />
+                                                </label>
+                                            </figure>
+                                            <div class="sb-icon-box2 rounded-circle">
+                                                <figure class="sb-icon"><img src="" alt=""></figure>
+                                            </div>
+                                            <div class="sb-captiion">
+                                                <h3>Subcoriáceas</h3>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--subcoriáceas-->
+                                    <!--lanceoladas-->
+                                    <div class="col-md-2 col-lg-6">
+                                        <div class="service-box">
+                                            <figure class="service-thumbnail">
+                                                <input type="checkbox" name="lanceoladas" id="lanceoladas"
+                                                    class="input-hidden hoja" />
+                                                <label for="lanceoladas">
+                                                    <img src="img/Filtro/hojas/plana.png" alt="" />
+                                                </label>
+                                            </figure>
+                                            <div class="sb-icon-box2 rounded-circle">
+                                                <figure class="sb-icon"><img src="" alt=""></figure>
+                                            </div>
+                                            <div class="sb-captiion">
+                                                <h3>Lanceoladas</h3>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--lanceoladass-->
+                                </div>
+    
+                                <!-- ////// HAZ -->
+                                <div class="row filtro hover-effects image-hover collapse" id="haza">
+                                    <div class="section-tittle-alt">
+                                        <h2>Haz</h2>
+                                    </div>
+                                    <!--glabro-->
+                                    <div class="col-md-6 col-lg-5">
+                                        <div class="service-box">
+                                            <figure class="service-thumbnail">
+                                                <input type="checkbox" name="glabro" id="glabro" class="input-hidden has" />
+                                                <label for="glabro">
+                                                    <img src="img/Filtro/haz/glabro.jpg" alt="" />
+                                                </label>
+                                            </figure>
+                                            <div class="sb-icon-box rounded-circle">
+                                                <figure class="sb-icon"><img src="" alt=""></figure>
+                                            </div>
+                                            <div class="sb-captiion">
+                                                <h3>Glabro</h3>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--glabro-->
+    
+                                    <!--liso-->
+                                    <div class="col-md-6 col-lg-5">
+                                        <div class="service-box">
+                                            <figure class="service-thumbnail">
+                                                <input type="checkbox" name="liso" id="liso" class="input-hidden has" />
+                                                <label for="liso">
+                                                    <img src="img/Filtro/haz/lustr.jpg" alt="" />
+                                                </label>
+                                            </figure>
+                                            <div class="sb-icon-box rounded-circle">
+                                                <figure class="sb-icon"><img src="" alt=""></figure>
+                                            </div>
+                                            <div class="sb-captiion">
+                                                <h3>Glabro (liso)</h3>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--liso-->
+                                    <!--pubescente-->
+                                    <div class="col-md-6 col-lg-5">
+                                        <div class="service-box">
+                                            <figure class="service-thumbnail">
+                                                <input type="checkbox" name="pubescente" id="pubescen"
+                                                    class="input-hidden has" />
+                                                <label for="pubescen">
+                                                    <img src="img/Filtro/haz/pube.jpg" alt="" />
+                                                </label>
+                                            </figure>
+                                            <div class="sb-icon-box rounded-circle">
+                                                <figure class="sb-icon"><img src="" alt=""></figure>
+                                            </div>
+                                            <div class="sb-captiion">
+                                                <h3>Pubescente</h3>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--pubescente-->
+                                    <!--verde claro-->
+                                    <div class="col-md-6 col-lg-5">
+                                        <div class="service-box">
+                                            <figure class="service-thumbnail">
+                                                <input type="checkbox" name="verde claro" id="verde claro"
+                                                    class="input-hidden has" />
+                                                <label for="verde claro">
+                                                    <img src="img/Filtro/haz/pube.jpg" alt="" />
+                                                </label>
+                                            </figure>
+                                            <div class="sb-icon-box rounded-circle">
+                                                <figure class="sb-icon"><img src="" alt=""></figure>
+                                            </div>
+                                            <div class="sb-captiion">
+                                                <h3>Verde claro</h3>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--verde claro-->
+                                    <!--opaco-->
+                                    <div class="col-md-6 col-lg-5">
+                                        <div class="service-box">
+                                            <figure class="service-thumbnail">
+                                                <input type="checkbox" name="opaco" id="opaco" class="input-hidden has" />
+                                                <label for="opaco">
+                                                    <img src="img/Filtro/haz/pube.jpg" alt="" />
+                                                </label>
+                                            </figure>
+                                            <div class="sb-icon-box rounded-circle">
+                                                <figure class="sb-icon"><img src="" alt=""></figure>
+                                            </div>
+                                            <div class="sb-captiion">
+                                                <h3>Opaco</h3>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--opaco-->
+                                </div>
+    
+                                <!-- ////// ENVES -->
+                                <div class="row filtro hover-effects image-hover collapse" id="envesa">
+                                    <div class="section-tittle-alt">
+                                        <h2>Enves</h2>
+                                    </div>
+                                    <!--glabr-->
+                                    <div class="col-md-4 col-lg-6">
+                                        <div class="service-box">
+                                            <figure class="service-thumbnail">
+                                                <input type="checkbox" name="glabro (liso)" id="glabro(liso)2"
+                                                    class="input-hidden env" />
+                                                <label for="glabro(liso)2">
+                                                    <img src="img/Filtro/enves/glab.png" alt="" />
+                                                </label>
+                                            </figure>
+                                            <div class="sb-icon-box rounded-circle">
+                                                <figure class="sb-icon"><img src="" alt=""></figure>
+                                            </div>
+                                            <div class="sb-captiion">
+                                                <h3>Glabro (liso)</h3>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--glabr-->
+    
+                                    <!--pelos cortos-->
+                                    <div class="col-md-4 col-lg-6">
+                                        <div class="service-box">
+                                            <figure class="service-thumbnail">
+                                                <input type="checkbox" name="cortos" id="cortos2"
+                                                    class="input-hidden env" />
+                                                <label for="cortos2">
+                                                    <img src="img/Filtro/enves/dento.png" alt="" />
+                                                </label>
+                                            </figure>
+                                            <div class="sb-icon-box rounded-circle">
+                                                <figure class="sb-icon"><img src="" alt=""></figure>
+                                            </div>
+                                            <div class="sb-captiion">
+                                                <h3>Pelos cortos</h3>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!---->
+                                    <!--pelos rojos-->
+                                    <div class="col-md-4 col-lg-6">
+                                        <div class="service-box">
+                                            <figure class="service-thumbnail">
+                                                <input type="checkbox" name="pelos rojizos" id="pelos rojizos"
+                                                    class="input-hidden env" />
+                                                <label for="pelos rojizos">
+                                                    <img src="img/Filtro/enves/pues.png" alt="" />
+                                                </label>
+                                            </figure>
+                                            <div class="sb-icon-box rounded-circle">
+                                                <figure class="sb-icon"><img src="" alt=""></figure>
+                                            </div>
+                                            <div class="sb-captiion">
+                                                <h3>Pelos rojizos</h3>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--pelos r-->
+                                    <!--pelos g-->
+                                    <div class="col-md-4 col-lg-6">
+                                        <div class="service-box">
+                                            <figure class="service-thumbnail">
+                                                <input type="checkbox" name="pelos glandulares" id="pelos glandulares"
+                                                    class="input-hidden env" />
+                                                <label for="pelos glandulares">
+                                                    <img src="img/Filtro/enves/pelos.png" alt="" />
+                                                </label>
+                                            </figure>
+                                            <div class="sb-icon-box rounded-circle">
+                                                <figure class="sb-icon"><img src="" alt=""></figure>
+                                            </div>
+                                            <div class="sb-captiion">
+                                                <h3>Pelos Glandulares</h3>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--Pelos Glandulares-->
+                                    <!--pubescent-->
+                                    <div class="col-md-4 col-lg-6">
+                                        <div class="service-box">
+                                            <figure class="service-thumbnail">
+                                                <input type="checkbox" name="pubescente" id="pubescen2"
+                                                    class="input-hidden env" />
+                                                <label for="pubescen2">
+                                                    <img src="img/Filtro/enves/puebe.png" alt="" />
+                                                </label>
+                                            </figure>
+                                            <div class="sb-icon-box rounded-circle">
+                                                <figure class="sb-icon"><img src="" alt=""></figure>
+                                            </div>
+                                            <div class="sb-captiion">
+                                                <h3>Pubescente</h3>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--Pubescente-->
+                                    <!--pelos bla-->
+                                    <div class="col-md-4 col-lg-6">
+                                        <div class="service-box">
+                                            <figure class="service-thumbnail">
+                                                <input type="checkbox" name="pelos blanquecinos" id="pelos blanquecinos"
+                                                    class="input-hidden env" />
+                                                <label for="pelos blanquecinos">
+                                                    <img src="img/Filtro/enves/pelos.png" alt="" />
+                                                </label>
+                                            </figure>
+                                            <div class="sb-icon-box rounded-circle">
+                                                <figure class="sb-icon"><img src="" alt=""></figure>
+                                            </div>
+                                            <div class="sb-captiion">
+                                                <h3>Pelos blanquecinos</h3>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--Pelos blanque-->
+                                </div>
+    
+                                <!-- ////// FLORES ARBUS-->
+                                <div class="row filtro hover-effects image-hover collapse" id="floresa">
+                                    <div class="section-tittle-alt">
+                                        <h2>Flores</h2>
+                                    </div>
+                                    <!--rosas-->
+                                    <div class="col-md-4 col-lg-6">
+                                        <div class="service-box">
+                                            <figure class="service-thumbnail">
+                                                <input type="checkbox" name="rosas" id="rosas" class="input-hidden flor" />
+                                                <label for="rosas">
+                                                    <img src="img/Filtro/flores/rosas.png" alt="" />
+                                                </label>
+                                            </figure>
+                                            <div class="sb-icon-box rounded-circle">
+                                                <figure class="sb-icon"><img src="" alt=""></figure>
+                                            </div>
+                                            <div class="sb-captiion">
+                                                <h3>Rosas</h3>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--rosas-->
+    
+                                    <!--amarill-->
+                                    <div class="col-md-4 col-lg-6">
+                                        <div class="service-box">
+                                            <figure class="service-thumbnail">
+                                                <input type="checkbox" name="amarillas" id="amarill"
+                                                    class="input-hidden flor" />
+                                                <label for="amarill">
+                                                    <img src="img/Filtro/flores/amarillas.png" alt="" />
+                                                </label>
+                                            </figure>
+                                            <div class="sb-icon-box rounded-circle">
+                                                <figure class="sb-icon"><img src="" alt=""></figure>
+                                            </div>
+                                            <div class="sb-captiion">
+                                                <h3>Amarillas</h3>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--amarill-->
+                                    <!--verdosas-->
+                                    <div class="col-md-4 col-lg-6">
+                                        <div class="service-box">
+                                            <figure class="service-thumbnail">
+                                                <input type="checkbox" name="verdosas" id="verdosas"
+                                                    class="input-hidden flor">
+                                                <label for="verdosas">
+                                                    <img src="img/Filtro/flores/verdes.png" alt="" />
+                                                </label>
+                                            </figure>
+                                            <div class="sb-icon-box rounded-circle">
+                                                <figure class="sb-icon"><img src="" alt=""></figure>
+                                            </div>
+                                            <div class="sb-captiion">
+                                                <h3>Verdosas</h3>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--verdosas-->
+                                    <!--rojas-->
+                                    <div class="col-md-4 col-lg-6">
+                                        <div class="service-box">
+                                            <figure class="service-thumbnail">
+                                                <input type="checkbox" name="rojo" id="roj2" class="input-hidden flor" />
+                                                <label for="roj2">
+                                                    <img src="img/Filtro/flores/rojas.png" alt="" />
+                                                </label>
+                                            </figure>
+                                            <div class="sb-icon-box rounded-circle">
+                                                <figure class="sb-icon"><img src="" alt=""></figure>
+                                            </div>
+                                            <div class="sb-captiion">
+                                                <h3>Rojas</h3>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--Rojas-->
+                                    <!--cremosas-->
+                                    <div class="col-md-4 col-lg-6">
+                                        <div class="service-box">
+                                            <figure class="service-thumbnail">
+                                                <input type="checkbox" name="cremas" id="crem" class="input-hidden flor" />
+                                                <label for="crem">
+                                                    <img src="img/Filtro/flores/crema.png" alt="" />
+                                                </label>
+                                            </figure>
+                                            <div class="sb-icon-box rounded-circle">
+                                                <figure class="sb-icon"><img src="" alt=""></figure>
+                                            </div>
+                                            <div class="sb-captiion">
+                                                <h3>Cremosas</h3>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--cremosas-->
+                                    <!--blan-->
+                                    <div class="col-md-4 col-lg-6">
+                                        <div class="service-box">
+                                            <figure class="service-thumbnail">
+                                                <input type="checkbox" name="blancas" id="blan" class="input-hidden flor" />
+                                                <label for="blan">
+                                                    <img src="img/Filtro/flores/blancas.png" alt="" />
+                                                </label>
+                                            </figure>
+                                            <div class="sb-icon-box rounded-circle">
+                                                <figure class="sb-icon"><img src="" alt=""></figure>
+                                            </div>
+                                            <div class="sb-captiion">
+                                                <h3>Blancas</h3>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--blan-->
+                                </div>
+    
+                                <!-- //////COMAROSTAPHILYS -->
+                                <!-- MARGEN COMAROS -->
+                                <div class="row filtro hover-effects image-hover collapse" id="margen">
+                                    <div class="section-tittle-alt">
+                                        <h2>Margen</h2>
+                                    </div>
+                                    <!--Entero-->
+                                    <div class="col-md-4 col-lg-6">
+                                        <div class="service-box">
+                                            <figure class="service-thumbnail">
+                                                <input type="checkbox" name="entero" id="entero2"
+                                                    class="input-hidden marg" />
+                                                <label for="entero2">
+                                                    <img src="img/Filtro/enves/glab.png" alt="" />
+                                                </label>
+                                            </figure>
+                                            <div class="sb-icon-box rounded-circle">
+                                                <figure class="sb-icon"><img src="" alt=""></figure>
+                                            </div>
+                                            <div class="sb-captiion">
+                                                <h3>Entero</h3>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--Entero-->
+    
+                                    <!--Plano-->
+                                    <div class="col-md-4 col-lg-6">
+                                        <div class="service-box">
+                                            <figure class="service-thumbnail">
+                                                <input type="checkbox" name="plano" id="plano2" class="input-hidden marg" />
+                                                <label for="plano2">
+                                                    <img src="img/Filtro/enves/dento.png" alt="" />
+                                                </label>
+                                            </figure>
+                                            <div class="sb-icon-box rounded-circle">
+                                                <figure class="sb-icon"><img src="" alt=""></figure>
+                                            </div>
+                                            <div class="sb-captiion">
+                                                <h3>Plano</h3>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--Plano-->
+                                    <!--aserrado-->
+                                    <div class="col-md-4 col-lg-6">
+                                        <div class="service-box">
+                                            <figure class="service-thumbnail">
+                                                <input type="checkbox" name="aserrado" id="aserrado2"
+                                                    class="input-hidden marg" />
+                                                <label for="aserrado2">
+                                                    <img src="img/Filtro/enves/pues.png" alt="" />
+                                                </label>
+                                            </figure>
+                                            <div class="sb-icon-box rounded-circle">
+                                                <figure class="sb-icon"><img src="" alt=""></figure>
+                                            </div>
+                                            <div class="sb-captiion">
+                                                <h3>Aserrado</h3>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--aserrado-->
+                                    <!--Poco re-->
+                                    <div class="col-md-4 col-lg-6">
+                                        <div class="service-box">
+                                            <figure class="service-thumbnail">
+                                                <input type="checkbox" name="poco revoluto" id="poco revoluto2"
+                                                    class="input-hidden marg" />
+                                                <label for="poco revoluto2">
+                                                    <img src="img/Filtro/enves/pelos.png" alt="" />
+                                                </label>
+                                            </figure>
+                                            <div class="sb-icon-box rounded-circle">
+                                                <figure class="sb-icon"><img src="" alt=""></figure>
+                                            </div>
+                                            <div class="sb-captiion">
+                                                <h3>Poco revoluto</h3>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--poco re-->
+                                    <!--odulado-->
+                                    <div class="col-md-4 col-lg-6">
+                                        <div class="service-box">
+                                            <figure class="service-thumbnail">
+                                                <input type="checkbox" name="poco ondulado" id="poco ondulado2"
+                                                    class="input-hidden marg" />
+                                                <label for="poco ondulado2">
+                                                    <img src="img/Filtro/enves/puebe.png" alt="" />
+                                                </label>
+                                            </figure>
+                                            <div class="sb-icon-box rounded-circle">
+                                                <figure class="sb-icon"><img src="" alt=""></figure>
+                                            </div>
+                                            <div class="sb-captiion">
+                                                <h3>Poco ondulado</h3>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--ond-->
+                                    <!--con dientes-->
+                                    <div class="col-md-4 col-lg-6">
+                                        <div class="service-box">
+                                            <figure class="service-thumbnail">
+                                                <input type="checkbox" name="con dientes" id="con dientes2"
+                                                    class="input-hidden marg" />
+                                                <label for="con dientes2">
+                                                    <img src="img/Filtro/enves/puebe.png" alt="" />
+                                                </label>
+                                            </figure>
+                                            <div class="sb-icon-box rounded-circle">
+                                                <figure class="sb-icon"><img src="" alt=""></figure>
+                                            </div>
+                                            <div class="sb-captiion">
+                                                <h3>Con dientes</h3>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--con dientes-->
+                                </div>
+    
+                                <!--INFLORESCENCIA COMAROS -->
+                                <div class="row filtro hover-effects image-hover collapse" id="inflore">
+                                    <div class="section-tittle-alt">
+                                        <h2>Inflorescencia</h2>
+                                    </div>
+                                    <!--Con pelos glandulares-->
+                                    <div class="col-md-2 col-lg-6">
+                                        <div class="service-box">
+                                            <figure class="service-thumbnail">
+                                                <input type="checkbox" name="con pelos glandulares"
+                                                    id="con pelos glandulares2" class="input-hidden inflo" />
+                                                <label for="con pelos glandulares2">
+                                                    <img src="img/Filtro/haz/glabro.jpg" alt="" />
+                                                </label>
+                                            </figure>
+                                            <div class="sb-icon-box rounded-circle">
+                                                <figure class="sb-icon"><img src="" alt=""></figure>
+                                            </div>
+                                            <div class="sb-captiion">
+                                                <h3>Con pelos glandulares</h3>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--Con pelos glandulares-->
+    
+                                    <!--pubesente-->
+                                    <div class="col-md-2 col-lg-6">
+                                        <div class="service-box">
+                                            <figure class="service-thumbnail">
+                                                <input type="checkbox" name="pubescente" id="pubescen3"
+                                                    class="input-hidden inflo" />
+                                                <label for="pubescen3">
+                                                    <img src="img/Filtro/haz/lustr.jpg" alt="" />
+                                                </label>
+                                            </figure>
+                                            <div class="sb-icon-box rounded-circle">
+                                                <figure class="sb-icon"><img src="" alt=""></figure>
+                                            </div>
+                                            <div class="sb-captiion">
+                                                <h3>Pubescente</h3>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--pube-->
+                                    <!--glabra-->
+                                    <div class="col-md-2 col-lg-6">
+                                        <div class="service-box">
+                                            <figure class="service-thumbnail">
+                                                <input type="checkbox" name="glabra" id="glabra2"
+                                                    class="input-hidden inflo" />
+                                                <label for="glabra2">
+                                                    <img src="img/Filtro/haz/pube.jpg" alt="" />
+                                                </label>
+                                            </figure>
+                                            <div class="sb-icon-box rounded-circle">
+                                                <figure class="sb-icon"><img src="" alt=""></figure>
+                                            </div>
+                                            <div class="sb-captiion">
+                                                <h3>Glabra</h3>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--glabra-->
+                                </div>
+    
+                                <!-- PECIOLOS Y RAMILLAS COMAROS -->
+                                <div class="row filtro hover-effects image-hover collapse" id="peciolosrll">
+                                    <div class="section-tittle-alt">
+                                        <h2>Peciolos y Ramillas</h2>
+                                    </div>
+                                    <!--Con pelos glandulares-->
+                                    <div class="col-md-2 col-lg-6">
+                                        <div class="service-box">
+                                            <figure class="service-thumbnail">
+                                                <input type="checkbox" name="con pelos glandulares"
+                                                    id="con pelos glandulares3" class="input-hidden peci" />
+                                                <label for="con pelos glandulares3">
+                                                    <img src="img/Filtro/haz/glabro.jpg" alt="" />
+                                                </label>
+                                            </figure>
+                                            <div class="sb-icon-box rounded-circle">
+                                                <figure class="sb-icon"><img src="" alt=""></figure>
+                                            </div>
+                                            <div class="sb-captiion">
+                                                <h3>Con pelos glandulares</h3>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--Con pelos glandulares-->
+    
+                                    <!--pubesente-->
+                                    <div class="col-md-2 col-lg-6">
+                                        <div class="service-box">
+                                            <figure class="service-thumbnail">
+                                                <input type="checkbox" name="pubescentes" id="pubescen4"
+                                                    class="input-hidden peci" />
+                                                <label for="pubescen4">
+                                                    <img src="img/Filtro/haz/lustr.jpg" alt="" />
+                                                </label>
+                                            </figure>
+                                            <div class="sb-icon-box rounded-circle">
+                                                <figure class="sb-icon"><img src="" alt=""></figure>
+                                            </div>
+                                            <div class="sb-captiion">
+                                                <h3>Pubescente</h3>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--pube-->
+                                    <!--glabra-->
+                                    <div class="col-md-2 col-lg-6">
+                                        <div class="service-box">
+                                            <figure class="service-thumbnail">
+                                                <input type="checkbox" name="glabro" id="glabr2"
+                                                    class="input-hidden peci" />
+                                                <label for="glabra2">
+                                                    <img src="img/Filtro/haz/pube.jpg" alt="" />
+                                                </label>
+                                            </figure>
+                                            <div class="sb-icon-box rounded-circle">
+                                                <figure class="sb-icon"><img src="" alt=""></figure>
+                                            </div>
+                                            <div class="sb-captiion">
+                                                <h3>Glabra</h3>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--glabra-->
+                                </div>
+    
+                                <!-- HAZ COMAROS-->
+                                <div class="row filtro hover-effects image-hover collapse" id="hazc">
+                                    <div class="section-tittle-alt">
+                                        <h2>Haz</h2>
+                                    </div>
+                                    <!--glabro-->
+                                    <div class="col-md-2 col-lg-6">
+                                        <div class="service-box">
+                                            <figure class="service-thumbnail">
+                                                <input type="checkbox" name="glabro" id="glabro2"
+                                                    class="input-hidden has" />
+                                                <label for="glabro2">
+                                                    <img src="img/Filtro/haz/glabro.jpg" alt="" />
+                                                </label>
+                                            </figure>
+                                            <div class="sb-icon-box rounded-circle">
+                                                <figure class="sb-icon"><img src="" alt=""></figure>
+                                            </div>
+                                            <div class="sb-captiion">
+                                                <h3>Glabro</h3>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--glabro-->
+                                    <!--pubescente-->
+                                    <div class="col-md-2 col-lg-6">
+                                        <div class="service-box">
+                                            <figure class="service-thumbnail">
+                                                <input type="checkbox" name="pubescente" id="pubescente2"
+                                                    class="input-hidden has" />
+                                                <label for="pubescente2">
+                                                    <img src="img/Filtro/haz/pube.jpg" alt="" />
+                                                </label>
+                                            </figure>
+                                            <div class="sb-icon-box rounded-circle">
+                                                <figure class="sb-icon"><img src="" alt=""></figure>
+                                            </div>
+                                            <div class="sb-captiion">
+                                                <h3>Pubescente</h3>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--pubescente-->
+                                    <!--pelos gla-->
+                                    <div class="col-md-2 col-lg-6">
+                                        <div class="service-box">
+                                            <figure class="service-thumbnail">
+                                                <input type="checkbox" name="glandulares" id="glandulares2"
+                                                    class="input-hidden has" />
+                                                <label for="glandulares2">
+                                                    <img src="img/Filtro/enves/pelos.png" alt="" />
+                                                </label>
+                                            </figure>
+                                            <div class="sb-icon-box rounded-circle">
+                                                <figure class="sb-icon"><img src="" alt=""></figure>
+                                            </div>
+                                            <div class="sb-captiion">
+                                                <h3>Pelos Glandulares</h3>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--pelos gla-->
+                                </div>
+    
+                                <!-- ////// ENVES -->
+                                <div class="row filtro hover-effects image-hover collapse" id="envesc">
+                                    <div class="section-tittle-alt">
+                                        <h2>Enves</h2>
+                                    </div>
+                                    <!--pubescent-->
+                                    <div class="col-md-2 col-lg-6">
+                                        <div class="service-box">
+                                            <figure class="service-thumbnail">
+                                                <input type="checkbox" name="pubescente" id="pubescen5"
+                                                    class="input-hidden env" />
+                                                <label for="pubescen5">
+                                                    <img src="img/Filtro/enves/puebe.png" alt="" />
+                                                </label>
+                                            </figure>
+                                            <div class="sb-icon-box rounded-circle">
+                                                <figure class="sb-icon"><img src="" alt=""></figure>
+                                            </div>
+                                            <div class="sb-captiion">
+                                                <h3>Pubescente</h3>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--Pubescente-->
+                                    <!--glabr-->
+                                    <div class="col-md-2 col-lg-6">
+                                        <div class="service-box">
+                                            <figure class="service-thumbnail">
+                                                <input type="checkbox" name="glabro" id="glabro3"
+                                                    class="input-hidden env" />
+                                                <label for="glabro3">
+                                                    <img src="img/Filtro/enves/glab.png" alt="" />
+                                                </label>
+                                            </figure>
+                                            <div class="sb-icon-box rounded-circle">
+                                                <figure class="sb-icon"><img src="" alt=""></figure>
+                                            </div>
+                                            <div class="sb-captiion">
+                                                <h3>Glabro</h3>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--glabr-->
+    
+                                    <!--Densamente tomentoso-->
+                                    <div class="col-md-2 col-lg-6">
+                                        <div class="service-box">
+                                            <figure class="service-thumbnail">
+                                                <input type="checkbox" name="densamente tomentoso"
+                                                    id="densamente tomentoso2" class="input-hidden env" />
+                                                <label for="densamente tomentoso2">
+                                                    <img src="img/Filtro/enves/dento.png" alt="" />
+                                                </label>
+                                            </figure>
+                                            <div class="sb-icon-box rounded-circle">
+                                                <figure class="sb-icon"><img src="" alt=""></figure>
+                                            </div>
+                                            <div class="sb-captiion">
+                                                <h3>Densamente tomentoso</h3>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--Densamente tomentoso-->
+                                    <!--glauco-->
+                                    <div class="col-md-2 col-lg-6">
+                                        <div class="service-box">
+                                            <figure class="service-thumbnail">
+                                                <input type="checkbox" name="glauco" id="glauco2"
+                                                    class="input-hidden env" />
+                                                <label for="glauco2">
+                                                    <img src="img/Filtro/enves/pues.png" alt="" />
+                                                </label>
+                                            </figure>
+                                            <div class="sb-icon-box rounded-circle">
+                                                <figure class="sb-icon"><img src="" alt=""></figure>
+                                            </div>
+                                            <div class="sb-captiion">
+                                                <h3>Glauco</h3>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--pglauco-->
+                                    <!--pelos g-->
+                                    <div class="col-md-2 col-lg-6">
+                                        <div class="service-box">
+                                            <figure class="service-thumbnail">
+                                                <input type="checkbox" name="glandular" id="glandular2"
+                                                    class="input-hidden env" />
+                                                <label for="glandular2">
+                                                    <img src="img/Filtro/enves/pelos.png" alt="" />
+                                                </label>
+                                            </figure>
+                                            <div class="sb-icon-box rounded-circle">
+                                                <figure class="sb-icon"><img src="" alt=""></figure>
+                                            </div>
+                                            <div class="sb-captiion">
+                                                <h3>Glandular</h3>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--Pelos Glandulares-->
+                                </div>
+    
+                                <!-- ////// FLORES comaros-->
+                                <div class="row filtro hover-effects image-hover collapse" id="floresc">
+                                    <div class="section-tittle-alt">
+                                        <h2>Flores</h2>
+                                    </div>
+                                    <!--rosas-->
+                                    <div class="col-md-2 col-lg-6">
+                                        <div class="service-box">
+                                            <figure class="service-thumbnail">
+                                                <input type="checkbox" name="rosa" id="rosa2" class="input-hidden flor" />
+                                                <label for="rosas2">
+                                                    <img src="img/Filtro/flores/rosas.png" alt="" />
+                                                </label>
+                                            </figure>
+                                            <div class="sb-icon-box rounded-circle">
+                                                <figure class="sb-icon"><img src="" alt=""></figure>
+                                            </div>
+                                            <div class="sb-captiion">
+                                                <h3>Rosas</h3>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--rosas-->
+    
+                                    <!--amarill-->
+                                    <div class="col-md-2 col-lg-6">
+                                        <div class="service-box">
+                                            <figure class="service-thumbnail">
+                                                <input type="checkbox" name="amarillas" id="amarill2"
+                                                    class="input-hidden flor" />
+                                                <label for="amarill2">
+                                                    <img src="img/Filtro/flores/amarillas.png" alt="" />
+                                                </label>
+                                            </figure>
+                                            <div class="sb-icon-box rounded-circle">
+                                                <figure class="sb-icon"><img src="" alt=""></figure>
+                                            </div>
+                                            <div class="sb-captiion">
+                                                <h3>Amarillas</h3>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--amarill-->
+                                    <!--verdosas-->
+                                    <div class="col-md-2 col-lg-6">
+                                        <div class="service-box">
+                                            <figure class="service-thumbnail">
+                                                <input type="checkbox" name="verdosas" id="verdosas2"
+                                                    class="input-hidden flor">
+                                                <label for="verdosas2">
+                                                    <img src="img/Filtro/flores/verdes.png" alt="" />
+                                                </label>
+                                            </figure>
+                                            <div class="sb-icon-box rounded-circle">
+                                                <figure class="sb-icon"><img src="" alt=""></figure>
+                                            </div>
+                                            <div class="sb-captiion">
+                                                <h3>Verdosas</h3>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--verdosas-->
+                                    <!--magenta-->
+                                    <div class="col-md-2 col-lg-6">
+                                        <div class="service-box">
+                                            <figure class="service-thumbnail">
+                                                <input type="checkbox" name="magenta" id="magenta2"
+                                                    class="input-hidden flor" />
+                                                <label for="magenta2">
+                                                    <img src="img/Filtro/flores/rojas.png" alt="" />
+                                                </label>
+                                            </figure>
+                                            <div class="sb-icon-box rounded-circle">
+                                                <figure class="sb-icon"><img src="" alt=""></figure>
+                                            </div>
+                                            <div class="sb-captiion">
+                                                <h3>Magenta</h3>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--magenta-->
+                                    <!--rojas-->
+                                    <div class="col-md-2 col-lg-6">
+                                        <div class="service-box">
+                                            <figure class="service-thumbnail">
+                                                <input type="checkbox" name="rojo" id="rojo2" class="input-hidden flor" />
+                                                <label for="rojo2">
+                                                    <img src="img/Filtro/flores/rojas.png" alt="" />
+                                                </label>
+                                            </figure>
+                                            <div class="sb-icon-box rounded-circle">
+                                                <figure class="sb-icon"><img src="" alt=""></figure>
+                                            </div>
+                                            <div class="sb-captiion">
+                                                <h3>Rojas</h3>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--Rojas-->
+                                    <!--cremosas-->
+                                    <div class="col-md-2 col-lg-6">
+                                        <div class="service-box">
+                                            <figure class="service-thumbnail">
+                                                <input type="checkbox" name="cremas" id="crem2" class="input-hidden flor" />
+                                                <label for="crem2">
+                                                    <img src="img/Filtro/flores/crema.png" alt="" />
+                                                </label>
+                                            </figure>
+                                            <div class="sb-icon-box rounded-circle">
+                                                <figure class="sb-icon"><img src="" alt=""></figure>
+                                            </div>
+                                            <div class="sb-captiion">
+                                                <h3>Cremas</h3>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--cremosas-->
+                                    <!--blan-->
+                                    <div class="col-md-2 col-lg-6">
+                                        <div class="service-box">
+                                            <figure class="service-thumbnail">
+                                                <input type="checkbox" name="blancas" id="blancas2"
+                                                    class="input-hidden flor" />
+                                                <label for="blancas2">
+                                                    <img src="img/Filtro/flores/blancas.png" alt="" />
+                                                </label>
+                                            </figure>
+                                            <div class="sb-icon-box rounded-circle">
+                                                <figure class="sb-icon"><img src="" alt=""></figure>
+                                            </div>
+                                            <div class="sb-captiion">
+                                                <h3>Blancas</h3>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--blan-->
+                                    <!--verde palido-->
+                                    <div class="col-md-2 col-lg-6">
+                                        <div class="service-box">
+                                            <figure class="service-thumbnail">
+                                                <input type="checkbox" name="verde pálido" id="verde pálido2"
+                                                    class="input-hidden flor" />
+                                                <label for="verde pálido2">
+                                                    <img src="img/Filtro/flores/verdes.png" alt="" />
+                                                </label>
+                                            </figure>
+                                            <div class="sb-icon-box rounded-circle">
+                                                <figure class="sb-icon"><img src="" alt=""></figure>
+                                            </div>
+                                            <div class="sb-captiion">
+                                                <h3>Verde pálido</h3>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--verde palido-->
+                                </div>
+    
+                            </div>
+                            <div class="col-4">
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="col-6" id="tablaarb" hidden>
+                                            <h4 class="text-center">Arbutus</h4>
+                                            <table class="table">
+                                                <thead>
+                                                    <tr>
+                                                        <th scope="col"></th>
+                                                        <th scope="col">Nombre</th>
+                                                        <th scope="col"></th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody id="tarbutus">
+                                                </tbody>
 
-                <!--ovadas-->
-                <div class="col-md-6 col-lg-3">
-                    <div class="service-box">
-                        <figure class="service-thumbnail">
-                            <input type="checkbox" name="" id="ovadaso" class="input-hidden hoja" />
-                            <label for="ovadas">
-                                <img src="img/Filtro/hojas/ovalada.png" alt="" />
-                            </label>
-                        </figure>
-                        <div class="sb-icon-box2 rounded-circle">
-                            <figure class="sb-icon"><img src="" alt=""></figure>
-                        </div>
-                        <div class="sb-caption">
-                            <h3>Ovadas</h3>
-                        </div>
-                    </div>
-                </div>
-                <!--ovadas-->
-                <!--elípticas-->
-                <div class="col-md-6 col-lg-3">
-                    <div class="service-box">
-                        <figure class="service-thumbnail">
-                            <input type="checkbox" id="elípticas" class="input-hidden hoja" />
-                            <label for="elípticas">
-                                <img src="img/Filtro/hojas/elipica.png" alt="" />
-                            </label>
-                        </figure>
-                        <div class="sb-icon-box2 rounded-circle">
-                            <figure class="sb-icon"><img src="" alt=""></figure>
-                        </div>
-                        <div class="sb-caption">
-                            <h3>Elípticas</h3>
+                                                
+                                            </table>
+                                        </div>
+                                        <div class="col-6" id="tablacoma" hidden>
+                                                <h6 class="text-center">Comarostaphilys</h6>
+                                            <table class="table">
+                                                <thead>
+                                                    <tr>
+                                                        <th scope="col"></th>
+                                                        <th scope="col">Nombre</th>
+                                                        <th scope="col"></th>
+                                                    </tr>
+                                                </thead>                                        
+                                                <tbody id="tcomaros">
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+    
+                            </div>
                         </div>
                     </div>
                 </div>
-                <!--elípticas-->
-                <!--oblongas-->
-                <div class="col-md-6 col-lg-3">
-                    <div class="service-box">
-                        <figure class="service-thumbnail">
-                            <input type="checkbox" id="oblongas" class="input-hidden hoja" />
-                            <label for="oblongas">
-                                <img src="img/Filtro/hojas/oblongas.png" alt="" />
-                            </label>
-                        </figure>
-                        <div class="sb-icon-box2 rounded-circle">
-                            <figure class="sb-icon"><img src="" alt=""></figure>
-                        </div>
-                        <div class="sb-caption">
-                            <h3>Oblongas</h3>
-                        </div>
-                    </div>
-                </div>
-                <!--oblongas-->
-                <!--Herbáceas-->
-                <div class="col-md-6 col-lg-3">
-                    <div class="service-box">
-                        <figure class="service-thumbnail">
-                            <input type="checkbox" id="herbáceas" class="input-hidden hoja" />
-                            <label for="herbáceas">
-                                <img src="img/Filtro/hojas/herbacea.png" alt="" />
-                            </label>
-                        </figure>
-                        <div class="sb-icon-box2 rounded-circle">
-                            <figure class="sb-icon"><img src="" alt=""></figure>
-                        </div>
-                        <div class="sb-caption">
-                            <h3>Herbáceas</h3>
-                        </div>
-                    </div>
-                </div>
-                <!--herbáceas-->
-                <!--subcoriáceas-->
-                <div class="col-md-6 col-lg-3">
-                    <div class="service-box">
-                        <figure class="service-thumbnail">
-                            <input type="checkbox" id="subcoriáceas" class="input-hidden hoja" />
-                            <label for="subcoriáceas">
-                                <img src="img/Filtro/hojas/subcor.png" alt="" />
-                            </label>
-                        </figure>
-                        <div class="sb-icon-box2 rounded-circle">
-                            <figure class="sb-icon"><img src="" alt=""></figure>
-                        </div>
-                        <div class="sb-caption">
-                            <h3>Subcoriáceas</h3>
-                        </div>
-                    </div>
-                </div>
-                <!--subcoriáceas-->
-                <!--planas-->
-                <div class="col-md-6 col-lg-3">
-                    <div class="service-box">
-                        <figure class="service-thumbnail">
-                            <input type="checkbox" id="planas" class="input-hidden hoja" />
-                            <label for="planas">
-                                <img src="img/Filtro/hojas/plana.png" alt="" />
-                            </label>
-                        </figure>
-                        <div class="sb-icon-box2 rounded-circle">
-                            <figure class="sb-icon"><img src="" alt=""></figure>
-                        </div>
-                        <div class="sb-caption">
-                            <h3>Planas</h3>
-                        </div>
-                    </div>
-                </div>
-                <!--planas-->
-                <!--deciduas-->
-                <div class="col-md-6 col-lg-3">
-                    <div class="service-box">
-                        <figure class="service-thumbnail">
-                            <input type="checkbox" id="deciduas" class="input-hidden hoja" />
-                            <label for="deciduas">
-                                <img src="img/Filtro/hojas/decidua.png" alt="" />
-                            </label>
-                        </figure>
-                        <div class="sb-icon-box2 rounded-circle">
-                            <figure class="sb-icon"><img src="" alt=""></figure>
-                        </div>
-                        <div class="sb-caption">
-                            <h3>Deciduas</h3>
-                        </div>
-                    </div>
-                </div>
-                <!--deciduas-->
-                <!--agudo-->
-                <div class="col-md-6 col-lg-3">
-                    <div class="service-box">
-                        <figure class="service-thumbnail">
-                            <input type="checkbox" id="agudo" class="input-hidden hoja" />
-                            <label for="agudo">
-                                <img src="img/Filtro/hojas/apice.png" alt="" />
-                            </label>
-                        </figure>
-                        <div class="sb-icon-box2 rounded-circle">
-                            <figure class="sb-icon"><img src="" alt=""></figure>
-                        </div>
-                        <div class="sb-caption">
-                            <h3>Ápice agudo</h3>
-                        </div>
-                    </div>
-                </div>
-                <!--ápice agudo-->
-                <!--redondeado-->
-                <div class="col-md-6 col-lg-3">
-                    <div class="service-box">
-                        <figure class="service-thumbnail">
-                            <input type="checkbox" id="redondeado" class="input-hidden hoja" />
-                            <label for="redondeado">
-                                <img src="img/Filtro/hojas/redonda.png" alt="" />
-                            </label>
-                        </figure>
-                        <div class="sb-icon-box2 rounded-circle">
-                            <figure class="sb-icon"><img src="" alt=""></figure>
-                        </div>
-                        <div class="sb-caption">
-                            <h3>Redondeado</h3>
-                        </div>
-                    </div>
-                </div>
-                <!--redondeado-->
-            </div>
-            <!-- ////// HOJAS -->
-            <!-- ////// HAZ -->
-            <div class="row filtro hover-effects image-hover" id="haz" hidden>
-                <div class="section-tittle-alt">
-                    <h2>Haz</h2>
-                </div>
-                <!--glabro-->
-                <div class="col-md-6 col-lg-4">
-                    <div class="service-box">
-                        <figure class="service-thumbnail">
-                            <input type="checkbox" id="glabro" class="input-hidden has" />
-                            <label for="glabro">
-                                <img src="img/Filtro/haz/glabro.jpg" alt="" />
-                            </label>
-                        </figure>
-                        <div class="sb-icon-box rounded-circle">
-                            <figure class="sb-icon"><img src="" alt=""></figure>
-                        </div>
-                        <div class="sb-caption">
-                            <h3>glabro</h3>
-                        </div>
-                    </div>
-                </div>
-                <!--glabro-->
-
-                <!--lustroso-->
-                <div class="col-md-6 col-lg-4">
-                    <div class="service-box">
-                        <figure class="service-thumbnail">
-                            <input type="checkbox" name="" id="lustroso" class="input-hidden has" />
-                            <label for="lustroso">
-                                <img src="img/Filtro/haz/lustr.jpg" alt="" />
-                            </label>
-                        </figure>
-                        <div class="sb-icon-box rounded-circle">
-                            <figure class="sb-icon"><img src="" alt=""></figure>
-                        </div>
-                        <div class="sb-caption">
-                            <h3>Lustroso</h3>
-                        </div>
-                    </div>
-                </div>
-                <!--lustroso-->
-                <!--pubescente-->
-                <div class="col-md-6 col-lg-4">
-                    <div class="service-box">
-                        <figure class="service-thumbnail">
-                            <input type="checkbox" name="" id="pubescente" class="input-hidden has" />
-                            <label for="pubescente">
-                                <img src="img/Filtro/haz/pube.jpg" alt="" />
-                            </label>
-                        </figure>
-                        <div class="sb-icon-box rounded-circle">
-                            <figure class="sb-icon"><img src="" alt=""></figure>
-                        </div>
-                        <div class="sb-caption">
-                            <h3>Pubescente</h3>
-                        </div>
-                    </div>
-                </div>
-                <!--pubescente-->
-            </div>
-            <!-- ////// HAZ -->
-
-            <!-- ////// ENVES -->
-            <div class="row filtro hover-effects image-hover" id="enves" hidden>
-                <div class="section-tittle-alt">
-                    <h2>Enves</h2>
-                </div>
-                <!--glabr-->
-                <div class="col-md-6 col-lg-4">
-                    <div class="service-box">
-                        <figure class="service-thumbnail">
-                            <input type="checkbox" id="glabr" class="input-hidden env" />
-                            <label for="glabro">
-                                <img src="img/Filtro/enves/glab.png" alt="" />
-                            </label>
-                        </figure>
-                        <div class="sb-icon-box rounded-circle">
-                            <figure class="sb-icon"><img src="" alt=""></figure>
-                        </div>
-                        <div class="sb-caption">
-                            <h3>Glabro</h3>
-                        </div>
-                    </div>
-                </div>
-                <!--glabr-->
-
-                <!--densa-->
-                <div class="col-md-6 col-lg-4">
-                    <div class="service-box">
-                        <figure class="service-thumbnail">
-                            <input type="checkbox" name="" id="densa" class="input-hidden env" />
-                            <label for="densa">
-                                <img src="img/Filtro/enves/dento.png" alt="" />
-                            </label>
-                        </figure>
-                        <div class="sb-icon-box rounded-circle">
-                            <figure class="sb-icon"><img src="" alt=""></figure>
-                        </div>
-                        <div class="sb-caption">
-                            <h3>Densamente Tomentoso</h3>
-                        </div>
-                    </div>
-                </div>
-                <!--densa-->
-                <!--espaciada-->
-                <div class="col-md-6 col-lg-4">
-                    <div class="service-box">
-                        <figure class="service-thumbnail">
-                            <input type="checkbox" name="" id="espaciada" class="input-hidden env" />
-                            <label for="espaciada">
-                                <img src="img/Filtro/enves/pues.png" alt="" />
-                            </label>
-                        </figure>
-                        <div class="sb-icon-box rounded-circle">
-                            <figure class="sb-icon"><img src="" alt=""></figure>
-                        </div>
-                        <div class="sb-caption">
-                            <h3>Pubescencia Espaciada</h3>
-                        </div>
-                    </div>
-                </div>
-                <!--espaciada-->
-                <!--glandula-->
-                <div class="col-md-6 col-lg-4">
-                    <div class="service-box">
-                        <figure class="service-thumbnail">
-                            <input type="checkbox" name="" id="glandula" class="input-hidden env" />
-                            <label for="glandula">
-                                <img src="img/Filtro/enves/pelos.png" alt="" />
-                            </label>
-                        </figure>
-                        <div class="sb-icon-box rounded-circle">
-                            <figure class="sb-icon"><img src="" alt=""></figure>
-                        </div>
-                        <div class="sb-caption">
-                            <h3>Pelos Glandulares</h3>
-                        </div>
-                    </div>
-                </div>
-                <!--Pelos Glandulares-->
-                <!--pubescent-->
-                <div class="col-md-6 col-lg-4">
-                    <div class="service-box">
-                        <figure class="service-thumbnail">
-                            <input type="checkbox" name="" id="pubescent" class="input-hidden env" />
-                            <label for="pubescent">
-                                <img src="img/Filtro/enves/puebe.png" alt="" />
-                            </label>
-                        </figure>
-                        <div class="sb-icon-box rounded-circle">
-                            <figure class="sb-icon"><img src="" alt=""></figure>
-                        </div>
-                        <div class="sb-caption">
-                            <h3>Pubescente</h3>
-                        </div>
-                    </div>
-                </div>
-                <!--Pubescente-->
-            </div>
-            <!-- ////// ENVES -->
-
-            <!-- ////// FLORES-->
-            <div class="row filtro hover-effects image-hover" id="flores" hidden>
-                <div class="section-tittle-alt">
-                    <h2>Flores</h2>
-                </div>
-                <!--rosas-->
-                <div class="col-md-6 col-lg-4">
-                    <div class="service-box">
-                        <figure class="service-thumbnail">
-                            <input type="checkbox" id="rosas" class="input-hidden flor"/>
-                            <label for="rosas">
-                                <img src="img/Filtro/flores/rosas.png" alt="" />
-                            </label>
-                        </figure>
-                        <div class="sb-icon-box rounded-circle">
-                            <figure class="sb-icon"><img src="" alt=""></figure>
-                        </div>
-                        <div class="sb-caption">
-                            <h3>Rosas</h3>
-                        </div>
-                    </div>
-                </div>
-                <!--rosas-->
-
-                <!--amarill-->
-                <div class="col-md-6 col-lg-4">
-                    <div class="service-box">
-                        <figure class="service-thumbnail">
-                            <input type="checkbox" name="" id="amarill" class="input-hidden flor"/>
-                            <label for="amarill">
-                                <img src="img/Filtro/flores/amarillas.png" alt="" />
-                            </label>
-                        </figure>
-                        <div class="sb-icon-box rounded-circle">
-                            <figure class="sb-icon"><img src="" alt=""></figure>
-                        </div>
-                        <div class="sb-caption">
-                            <h3>Amarillas</h3>
-                        </div>
-                    </div>
-                </div>
-                <!--amarill-->
-                <!--verdosas-->
-                <div class="col-md-6 col-lg-4">
-                    <div class="service-box">
-                        <figure class="service-thumbnail">
-                            <input type="checkbox" name="" id="verdosas" class="input-hidden flor">
-                            <label for="verdosas">
-                                <img src="img/Filtro/flores/verdes.png" alt="" />
-                            </label>
-                        </figure>
-                        <div class="sb-icon-box rounded-circle">
-                            <figure class="sb-icon"><img src="" alt=""></figure>
-                        </div>
-                        <div class="sb-caption">
-                            <h3>Verdosas</h3>
-                        </div>
-                    </div>
-                </div>
-                <!--verdosas-->
-                <!--rojas-->
-                <div class="col-md-6 col-lg-4">
-                    <div class="service-box">
-                        <figure class="service-thumbnail">
-                            <input type="checkbox" name="" id="rojas" class="input-hidden flor"/>
-                            <label for="rojas">
-                                <img src="img/Filtro/flores/rojas.png" alt="" />
-                            </label>
-                        </figure>
-                        <div class="sb-icon-box rounded-circle">
-                            <figure class="sb-icon"><img src="" alt=""></figure>
-                        </div>
-                        <div class="sb-caption">
-                            <h3>Rojas</h3>
-                        </div>
-                    </div>
-                </div>
-                <!--Rojas-->
-                <!--cremosas-->
-                <div class="col-md-6 col-lg-4">
-                    <div class="service-box">
-                        <figure class="service-thumbnail">
-                            <input type="checkbox" name="" id="cremosas" class="input-hidden flor"/>
-                            <label for="cremosas">
-                                <img src="img/Filtro/flores/crema.png" alt="" />
-                            </label>
-                        </figure>
-                        <div class="sb-icon-box rounded-circle">
-                            <figure class="sb-icon"><img src="" alt=""></figure>
-                        </div>
-                        <div class="sb-caption">
-                            <h3>Cremosas</h3>
-                        </div>
-                    </div>
-                </div>
-                <!--cremosas-->
-                <!--blan-->
-                <div class="col-md-6 col-lg-4">
-                    <div class="service-box">
-                        <figure class="service-thumbnail">
-                            <input type="checkbox" name="" id="blan" class="input-hidden flor"/>
-                            <label for="cremosas">
-                                <img src="img/Filtro/flores/blancas.png" alt="" />
-                            </label>
-                        </figure>
-                        <div class="sb-icon-box rounded-circle">
-                            <figure class="sb-icon"><img src="" alt=""></figure>
-                        </div>
-                        <div class="sb-caption">
-                            <h3>Blancas</h3>
-                        </div>
-                    </div>
-                </div>
-                <!--blan-->
-            </div>
-            <!--Flores-->
-        </div>
-        <!-- CONTROLES DE DESPLAZAMIENTO -->
-
-        <div class="row pt-5 pb-4">
-            <div class="col-6 text-left">
-                <button type="button" class="fu-width bttn--prrimary" hidden id="reinicio">Iniciar nuevamente</button>
-            </div>
-            <div class="col-6 text-right">
-                <button type="button" class="fulll-width bttn--prrimary" id="prev" hidden>Anterior</button>
-                <button type="button" class="fulll-width bttn--prrimary" id="next">Siguiente</button>
-            </div>
         </div>
     </section>
     <!--FILTROS-->
 
-	<!-- TABLAS DINAMICAS -->
+    <!-- TABLAS DINAMICAS -->
+    <div class="container pt-4">
+        <div class="row">
+            
+        </div>
+    </div>
 
-	<div class="container pt-4">
-		<div class="row">
-			<div class="col-6" id="tabla1">
-				<h3 class="text-center">Arbutus</h3>
-				<table class="table">
-					<thead>
-						<tr>
-							<th scope="col"></th>
-							<th scope="col">Nombre</th>
-							<th scope="col"></th>
-						</tr>
-					</thead>
-					<tbody id="arbutus">
-					</tbody>
-				</table>
-			</div>
-			<div class="col-6" id="tabla2">
-				<h3 class="text-center">Comarostaphilys</h3>
-				<table class="table">
-					<thead>
-						<tr>
-							<th scope="col"></th>
-							<th scope="col">Nombre</th>
-							<th scope="col"></th>
-						</tr>
-					</thead>
-					<tbody id="comaros">
-					</tbody>
-				</table>
-			</div>
-		</div>
-	</div>
+    <!-- //MODAL Arbutus -->
 
-    	<!-- //MODAL Arbutus -->
-
-	<!-- <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bd-example-modal-lg">Large modal</button> -->
-
-	<div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel"
-    aria-hidden="true" id="ver1">
-    <div class="modal-dialog modal-lg">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h1 id="nom">Nombre</h1>
-            </div>
-            <div class="modal-body">
-                <div class="container pl-4 pr-4">
-                    <div class="row">
-                        <div class="col-12"><span>
-                                <h5>Habito:</h5>
-                                <p id="hab">sfsfsf</p>
-                            </span></div>
-                        <div class="col-12"><span>
-                                <h5>Corteza Ramas:</h5>
-                                <p id="cr">sfsfsf</p>
-                            </span></div>
-                        <div class="col-12"><span>
-                                <h5>Corteza Ramillas:</h5>
-                                <p id="crs">sfsfsf</p>
-                            </span></div>
-                        <div class="col-12"><span>
-                                <h5>Peciolos:</h5>
-                                <p id="pec">sfsfsf</p>
-                            </span></div>
+    <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel"
+        aria-hidden="true" id="ver1">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <div class="container text-center">
+                        <h1 id="nom">Nombre</h1>
                     </div>
-                    <div class="row">
-                        <div class="col-12"><span>
-                                <h5>Hojas:</h5>
-                                <p id="hoj">sfsfsf</p>
-                            </span></div>
-                        <div class="col-12"><span>
-                                <h5>Haz:</h5>
-                                <p id="ha">sfsfsf</p>
-                            </span></div>
-                        <div class="col-12"><span>
-                                <h5>Enves:</h5>
-                                <p id="en">sfsfsf</p>
-                            </span></div>
-                        <div class="col-12"><span>
-                                <h5>Flores:</h5>
-                                <p id="flo">sfsfsf</p>
-                            </span></div>
-                    </div>
-                    <div class="row">
-                        <div class="col-12"><span>
-                                <h5>Ubicacion:</h5>
-                                <p id="ub">sfsfsf</p>
-                            </span></div>
-                    </div>
-                    <div class="row">
-                        <div class="col-4"><img src="img/Filtro/arbol.jpg" style="width: 8rem;" alt=""></div>
-                        <div class="col-4"><img src="img/Filtro/arbol.jpg" style="width: 8rem;" alt=""></div>
-                        <div class="col-4"><img src="img/Filtro/arbol.jpg" style="width: 8rem;" alt=""></div>
+                </div>
+                <div class="modal-body">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-4">
+                                <div class="container">
+                                    <div class="row pb-2">
+                                        <div class="col-12"><img src="" class="d-block w-100" id="imga1" alt=""></div>
+                                    </div>
+                                    <div class="row pb-2">
+                                        <div class="col-12"><img src="" class="d-block w-100" id="imga2" alt=""></div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-12"><img src="" class="d-block w-100" id="imga3" alt=""></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-8">
+                                <div class="container">
+                                    <h5>Habito:</h5>
+                                    <p id="hab">sfsfsf</p>
+
+                                    <h5>Corteza Ramas:</h5>
+                                    <p id="cr">sfsfsf</p>
+
+                                    <h5>Corteza Ramillas:</h5>
+                                    <p id="crs">sfsfsf</p>
+
+                                    <h5>Peciolos:</h5>
+                                    <p id="pec">sfsfsf</p>
+
+                                    <h5>Hojas:</h5>
+                                    <p id="hoj">sfsfsf</p>
+
+                                    <h5>Haz:</h5>
+                                    <p id="ha">sfsfsf</p>
+
+                                    <h5>Enves:</h5>
+                                    <p id="en">sfsfsf</p>
+
+                                    <h5>Flores:</h5>
+                                    <p id="flo">sfsfsf</p>
+
+                                    <h5>Ubicacion:</h5>
+                                    <p id="ub" class="text-break">sfsfsf</p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
+    <!--MODAL Comaros-->
+    <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel"
+        aria-hidden="true" id="ver2">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <div class="container text-center">
+                        <h1 id="nom2">Nombre</h1>
+                    </div>
+                </div>
+                <div class="modal-body">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-4">
+                                <div class="container">
+                                    <div class="row pb-2">
+                                        <div class="col-12"><img src="" class="d-block w-100" id="imgc1" alt=""></div>
+                                    </div>
+                                    <div class="row pb-2">
+                                        <div class="col-12"><img src="" class="d-block w-100" id="imgc2" alt=""></div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-12"><img src="" class="d-block w-100" id="imgc3" alt=""></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-8">
+                                <div class="container">
+                                    <h5>Habito:</h5>
+                                    <p id="hab2">sfsfsf</p>
 
-<div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel"
-aria-hidden="true" id="ver2">
-<div class="modal-dialog modal-lg">
-    <div class="modal-content">
-        <div class="modal-header">
-            <h1 id="nom2">Nombre</h1>
-        </div>
-        <div class="modal-body">
-            <div class="container pl-4 pr-4">
-                <div class="row">
-                    <div class="col-12"><span>
-                            <h5>Habito:</h5>
-                            <p id="hab2">sfsfsf</p>
-                        </span></div>
-                    <div class="col-12"><span>
-                            <h5>Peciolos Ramillas:</h5>
-                            <p id="pr">sfsfsf</p>
-                        </span></div>
-                    <div class="col-12"><span>
-                            <h5>Hojas:</h5>
-                            <p id="ho">sfsfsf</p>
-                        </span></div>
-                </div>
-                <div class="row">
-                    <div class="col-12"><span>
-                            <h5>Margen:</h5>
-                            <p id="mar">sfsfsf</p>
-                        </span></div>
-                    <div class="col-12"><span>
-                            <h5>Haz:</h5>
-                            <p id="h">sfsfsf</p>
-                        </span></div>
-                    <div class="col-12"><span>
-                            <h5>Enves:</h5>
-                            <p id="env2">sfsfsf</p>
-                        </span></div>
-                    <div class="col-12"><span>
-                            <h5>Inflorescencia:</h5>
-                            <p id="inf">sfsfsf</p>
-                        </span></div>
-                    <div class="col-12"><span>
-                            <h5>Flores:</h5>
-                            <p id="fl">sfsfsf</p>
-                        </span></div>
-                </div>
-                <div class="row">
-                    <div class="col-12"><span>
-                            <h5>Ubicacion:</h5>
-                            <p id="ubi">sfsfsf</p>
-                        </span></div>
-                </div>
-                <div class="row">
-                    <div class="col-4"><img src="img/Filtro/arbol.jpg" style="width: 8rem;" alt=""></div>
-                    <div class="col-4"><img src="img/Filtro/arbol.jpg" style="width: 8rem;" alt=""></div>
-                    <div class="col-4"><img src="img/Filtro/arbol.jpg" style="width: 8rem;" alt=""></div>
+                                    <h5>Peciolos Ramillas:</h5>
+                                    <p id="pr">sfsfsf</p>
+
+                                    <h5>Hojas:</h5>
+                                    <p id="ho">sfsfsf</p>
+
+                                    <h5>Margen:</h5>
+                                    <p id="mar">sfsfsf</p>
+
+                                    <h5>Haz:</h5>
+                                    <p id="h">sfsfsf</p>
+
+                                    <h5>Enves:</h5>
+                                    <p id="env2">sfsfsf</p>
+
+                                    <h5>Inflorescencia:</h5>
+                                    <p id="inf">sfsfsf</p>
+
+                                    <h5>Flores:</h5>
+                                    <p id="fl">sfsfsf</p>
+
+                                    <h5>Ubicacion:</h5>
+                                    <p id="ubi" class="text-break">sfsfsf</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
-</div>
-
-
-    <!-- Mapa
-    ================================================== -->
-    <section id="esp" class="s-clients">
-        <div class="row section-header has-bottom-sep" data-aos="fade-up">
-            <div class="col-full">
-                <span>Da click para obtener mas información</span>
-            </div>
-        </div>
-        <!--Cierre de la seccion de mas info-->
-        <!--Mapa-->
-        <div class="container-fluid">
-            <div class="w-70">
-                <div class="embed-container">
-                    <iframe width="500" height="400" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"
-                        title="Madroños en  México"
-                        src="https://kaxkhzaa6jbz4ylj.maps.arcgis.com/apps/Embed/index.html?webmap=aa715489865d4aee88c6af5a16517675&extent=-118.7437,14.4806,-86.2901,31.7498&home=true&zoom=true&previewImage=false&scale=true&search=true&searchextent=true&disable_scroll=true&theme=dark"></iframe>
-                </div>
-            </div>
-        </div>
-        <!--Cierre del mapa-->
-    </section>
 
 
     <!-- contact
@@ -1413,25 +1815,22 @@ aria-hidden="true" id="ver2">
                     <fieldset>
 
                         <div class="form-field">
-                            <input name="contactName" type="text" id="contactName" placeholder="Your Name" value=""
+                            <input name="contactName" type="text" id="contactName" placeholder="Tu nombre" value=""
                                 minlength="2" required="" aria-required="true" class="full-width">
                         </div>
                         <div class="form-field">
-                            <input name="contactEmail" type="email" id="contactEmail" placeholder="Your Email" value=""
+                            <input name="contactEmail" type="email" id="contactEmail" placeholder="Tu Email" value=""
                                 required="" aria-required="true" class="full-width">
                         </div>
+ 
                         <div class="form-field">
-                            <input name="contactSubject" type="text" id="contactSubject" placeholder="Subject" value=""
-                                class="full-width">
-                        </div>
-                        <div class="form-field">
-                            <textarea name="contactMessage" id="contactMessage" placeholder="Your Message" rows="10"
+                            <textarea name="contactMessage" id="contactMessage" placeholder="Mensage" rows="10"
                                 cols="50" required="" aria-required="true" class="full-width"></textarea>
                         </div>
                         <div class="form-field">
-                            <button class="full-width btn--primary">Submit</button>
+                            <button class="full-width btn--primary">Enviar</button>
                             <div class="submit-loader">
-                                <div class="text-loader">Sending...</div>
+                                <div class="text-loader">Enviando...</div>
                                 <div class="s-loader">
                                     <div class="bounce1"></div>
                                     <div class="bounce2"></div>
@@ -1445,12 +1844,12 @@ aria-hidden="true" id="ver2">
 
                 <!-- contact-warning -->
                 <div class="message-warning">
-                    Something went wrong. Please try again.
+                    Algo salio mal, intenta de nuevo.
                 </div>
 
                 <!-- contact-success -->
                 <div class="message-success">
-                    Your message was sent, thank you!<br>
+                    Tu mensaje ha ido enviado, Gracias!<br>
                 </div>
 
             </div> <!-- end contact-primary -->
@@ -1463,38 +1862,37 @@ aria-hidden="true" id="ver2">
                     <div class="cinfo">
                         <h5>Dirección</h5>
                         <p>
-                            1600 Amphitheatre Parkway<br>
-                            Mountain View, CA<br>
-                            94043 US
+                            Av. Universidad #1001,<br>
+                            La Estación Rincón, El Potrero,<br>
+                            20400 Rincón de Romos, Ags.
                         </p>
                     </div>
 
                     <div class="cinfo">
                         <h5>Email</h5>
                         <p>
-                            contact@glintsite.com<br>
-                            info@glintsite.com
+                            utna@utna.edu.mx<br>
+                            tecnogenesis@gmail.com
                         </p>
                     </div>
 
                     <div class="cinfo">
                         <h5>Otros:</h5>
                         <p>
-                            Phone: (+63) 555 1212<br>
-                            Mobile: (+63) 555 0100<br>
-                            Fax: (+63) 555 0101
+                            Tel. (465) 965 00 30<br>
+                            WhatsApp: 4651546294<br>
                         </p>
                     </div>
 
                     <ul class="contact-social">
                         <li>
-                            <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                            <a href="https://www.facebook.com/utnaoficial"><i class="fa fa-facebook" aria-hidden="true"></i></a>
                         </li>
                         <li>
-                            <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                            <a href="https://www.youtube.com/channel/UCF7Xb1DxdXgBbuDlIY6oRwg"><i class="fa fa-youtube" aria-hidden="true"></i></a>
                         </li>
                         <li>
-                            <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                            <a href="https://www.instagram.com/utna_edu/"><i class="fa fa-instagram" aria-hidden="true"></i></a>
                         </li>
 
                     </ul> <!-- end contact-social -->
@@ -1514,28 +1912,26 @@ aria-hidden="true" id="ver2">
         <div class="row footer-main text-dark">
 
             <div class="col-six tab-full left footer-desc">
-
-                <div class="footer-logo"></div>
-                Proin eget tortor risus. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Praesent sapien
-                massa, convallis a pellentesque nec, egestas non nisi. Mauris blandit aliquet elit, eget tincidunt nibh
-                pulvinar a. Nulla porttitor accumsan tincidunt. Nulla porttitor accumsan tincidunt. Quaerat voluptas
-                autem necessitatibus vitae aut.
-
+                <img src="img/footer/TecnoGenesis.png" alt="" width="280px" height="250px">
             </div>
 
             <div class="col-six tab-full right footer-subscribe text-dark">
 
-                <h4 class="text-dark">Get Notified</h4>
-                <p>Quia quo qui sed odit. Quaerat voluptas autem necessitatibus vitae aut non alias sed quia. Ut itaque
-                    enim optio ut excepturi deserunt iusto porro.</p>
+                <h2 class="text-dark">Tecno Genesis</h2>
+                <h4 class="text-dark md-1-1">Misión</h4>
+                <p class="mt-1">“Transformar el entorno a través de una educación superior integral de 
+                    excelencia en beneficio de la sociedad.”</p>
+
+                <img src="img/footer/utna.png" alt="" width="160px" height="200px">
+                <img src="img/footer/ipn.png" alt="" width="170px" height="240px">
             </div>
         </div> <!-- end footer-main -->
         <div class="row footer-bottom text-dark">
 
             <div class="col-twelve">
                 <div class="copyright">
-                    <span>© Copyright Glint 2017</span>
-                    <span>Site Template by <a href="https://www.colorlib.com/">Colorlib</a></span>
+                    <span>© Copyright TecnoGenesis 2017</span>
+                    <span>Site Template by TecnoGenesis</span>
                 </div>
 
                 <div class="go-top">
@@ -1551,10 +1947,8 @@ aria-hidden="true" id="ver2">
 
     <!-- Java Script
     ================================================== -->
-    <script src="js/jquery-3.2.1.min.js"></script>
     <script src="js/plugins.js"></script>
     <script src="js/main.js"></script>
-
     <script src="js/jquery.min.js"></script>
     <script src="js/jquery-migrate-3.0.1.min.js"></script>
     <script src="js/popper.min.js"></script>
@@ -1568,6 +1962,13 @@ aria-hidden="true" id="ver2">
     <script src="js/bootstrap-datepicker.js"></script>
     <script src="js/scrollax.min.js"></script>
     <script src="js/main2.js"></script>
+    <script src="js/mapa.js"></script>
+
+
+    <script src="js/fetch.js"></script>
+    <script src="js/fetchBusqueda.js"></script>-->
+    <script type="text/javascript" src="https://www.amcharts.com/lib/3/ammap.js"></script>
+    <script type="text/javascript" src="https://www.amcharts.com/lib/3/maps/js/mexicoLow.js"></script>
     <script src="js/fetchBusqueda.js"></script>
     <script>
         $(document).ready(function () {
