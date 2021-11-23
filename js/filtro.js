@@ -184,7 +184,7 @@ $(document).ready(function () {
 		Object.entries(obj).map(([token, value]) => {
 			if (value != "") {
 				document.getElementById("selecciones").innerHTML += `
-				<li><b>${token} :</b> ${value}</b>\n	`;
+				<span><b>${token} :</b> ${value}</b></span> |&nbsp `;
 			}
 		});
 	}
@@ -195,7 +195,8 @@ $(document).ready(function () {
 		$('#generos').prop('hidden', true);
 		reset();
 		$('#filtro').prop('hidden', false);
-		$('.collapse').collapse('hide');
+		//$('.collapse').collapse('hide');
+		$('#habito').collapse('show');
 		$('input[type=checkbox]').not(this).prop('checked', false);
 		gen = $(this).prop('id');
 		if (gen == "Arbutus") {
@@ -205,20 +206,23 @@ $(document).ready(function () {
 			$('#tablacoma').prop('hidden', true);
 			$('#btn-comaros').prop('hidden', true);
 			$('#btn-arbutus').prop('hidden', false);
+			$('#habito').collapse('show');
 		}
-		if (gen == "Comarostaphylis") {
+		//en caso de fallo eliminar else y solo dejar if
+		 else if (gen == "Comarostaphylis") {
 			fetch2();
 			$('#titu').html(gen);
 			$('#tablacoma').prop('hidden', false);
 			$('#tablaarb').prop('hidden', true);
 			$('#btn-arbutus').prop('hidden', true);
 			$('#btn-comaros').prop('hidden', false);
+			$('#habito').collapse('show');
 		}
-		if ($('#Arbutus').prop('checked') == false && $('#Comarostaphylis').prop('checked') == false) {
+		else if ($('#Arbutus').prop('checked') == false && $('#Comarostaphylis').prop('checked') == false) {
 			$('#filtro').prop('hidden', true);
 			$('.tables').prop('hidden', true);
 		}
-		$('#habito').collapse('show');
+		
 
 	});
 
@@ -385,7 +389,6 @@ $(document).ready(function () {
 	function crear() {
 		var mapa = AmCharts.makeChart("map", {
 			"type": "map",
-
 			"addClassNames": true,
 			"fontSize": 15,
 			"color": "#000000",
@@ -476,23 +479,6 @@ $(document).ready(function () {
         crear();
 	});
 
-	/*
-	$('.ubi').on('click', function () {
-		var ubi = $(this).prop('name');
-		$('.ubi').not(this).prop('checked', false);
-		if ($(this).prop('checked') == false) {
-			obj.ubicacion = "";
-			color('#btnubi', 0);
-		} else {
-			color('#btnubi', 1);
-			obj.ubicacion = ubi;
-			setTimeout(fetchpost, 500, obj);
-		}
-		selecciones();
-		console.log(obj);
-    
-	});
-*/
 	//FLORES
 	$('.flor').on('click', function () {
 		var flores = $(this).prop('name');
@@ -516,17 +502,19 @@ $(document).ready(function () {
 		$('#generos').prop('hidden', false);
 		$('.tables').prop('hidden', true);
 		$('#selecciones').html("");
+		//$('#habito').collapse('show');
 		reset();
 	});
 
 	///BOTON REINICIAR
 	$('#reiniciar').on('click', function () {
 		$('.collapse :checkbox').prop('checked', false);
-		$('.collapse').collapse('hide');
+		//$('.collapse').collapse('hide');
 		if ($('#Arbutus').prop('checked') == true) { fetch1() }
 		if ($('#Comarostaphylis').prop('checked') == true) { fetch2() }
 		$('#selecciones').html("");
 		reset();
+		//$('#habito').collapse('show');
 	});
 
 	///BOTONES VER MAS

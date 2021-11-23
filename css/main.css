@@ -835,11 +835,11 @@ input[type="button"] {
   font-family: "montserrat-medium", sans-serif;
   font-size: 1.2rem;
   text-transform: uppercase;
-  letter-spacing: 0.3rem;
+  letter-spacing: 0.2rem;
   height: 5.4rem;
   line-height: calc(5.4rem - 0.4rem);
   padding: 0 3rem;
-  margin: 0 0.3rem 1.2rem 0;
+  margin: 0 0.2rem 1.0rem 0;
   color: #000000;
   text-decoration: none;
   text-align: center;
@@ -967,8 +967,11 @@ button.fulll-width {
 }
 .bttn.fu-width,
 button.fu-width {
-
+  font-size:10px;
+  text-align: center ;
+  width: 170px;
   margin-right: 0;
+  
 }
 .bttn2.fu-width2,
 button.fu-width2 {
