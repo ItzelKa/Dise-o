@@ -73,6 +73,10 @@ function fetcheditar1(id) {
 			let src2 = data.arbutus[0].imagenes.imagen2;
 			let src3 = data.arbutus[0].imagenes.imagen3;
 
+			$('#foto1').attr('src',"");
+			$('#foto2').attr('src',"");
+			$('#foto3').attr('src',"");
+
 			if (src1) { $('#foto1').attr('src', src1); }
 			if (src2) { $('#foto2').attr('src', src2); }
 			if (src3) { $('#foto3').attr('src', src3); }
@@ -274,6 +278,36 @@ $('body').on('click', '.delete', function () {
 ///BOTON LIMPIAR FORMULARIO
 $('#limpia').on('click', function () {
 	limpia();
+});
+
+//BOTON ELIMINAR Imagen
+$('.delimg').on('click', function () {
+	var id = $('#id').val();
+	var imgs=$(this).attr("id");
+	if (arrayestados(2)) { return false; }
+	let dato = new FormData(document.getElementById('formarbu2'));
+	dato.append('ubicacion', estados);
+	let img1 = $('#foto1').attr('src'); 
+	let img2 = $('#foto2').attr('src');
+	let img3 = $('#foto3').attr('src'); 
+	switch (imgs) {
+		case "1":
+			img1="";
+			break;
+		case "2":
+			img2="";
+			break;
+		case "3":
+			img3="";
+			break;
+	}
+		dato.append('img1', img1);
+		dato.append('img2', img2);
+		dato.append('img3', img3);
+
+		const entradas = Object.fromEntries(dato.entries());
+		const datos = JSON.stringify(entradas);
+		fetcheditar2(id, datos);
 });
 
 

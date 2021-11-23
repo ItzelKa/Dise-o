@@ -121,627 +121,736 @@
 
             <!-- //MODAL Insertar Comarosta -->
 
-            <div class="modal fade bd-example-modal-xl" tabindex="-1" role="dialog" aria-labelledby="myExtraLargeModalLabel"
-                aria-hidden="true" id="insert">
-                <div class="modal-dialog modal-xl">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h2 class="offset-4">Agrega nuevo Comarostaphylis</h2>
-                        </div>
-                        <div class="modal-body">
-                            <div class="container pl-4 pr-4">
-                                <div class="row">
-                                    <div class="col-12">
-                                        <div class="container">
-                                            <form id="formcoma" enctype="multipart/form-data">
-                                                <div class="form-row pt-">
-                                                    <div class="col-4">
-                                                        <input type="text" class="form-control form-control-lg" name="nombre"
-                                                            id="nombre" placeholder="Nombre">
-                                                    </div>
-                                                    <div class="col-4">
-                                                        <input type="text" class="form-control form-control-lg" name="habito"
-                                                            id="habito" placeholder="Habito">
-                                                    </div>
-                                                    <div class="col-4">
-                                                        <input type="text" class="form-control form-control-lg" name="margen"
-                                                            id="margen" placeholder="Margen">
-                                                    </div>
-                                                </div>
-
-                                                <div class="form-row pt-3">
-                                                    <div class="col-4">
-                                                        <input type="text" class="form-control form-control-lg" name="peciolosr"
-                                                            id="peciolosr" placeholder="Peciolos Ramillas">
-                                                    </div>
-                                                    <div class="col-4">
-                                                        <input type="text" class="form-control form-control-lg" name="inflorescencia"
-                                                            id="inflorescencia" placeholder="Inflorescencia">
-                                                    </div>
-                                                    <div class="col-4">
-                                                        <input type="text" class="form-control form-control-lg" name="hojas"
-                                                            id="hojas" placeholder="Hojas">
-                                                    </div>
-                                                </div>
-
-                                                <div class="form-row pt-3">
-                                                    <div class="col-4">
-                                                        <input type="text" class="form-control form-control-lg" name="haz"
-                                                            id="haz" placeholder="Haz">
-                                                    </div>
-                                                    <div class="col-4">
-                                                        <input type="text" class="form-control form-control-lg" name="enves"
-                                                            id="enves" placeholder="Enves">
-                                                    </div>
-                                                    <div class="col-4">
-                                                        <input type="text" class="form-control form-control-lg" name="flores"
-                                                            id="flores" placeholder="Flores">
-                                                    </div>
-                                                </div>
-
-                                            </form>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="form-row pt-4">
-                                    <div class="col-3"></div>
-                                    <div class="col-6">
-                                            <div class="custom-file">
-                                                <input type="file" class="custom-file-input form-control-lg" name="files" id="img" lang="es" multiple>
-                                                <label class="custom-file-label form-control-lg" for="img">Seleccione max 3 Imagenes:</label>
-                                            </div>
-                                    </div>
-                                    <div class="col-3"></div>
-                                </div>
-                                
-                                <!-- //////ROW INCIO CHECKBOXES ESTADOS -->
-                                <div class="row pt-4">
-                                    <div class="col-2"></div>
-                                    <div class="col-10">
-                                    <h5>Ubicacion</h5>
-                                    <div class="container">
-                                        <div class="row">
-                                        <div class="col-3">
-                                            <div class="form-check">
-                                            <input class="form-check-input" type="checkbox" value="Aguascalientes" id="Aguascalientes">
-                                            <label class="form-check-label" for="Aguascalientes">
-                                                Ags
-                                            </label>
-                                            </div>
-                                            <div class="form-check">
-                                            <input class="form-check-input" type="checkbox" value="Baja California" id="Baja California">
-                                            <label class="form-check-label" for="Baja California">
-                                                BC
-                                            </label>
-                                            </div>
-                                            <div class="form-check">
-                                            <input class="form-check-input" type="checkbox" value="Baja California Sur"
-                                                id="Baja California Sur">
-                                            <label class="form-check-label" for="Baja California Sur">
-                                                BCS
-                                            </label>
-                                            </div>
-                                            <div class="form-check">
-                                            <input class="form-check-input" type="checkbox" value="Campeche" id="Campeche">
-                                            <label class="form-check-label" for="Campeche">
-                                                Camp
-                                            </label>
-                                            </div>
-                                            <div class="form-check">
-                                            <input class="form-check-input" type="checkbox" value="Coahuila" id="Coahuila">
-                                            <label class="form-check-label" for="Coahuila">
-                                                Coah
-                                            </label>
-                                            </div>
-                                            <div class="form-check">
-                                            <input class="form-check-input" type="checkbox" value="Colima" id="Colima">
-                                            <label class="form-check-label" for="Colima">
-                                                Col
-                                            </label>
-                                            </div>
-                                            <div class="form-check">
-                                            <input class="form-check-input" type="checkbox" value="Chiapas" id="Chiapas">
-                                            <label class="form-check-label" for="Chiapas">
-                                                Chis
-                                            </label>
-                                            </div>
-                                            <div class="form-check">
-                                            <input class="form-check-input" type="checkbox" value="Chihuahua" id="Chihuahua">
-                                            <label class="form-check-label" for="Chihuahua">
-                                                Chih
-                                            </label>
-                                            </div>
-                                        </div>
-                    
-                                        <!-- //////DIVISOR DE COLUMNAS -->
-                    
-                                        <div class="col-3">
-                                            <div class="form-check">
-                                            <input class="form-check-input" type="checkbox" value="Distrito Federal" id="Distrito Federal">
-                                            <label class="form-check-label" for="Distrito Federal">
-                                                DF
-                                            </label>
-                                            </div>
-                                            <div class="form-check">
-                                            <input class="form-check-input" type="checkbox" value="Durango" id="Durango">
-                                            <label class="form-check-label" for="Durango">
-                                                Dgo
-                                            </label>
-                                            </div>
-                                            <div class="form-check">
-                                            <input class="form-check-input" type="checkbox" value="Guanajuato" id="Guanajuato">
-                                            <label class="form-check-label" for="Guanajuato">
-                                                Gto
-                                            </label>
-                                            </div>
-                                            <div class="form-check">
-                                            <input class="form-check-input" type="checkbox" value="Guerrero" id="Guerrero">
-                                            <label class="form-check-label" for="Guerrero">
-                                                Gro
-                                            </label>
-                                            </div>
-                                            <div class="form-check">
-                                            <input class="form-check-input" type="checkbox" value="Hidalgo" id="Hidalgo">
-                                            <label class="form-check-label" for="Hidalgo">
-                                                Hgo
-                                            </label>
-                                            </div>
-                                            <div class="form-check">
-                                            <input class="form-check-input" type="checkbox" value="Jalisco" id="Jalisco">
-                                            <label class="form-check-label" for="Jalisco">
-                                                Jal
-                                            </label>
-                                            </div>
-                                            <div class="form-check">
-                                            <input class="form-check-input" type="checkbox" value="Mexico" id="Mexico">
-                                            <label class="form-check-label" for="Mexico">
-                                                Mex
-                                            </label>
-                                            </div>
-                                            <div class="form-check">
-                                            <input class="form-check-input" type="checkbox" value="Michoacan" id="Michoacan">
-                                            <label class="form-check-label" for="Michoacan">
-                                                Mich
-                                            </label>
-                                            </div>
-                                        </div>
-                    
-                                        <!-- //////DIVISOR DE COLUMNAS -->
-                    
-                                        <div class="col-3">
-                                            <div class="form-check">
-                                            <input class="form-check-input" type="checkbox" value="Morelos" id="Morelos">
-                                            <label class="form-check-label" for="Morelos">
-                                                Mor
-                                            </label>
-                                            </div>
-                                            <div class="form-check">
-                                            <input class="form-check-input" type="checkbox" value="Nayarit" id="Nayarit">
-                                            <label class="form-check-label" for="Nayarit">
-                                                Nay
-                                            </label>
-                                            </div>
-                                            <div class="form-check">
-                                            <input class="form-check-input" type="checkbox" value="Nuevo Leon" id="Nuevo Leon">
-                                            <label class="form-check-label" for="Nuevo Leon">
-                                                NL
-                                            </label>
-                                            </div>
-                                            <div class="form-check">
-                                            <input class="form-check-input" type="checkbox" value="Oaxaca" id="Oaxaca">
-                                            <label class="form-check-label" for="Oaxaca">
-                                                Oax
-                                            </label>
-                                            </div>
-                                            <div class="form-check">
-                                            <input class="form-check-input" type="checkbox" value="Puebla" id="Puebla">
-                                            <label class="form-check-label" for="Puebla">
-                                                Pue
-                                            </label>
-                                            </div>
-                                            <div class="form-check">
-                                            <input class="form-check-input" type="checkbox" value="Queretaro" id="Queretaro">
-                                            <label class="form-check-label" for="Queretaro">
-                                                Qro
-                                            </label>
-                                            </div>
-                                            <div class="form-check">
-                                            <input class="form-check-input" type="checkbox" value="Quintana Roo" id="Quintana Roo">
-                                            <label class="form-check-label" for="Quintana Roo">
-                                                QR
-                                            </label>
-                                            </div>
-                                            <div class="form-check">
-                                            <input class="form-check-input" type="checkbox" value="San Luis Potosil" id="San Luis Potosil">
-                                            <label class="form-check-label" for="San Luis Potosil">
-                                                SLP
-                                            </label>
-                                            </div>
-                                        </div>
-                    
-                                        <!-- //////DIVISOR DE COLUMNAS -->
-                    
-                                        <div class="col-3">
-                                            <div class="form-check">
-                                            <input class="form-check-input" type="checkbox" value="Sinaloa" id="Sinaloa">
-                                            <label class="form-check-label" for="Sinaloa">
-                                                Sin
-                                            </label>
-                                            </div>
-                                            <div class="form-check">
-                                            <input class="form-check-input" type="checkbox" value="Sonora" id="Sonora">
-                                            <label class="form-check-label" for="Sonora">
-                                                Son
-                                            </label>
-                                            </div>
-                                            <div class="form-check">
-                                            <input class="form-check-input" type="checkbox" value="Tabasco" id="Tabasco">
-                                            <label class="form-check-label" for="Tabasco">
-                                                Tab
-                                            </label>
-                                            </div>
-                                            <div class="form-check">
-                                            <input class="form-check-input" type="checkbox" value="Tamaulipas" id="Tamaulipas">
-                                            <label class="form-check-label" for="Tamaulipas">
-                                                Tams
-                                            </label>
-                                            </div>
-                                            <div class="form-check">
-                                            <input class="form-check-input" type="checkbox" value="Tlaxcala" id="Tlaxcala">
-                                            <label class="form-check-label" for="Tlaxcala">
-                                                Tlax
-                                            </label>
-                                            </div>
-                                            <div class="form-check">
-                                            <input class="form-check-input" type="checkbox" value="Veracruz" id="Veracruz">
-                                            <label class="form-check-label" for="Veracruz">
-                                                Ver
-                                            </label>
-                                            </div>
-                                            <div class="form-check">
-                                            <input class="form-check-input" type="checkbox" value="Yucatan" id="Yucatan">
-                                            <label class="form-check-label" for="Yucatan">
-                                                Yuc
-                                            </label>
-                                            </div>
-                                            <div class="form-check">
-                                            <input class="form-check-input" type="checkbox" value="Zacatecas" id="Zacatecas">
-                                            <label class="form-check-label" for="Zacatecas">
-                                                Zac
-                                            </label>
-                                            </div>
-                                        </div>
-                    
-                                        </div>
-                                    </div>
-                                    </div>
-                                </div>
-                                <!-- //////ROW FIN CHECKBOXES ESTADOS -->
-
-                            </div>
-                        </div>
-                        <div class="modal-footer text-center">
-                            <button type="button" class="btn btn-lg btn-warning" id="limpia">Limpiar</button>
-                            <button type="button" class="btn btn-lg btn-success" id="inserta">Insertar</button>
-                        </div>
-                    </div>
-                </div>
+    <div class="modal fade bd-example-modal-xl" tabindex="-1" role="dialog" aria-labelledby="myExtraLargeModalLabel"
+    aria-hidden="true" id="insert">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 class="offset-4">Agrega nuevo Comarostaphylis</h2>
             </div>
+            <div class="modal-body">
+                <div class="container pl-4 pr-4">
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="container">
+                                <form id="formcoma" enctype="multipart/form-data">
+                                    <div class="form-row pt-">
+                                        <div class="col-4">
+                                            <input type="text" class="form-control form-control-lg" name="nombre"
+                                                id="nombre" placeholder="Nombre">
+                                        </div>
+                                        <div class="col-4">
+                                            <input type="text" class="form-control form-control-lg" name="habito"
+                                                id="habito" placeholder="Habito">
+                                        </div>
+                                        <div class="col-4">
+                                            <input type="text" class="form-control form-control-lg" name="margen"
+                                                id="margen" placeholder="Margen">
+                                        </div>
+                                    </div>
 
+                                    <div class="form-row pt-3">
+                                        <div class="col-4">
+                                            <input type="text" class="form-control form-control-lg" name="peciolosr"
+                                                id="peciolosr" placeholder="Peciolos Ramillas">
+                                        </div>
+                                        <div class="col-4">
+                                            <input type="text" class="form-control form-control-lg"
+                                                name="inflorescencia" id="inflorescencia"
+                                                placeholder="Inflorescencia">
+                                        </div>
+                                        <div class="col-4">
+                                            <input type="text" class="form-control form-control-lg" name="hojas"
+                                                id="hojas" placeholder="Hojas">
+                                        </div>
+                                    </div>
 
-            <!-- //MODAL Actualizar Comarosta -->
+                                    <div class="form-row pt-3">
+                                        <div class="col-4">
+                                            <input type="text" class="form-control form-control-lg" name="haz"
+                                                id="haz" placeholder="Haz">
+                                        </div>
+                                        <div class="col-4">
+                                            <input type="text" class="form-control form-control-lg" name="enves"
+                                                id="enves" placeholder="Enves">
+                                        </div>
+                                        <div class="col-4">
+                                            <input type="text" class="form-control form-control-lg" name="flores"
+                                                id="flores" placeholder="Flores">
+                                        </div>
+                                    </div>
 
-            <div class="modal fade bd-example-modal-xl" tabindex="-1" role="dialog" aria-labelledby="myExtraLargeModalLabel"
-            aria-hidden="true" id="edit">
-            <div class="modal-dialog modal-xl">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h2 class="offset-4">Actualiza Comarostphylis</h2>
+                                </form>
+                            </div>
+                        </div>
                     </div>
-                    <div class="modal-body">
-                        <div class="container pl-4 pr-4">
-                            <div class="row">
-                                <div class="col-12">
-                                    <div class="container">
-                                        <form id="formcoma2" enctype="multipart/form-data">
-                                            <div class="form-row pt-">
-                                                <div class="col-4">
-                                                    <input type="text" id="id" hidden>
-                                                    <input type="text" class="form-control form-control-lg" name="nombre"
-                                                        id="nom" placeholder="Nombre">
-                                                </div>
-                                                <div class="col-4">
-                                                    <input type="text" class="form-control form-control-lg" name="habito"
-                                                        id="hab" placeholder="Habito">
-                                                </div>
-                                                <div class="col-4">
-                                                    <input type="text" class="form-control form-control-lg" name="margen2"
-                                                        id="margen2" placeholder="Margen">
-                                                </div>
-                                            </div>
 
-                                            <div class="form-row pt-3">
-                                                <div class="col-4">
-                                                    <input type="text" class="form-control form-control-lg" name="peciolosr2"
-                                                        id="peciolosr2" placeholder="Peciolos
-                                                    Ramillas">
-                                                </div>
-                                                <div class="col-4">
-                                                    <input type="text" class="form-control form-control-lg" name="inflorescencia2"
-                                                        id="inflorescencia2" placeholder="Inflorescencia">
-                                                </div>
-                                                <div class="col-4">
-                                                    <input type="text" class="form-control form-control-lg" name="hojas"
-                                                        id="hoj" placeholder="Hojas">
-                                                </div>
-                                            </div>
-
-                                            <div class="form-row pt-3">
-                                                <div class="col-4">
-                                                    <input type="text" class="form-control form-control-lg" name="haz"
-                                                        id="haz2" placeholder="Haz">
-                                                </div>
-                                                <div class="col-4">
-                                                    <input type="text" class="form-control form-control-lg" name="enves"
-                                                        id="env" placeholder="Enves">
-                                                </div>
-                                                <div class="col-4">
-                                                    <input type="text" class="form-control form-control-lg" name="flores"
-                                                        id="flo" placeholder="Flores">
-                                                </div>
-                                            </div>
-                                        </form>
-                                    </div>
-                                </div>
+                    <div class="form-row pt-4">
+                        <div class="col-3"></div>
+                        <div class="col-6">
+                            <div class="custom-file">
+                                <input type="file" class="custom-file-input form-control-lg" name="files" id="img"
+                                    lang="es" multiple>
+                                <label class="custom-file-label form-control-lg" for="img">Seleccione max 3
+                                    Imagenes:</label>
                             </div>
+                        </div>
+                        <div class="col-3"></div>
+                    </div>
 
-                            <div class="row pt-4">
-                                <div class="col-4 text-center">
-                                    <img src="" alt="" id="foto1" class="pb-1" style="width: 200px;height:200px">
-                                    <div class="custom-file">
-                                        <input type="file" class="custom-file-input form-control-lg" name="file1" id="img1" lang="es">
-                                        <label class="custom-file-label form-control-lg" for="img">Image1:</label>
-                                    </div>
-                                </div>
-                                <div class="col-4 text-center">
-                                    <img src="" alt="" id="foto2" class="pb-1" style="width: 200px;height:200px">
-                                    <div class="custom-file">
-                                        <input type="file" class="custom-file-input form-control-lg" name="file2" id="img2" lang="es">
-                                        <label class="custom-file-label form-control-lg" for="img">Imagen2:</label>
-                                    </div>
-                                </div>
-                                <div class="col-4 text-center">
-                                    <img src="" alt="" id="foto3" class="pb-1" style="width: 200px;height:200px">
-                                    <div class="custom-file">
-                                        <input type="file" class="custom-file-input form-control-lg" name="file3" id="img3" lang="es">
-                                        <label class="custom-file-label form-control-lg" for="img">Imagen3:</label>
-                                    </div>
-                                </div>
-                            </div>
-                            
-                           <!-- //////ROW INCIO CHECKBOXES ESTADOS -->
-                           <div class="row pt-4">
-                            <div class="col-2"></div>
-                            <div class="col-10">
+                    <div class="row pt-4">
+                        <div class="col-2"></div>
+                        <div class="col-10">
                             <h5>Ubicacion</h5>
                             <div class="container">
                                 <div class="row">
-                                <div class="col-3">
-                                    <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" value="Aguascalientes" id="Aguascalientes">
-                                    <label class="form-check-label" for="Aguascalientes">
-                                        Ags
-                                    </label>
+
+                                    <div class="col-3">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value="Aguascalientes"
+                                                id="Aguascalientes">
+                                            <label class="form-check-label" for="Aguascalientes">
+                                                Ags
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value="Baja California"
+                                                id="Baja California">
+                                            <label class="form-check-label" for="Baja California">
+                                                BC
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox"
+                                                value="Baja California Sur" id="Baja California Sur">
+                                            <label class="form-check-label" for="Baja California Sur">
+                                                BCS
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value="Campeche"
+                                                id="Campeche">
+                                            <label class="form-check-label" for="Campeche">
+                                                Camp
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value="Coahuila"
+                                                id="Coahuila">
+                                            <label class="form-check-label" for="Coahuila">
+                                                Coah
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value="Colima"
+                                                id="Colima">
+                                            <label class="form-check-label" for="Colima">
+                                                Col
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value="Chiapas"
+                                                id="Chiapas">
+                                            <label class="form-check-label" for="Chiapas">
+                                                Chis
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value="Chihuahua"
+                                                id="Chihuahua">
+                                            <label class="form-check-label" for="Chihuahua">
+                                                Chih
+                                            </label>
+                                        </div>
                                     </div>
-                                    <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" value="Baja California" id="Baja California">
-                                    <label class="form-check-label" for="Baja California">
-                                        BC
-                                    </label>
+
+                                    <!-- //////DIVISOR DE COLUMNAS -->
+
+                                    <div class="col-3">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value="Distrito Federal"
+                                                id="Distrito Federal">
+                                            <label class="form-check-label" for="Distrito Federal">
+                                                DF
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value="Durango"
+                                                id="Durango">
+                                            <label class="form-check-label" for="Durango">
+                                                Dgo
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value="Guanajuato"
+                                                id="Guanajuato">
+                                            <label class="form-check-label" for="Guanajuato">
+                                                Gto
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value="Guerrero"
+                                                id="Guerrero">
+                                            <label class="form-check-label" for="Guerrero">
+                                                Gro
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value="Hidalgo"
+                                                id="Hidalgo">
+                                            <label class="form-check-label" for="Hidalgo">
+                                                Hgo
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value="Jalisco"
+                                                id="Jalisco">
+                                            <label class="form-check-label" for="Jalisco">
+                                                Jal
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value="Mexico"
+                                                id="Mexico">
+                                            <label class="form-check-label" for="Mexico">
+                                                Mex
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value="Michoacan"
+                                                id="Michoacan">
+                                            <label class="form-check-label" for="Michoacan">
+                                                Mich
+                                            </label>
+                                        </div>
                                     </div>
-                                    <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" value="Baja California Sur"
-                                        id="Baja California Sur">
-                                    <label class="form-check-label" for="Baja California Sur">
-                                        BCS
-                                    </label>
+
+                                    <!-- //////DIVISOR DE COLUMNAS -->
+
+                                    <div class="col-3">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value="Morelos"
+                                                id="Morelos">
+                                            <label class="form-check-label" for="Morelos">
+                                                Mor
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value="Nayarit"
+                                                id="Nayarit">
+                                            <label class="form-check-label" for="Nayarit">
+                                                Nay
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value="Nuevo Leon"
+                                                id="Nuevo Leon">
+                                            <label class="form-check-label" for="Nuevo Leon">
+                                                NL
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value="Oaxaca"
+                                                id="Oaxaca">
+                                            <label class="form-check-label" for="Oaxaca">
+                                                Oax
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value="Puebla"
+                                                id="Puebla">
+                                            <label class="form-check-label" for="Puebla">
+                                                Pue
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value="Queretaro"
+                                                id="Queretaro">
+                                            <label class="form-check-label" for="Queretaro">
+                                                Qro
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value="Quintana Roo"
+                                                id="Quintana Roo">
+                                            <label class="form-check-label" for="Quintana Roo">
+                                                QR
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value="San Luis Potosil"
+                                                id="San Luis Potosil">
+                                            <label class="form-check-label" for="San Luis Potosil">
+                                                SLP
+                                            </label>
+                                        </div>
                                     </div>
-                                    <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" value="Campeche" id="Campeche">
-                                    <label class="form-check-label" for="Campeche">
-                                        Camp
-                                    </label>
+
+                                    <!-- //////DIVISOR DE COLUMNAS -->
+
+                                    <div class="col-3">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value="Sinaloa"
+                                                id="Sinaloa">
+                                            <label class="form-check-label" for="Sinaloa">
+                                                Sin
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value="Sonora"
+                                                id="Sonora">
+                                            <label class="form-check-label" for="Sonora">
+                                                Son
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value="Tabasco"
+                                                id="Tabasco">
+                                            <label class="form-check-label" for="Tabasco">
+                                                Tab
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value="Tamaulipas"
+                                                id="Tamaulipas">
+                                            <label class="form-check-label" for="Tamaulipas">
+                                                Tams
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value="Tlaxcala"
+                                                id="Tlaxcala">
+                                            <label class="form-check-label" for="Tlaxcala">
+                                                Tlax
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value="Veracruz"
+                                                id="Veracruz">
+                                            <label class="form-check-label" for="Veracruz">
+                                                Ver
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value="Yucatan"
+                                                id="Yucatan">
+                                            <label class="form-check-label" for="Yucatan">
+                                                Yuc
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value="Zacatecas"
+                                                id="Zacatecas">
+                                            <label class="form-check-label" for="Zacatecas">
+                                                Zac
+                                            </label>
+                                        </div>
                                     </div>
-                                    <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" value="Coahuila" id="Coahuila">
-                                    <label class="form-check-label" for="Coahuila">
-                                        Coah
-                                    </label>
-                                    </div>
-                                    <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" value="Colima" id="Colima">
-                                    <label class="form-check-label" for="Colima">
-                                        Col
-                                    </label>
-                                    </div>
-                                    <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" value="Chiapas" id="Chiapas">
-                                    <label class="form-check-label" for="Chiapas">
-                                        Chis
-                                    </label>
-                                    </div>
-                                    <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" value="Chihuahua" id="Chihuahua">
-                                    <label class="form-check-label" for="Chihuahua">
-                                        Chih
-                                    </label>
-                                    </div>
+
                                 </div>
-            
-                                <!-- //////DIVISOR DE COLUMNAS -->
-            
-                                <div class="col-3">
-                                    <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" value="Distrito Federal" id="Distrito Federal">
-                                    <label class="form-check-label" for="Distrito Federal">
-                                        DF
-                                    </label>
-                                    </div>
-                                    <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" value="Durango" id="Durango">
-                                    <label class="form-check-label" for="Durango">
-                                        Dgo
-                                    </label>
-                                    </div>
-                                    <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" value="Guanajuato" id="Guanajuato">
-                                    <label class="form-check-label" for="Guanajuato">
-                                        Gto
-                                    </label>
-                                    </div>
-                                    <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" value="Guerrero" id="Guerrero">
-                                    <label class="form-check-label" for="Guerrero">
-                                        Gro
-                                    </label>
-                                    </div>
-                                    <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" value="Hidalgo" id="Hidalgo">
-                                    <label class="form-check-label" for="Hidalgo">
-                                        Hgo
-                                    </label>
-                                    </div>
-                                    <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" value="Jalisco" id="Jalisco">
-                                    <label class="form-check-label" for="Jalisco">
-                                        Jal
-                                    </label>
-                                    </div>
-                                    <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" value="Mexico" id="Mexico">
-                                    <label class="form-check-label" for="Mexico">
-                                        Mex
-                                    </label>
-                                    </div>
-                                    <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" value="Michoacan" id="Michoacan">
-                                    <label class="form-check-label" for="Michoacan">
-                                        Mich
-                                    </label>
-                                    </div>
-                                </div>
-            
-                                <!-- //////DIVISOR DE COLUMNAS -->
-            
-                                <div class="col-3">
-                                    <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" value="Morelos" id="Morelos">
-                                    <label class="form-check-label" for="Morelos">
-                                        Mor
-                                    </label>
-                                    </div>
-                                    <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" value="Nayarit" id="Nayarit">
-                                    <label class="form-check-label" for="Nayarit">
-                                        Nay
-                                    </label>
-                                    </div>
-                                    <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" value="Nuevo Leon" id="Nuevo Leon">
-                                    <label class="form-check-label" for="Nuevo Leon">
-                                        NL
-                                    </label>
-                                    </div>
-                                    <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" value="Oaxaca" id="Oaxaca">
-                                    <label class="form-check-label" for="Oaxaca">
-                                        Oax
-                                    </label>
-                                    </div>
-                                    <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" value="Puebla" id="Puebla">
-                                    <label class="form-check-label" for="Puebla">
-                                        Pue
-                                    </label>
-                                    </div>
-                                    <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" value="Queretaro" id="Queretaro">
-                                    <label class="form-check-label" for="Queretaro">
-                                        Qro
-                                    </label>
-                                    </div>
-                                    <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" value="Quintana Roo" id="Quintana Roo">
-                                    <label class="form-check-label" for="Quintana Roo">
-                                        QR
-                                    </label>
-                                    </div>
-                                    <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" value="San Luis Potosil" id="San Luis Potosil">
-                                    <label class="form-check-label" for="San Luis Potosil">
-                                        SLP
-                                    </label>
-                                    </div>
-                                </div>
-            
-                                <!-- //////DIVISOR DE COLUMNAS -->
-            
-                                <div class="col-3">
-                                    <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" value="Sinaloa" id="Sinaloa">
-                                    <label class="form-check-label" for="Sinaloa">
-                                        Sin
-                                    </label>
-                                    </div>
-                                    <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" value="Sonora" id="Sonora">
-                                    <label class="form-check-label" for="Sonora">
-                                        Son
-                                    </label>
-                                    </div>
-                                    <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" value="Tabasco" id="Tabasco">
-                                    <label class="form-check-label" for="Tabasco">
-                                        Tab
-                                    </label>
-                                    </div>
-                                    <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" value="Tamaulipas" id="Tamaulipas">
-                                    <label class="form-check-label" for="Tamaulipas">
-                                        Tams
-                                    </label>
-                                    </div>
-                                    <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" value="Tlaxcala" id="Tlaxcala">
-                                    <label class="form-check-label" for="Tlaxcala">
-                                        Tlax
-                                    </label>
-                                    </div>
-                                    <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" value="Veracruz" id="Veracruz">
-                                    <label class="form-check-label" for="Veracruz">
-                                        Ver
-                                    </label>
-                                    </div>
-                                    <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" value="Yucatan" id="Yucatan">
-                                    <label class="form-check-label" for="Yucatan">
-                                        Yuc
-                                    </label>
-                                    </div>
-                                    <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" value="Zacatecas" id="Zacatecas">
-                                    <label class="form-check-label" for="Zacatecas">
-                                        Zac
-                                    </label>
-                                    </div>
-                                </div>
-            
-                                </div>
-                            </div>
                             </div>
                         </div>
+                    </div>
+
+
+                </div>
+            </div>
+            <div class="modal-footer text-center">
+                <button type="button" class="btn btn-lg btn-warning" id="limpia">Limpiar</button>
+                <button type="button" class="btn btn-lg btn-success" id="inserta">Insertar</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- //MODAL Actualizar Comarosta -->
+
+<div class="modal fade bd-example-modal-xl" tabindex="-1" role="dialog" aria-labelledby="myExtraLargeModalLabel"
+    aria-hidden="true" id="edit">
+    <div class="modal-dialog modal-xl">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 class="offset-4">Actualiza Comarostphylis</h2>
+            </div>
+            <div class="modal-body">
+                <div class="container pl-4 pr-4">
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="container">
+                                <form id="formcoma2" enctype="multipart/form-data">
+                                    <div class="form-row pt-">
+                                        <div class="col-4">
+                                            <input type="text" id="id" hidden>
+                                            <input type="text" class="form-control form-control-lg" name="nombre"
+                                                id="nom" placeholder="Nombre">
+                                        </div>
+                                        <div class="col-4">
+                                            <input type="text" class="form-control form-control-lg" name="habito"
+                                                id="hab" placeholder="Habito">
+                                        </div>
+                                        <div class="col-4">
+                                            <input type="text" class="form-control form-control-lg" name="margen2"
+                                                id="margen2" placeholder="Margen">
+                                        </div>
+                                    </div>
+
+                                    <div class="form-row pt-3">
+                                        <div class="col-4">
+                                            <input type="text" class="form-control form-control-lg"
+                                                name="peciolosr2" id="peciolosr2" placeholder="Peciolos
+                                         Ramillas">
+                                        </div>
+                                        <div class="col-4">
+                                            <input type="text" class="form-control form-control-lg"
+                                                name="inflorescencia2" id="inflorescencia2"
+                                                placeholder="Inflorescencia">
+                                        </div>
+                                        <div class="col-4">
+                                            <input type="text" class="form-control form-control-lg" name="hojas"
+                                                id="hoj" placeholder="Hojas">
+                                        </div>
+                                    </div>
+
+                                    <div class="form-row pt-3">
+                                        <div class="col-4">
+                                            <input type="text" class="form-control form-control-lg" name="haz"
+                                                id="haz2" placeholder="Haz">
+                                        </div>
+                                        <div class="col-4">
+                                            <input type="text" class="form-control form-control-lg" name="enves"
+                                                id="env" placeholder="Enves">
+                                        </div>
+                                        <div class="col-4">
+                                            <input type="text" class="form-control form-control-lg" name="flores"
+                                                id="flo" placeholder="Flores">
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row pt-4">
+                        <div class="col-lg-4 col-md-6 col-sm-12 text-center pb-2">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-12">
+                                        <img src="" alt="" id="foto1" class="pb-1" style="width: 200px;height:200px">
+                                    </div>
+                                </div>
+                                <div class="row w-75">
+                                    <div class="col-11 pr-0">
+                                        <div class="custom-file">
+                                            <input type="file" class="custom-file-input form-control" name="file1" id="img1"
+                                                lang="es">
+                                            <label class="custom-file-label form-control" for="img1"></label>
+                                        </div>
+                                    </div>
+                                    <div class="col-1 p-0">
+                                        <button class="btn btn-danger delimg" id="1">Quitar</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-4 col-md-6 col-sm-12  text-center pb-2">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-12">
+                                        <img src="" alt="" id="foto2" class="pb-1" style="width: 200px;height:200px">
+                                    </div>
+                                </div>
+                                <div class="row w-75">
+                                    <div class="col-11 pr-0">
+                                        <div class="custom-file">
+                                            <input type="file" class="custom-file-input form-control" name="file2" id="img2"
+                                                lang="es">
+                                            <label class="custom-file-label form-control" for="img2"></label>
+                                        </div>
+                                    </div>
+                                    <div class="col-1 p-0">
+                                        <button class="btn btn-danger delimg" id="2">Quitar</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 col-sm-12  text-center pb-2">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-12">
+                                        <img src="" alt="" id="foto3" class="pb-1" style="width: 200px;height:200px">
+                                    </div>
+                                </div>
+                                <div class="row w-75">
+                                    <div class="col-11 pr-0">
+                                        <div class="custom-file">
+                                            <input type="file" class="custom-file-input form-control" name="file3" id="img3"
+                                                lang="es">
+                                            <label class="custom-file-label form-control" for="img3"></label>
+                                        </div>
+                                    </div>
+                                    <div class="col-1 p-0">
+                                        <button class="btn btn-danger delimg" id="3">Quitar</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row pt-4">
+                        <div class="col-2"></div>
+                        <div class="col-10">
+                            <h5>Ubicacion</h5>
+                            <div class="container">
+                                <div class="row">
+
+                                    <div class="col-3">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value="Aguascalientes"
+                                                id="Aguascalientes">
+                                            <label class="form-check-label" for="Aguascalientes">
+                                                Ags
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value="Baja California"
+                                                id="Baja California">
+                                            <label class="form-check-label" for="Baja California">
+                                                BC
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox"
+                                                value="Baja California Sur" id="Baja California Sur">
+                                            <label class="form-check-label" for="Baja California Sur">
+                                                BCS
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value="Campeche"
+                                                id="Campeche">
+                                            <label class="form-check-label" for="Campeche">
+                                                Camp
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value="Coahuila"
+                                                id="Coahuila">
+                                            <label class="form-check-label" for="Coahuila">
+                                                Coah
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value="Colima"
+                                                id="Colima">
+                                            <label class="form-check-label" for="Colima">
+                                                Col
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value="Chiapas"
+                                                id="Chiapas">
+                                            <label class="form-check-label" for="Chiapas">
+                                                Chis
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value="Chihuahua"
+                                                id="Chihuahua">
+                                            <label class="form-check-label" for="Chihuahua">
+                                                Chih
+                                            </label>
+                                        </div>
+                                    </div>
+
+                                    <!-- //////DIVISOR DE COLUMNAS -->
+
+                                    <div class="col-3">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value="Distrito Federal"
+                                                id="Distrito Federal">
+                                            <label class="form-check-label" for="Distrito Federal">
+                                                DF
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value="Durango"
+                                                id="Durango">
+                                            <label class="form-check-label" for="Durango">
+                                                Dgo
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value="Guanajuato"
+                                                id="Guanajuato">
+                                            <label class="form-check-label" for="Guanajuato">
+                                                Gto
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value="Guerrero"
+                                                id="Guerrero">
+                                            <label class="form-check-label" for="Guerrero">
+                                                Gro
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value="Hidalgo"
+                                                id="Hidalgo">
+                                            <label class="form-check-label" for="Hidalgo">
+                                                Hgo
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value="Jalisco"
+                                                id="Jalisco">
+                                            <label class="form-check-label" for="Jalisco">
+                                                Jal
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value="Mexico"
+                                                id="Mexico">
+                                            <label class="form-check-label" for="Mexico">
+                                                Mex
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value="Michoacan"
+                                                id="Michoacan">
+                                            <label class="form-check-label" for="Michoacan">
+                                                Mich
+                                            </label>
+                                        </div>
+                                    </div>
+
+                                    <!-- //////DIVISOR DE COLUMNAS -->
+
+                                    <div class="col-3">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value="Morelos"
+                                                id="Morelos">
+                                            <label class="form-check-label" for="Morelos">
+                                                Mor
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value="Nayarit"
+                                                id="Nayarit">
+                                            <label class="form-check-label" for="Nayarit">
+                                                Nay
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value="Nuevo Leon"
+                                                id="Nuevo Leon">
+                                            <label class="form-check-label" for="Nuevo Leon">
+                                                NL
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value="Oaxaca"
+                                                id="Oaxaca">
+                                            <label class="form-check-label" for="Oaxaca">
+                                                Oax
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value="Puebla"
+                                                id="Puebla">
+                                            <label class="form-check-label" for="Puebla">
+                                                Pue
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value="Queretaro"
+                                                id="Queretaro">
+                                            <label class="form-check-label" for="Queretaro">
+                                                Qro
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value="Quintana Roo"
+                                                id="Quintana Roo">
+                                            <label class="form-check-label" for="Quintana Roo">
+                                                QR
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value="San Luis Potosil"
+                                                id="San Luis Potosil">
+                                            <label class="form-check-label" for="San Luis Potosil">
+                                                SLP
+                                            </label>
+                                        </div>
+                                    </div>
+
+                                    <!-- //////DIVISOR DE COLUMNAS -->
+
+                                    <div class="col-3">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value="Sinaloa"
+                                                id="Sinaloa">
+                                            <label class="form-check-label" for="Sinaloa">
+                                                Sin
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value="Sonora"
+                                                id="Sonora">
+                                            <label class="form-check-label" for="Sonora">
+                                                Son
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value="Tabasco"
+                                                id="Tabasco">
+                                            <label class="form-check-label" for="Tabasco">
+                                                Tab
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value="Tamaulipas"
+                                                id="Tamaulipas">
+                                            <label class="form-check-label" for="Tamaulipas">
+                                                Tams
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value="Tlaxcala"
+                                                id="Tlaxcala">
+                                            <label class="form-check-label" for="Tlaxcala">
+                                                Tlax
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value="Veracruz"
+                                                id="Veracruz">
+                                            <label class="form-check-label" for="Veracruz">
+                                                Ver
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value="Yucatan"
+                                                id="Yucatan">
+                                            <label class="form-check-label" for="Yucatan">
+                                                Yuc
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value="Zacatecas"
+                                                id="Zacatecas">
+                                            <label class="form-check-label" for="Zacatecas">
+                                                Zac
+                                            </label>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                         <!-- //////ROW FIN CHECKBOXES ESTADOS -->
 
                         </div>
