@@ -133,18 +133,149 @@
     <!--fin GENEROS-->
 
     <section class="s-clients" id="filtro" hidden>
-
         <div class="container">
-
             <!--Cont General-->
             <div class="section-tittle-alt">
                 <h2 id="titu">Genero</h2>
             </div>
             <p class="gallery-info service-alt">Selecciona las caracteristicas que conoces</p>
             <section id="pant-dividida">
+
                 <div class="container">
                     <div class="row">
-                        <div class="col-10">
+                        <div class="col"><!-- //HISTORIAL DEL FILTRO -->
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-12">
+                                        <h5 class="">Historial de Busqueda</h5>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-12">
+                                        <ul id="selecciones">
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col"><!-- //BOTONES DE FILTROS -->
+                            <div class="row pt-5 pl-5" id="conteni">
+
+                                <div class="col-7">
+                                    <p class="pr-1">
+                                    <div class="btn-group">
+                                        <button class="fuu-width bttn--prrimary" type="button" data-toggle="collapse"
+                                            data-target="#habito" aria-expanded="false" id="btnhab"
+                                            aria-controls="collapseExample">
+                                            Habito
+                                        </button>
+                                        <button class="fuu-width bttn--prrimary" type="button" data-toggle="collapse"
+                                            data-target="#ubicacion" aria-expanded="false" id="btnubi"
+                                            aria-controls="collapseExample">
+                                            Ubicacion
+                                        </button>
+                                    </div>
+                                    </p>
+
+                                    <div id="btn-arbutus">
+                                        <div class="btn-group-vertical">
+                                            <button class="fuu-width bttnn--prrimary" type="button"
+                                                data-toggle="collapse" data-target="#cortrm" aria-expanded="false"
+                                                id="btncortrm" aria-controls="collapseExample">
+                                                Corteza de Ramas
+                                            </button>
+                                            <button class="fuu-width bttnn--prrimary" type="button"
+                                                data-toggle="collapse" data-target="#cortrll" aria-expanded="false"
+                                                id="btncortrll" aria-controls="collapseExample">
+                                                Corteza de Ramillas
+                                            </button>
+                                        </div>
+                                        <div class="btn-group">
+                                            <button class="fuu-width bttnn--prrimary btnpec" type="button"
+                                                data-toggle="collapse" data-target="#peciolos" aria-expanded="false"
+                                                aria-controls="collapseExample">
+                                                Peciolos
+                                            </button>
+                                            <button class="fuu-width bttnn--prrimary btnhoj" type="button"
+                                                data-toggle="collapse" data-target="#hojasa" aria-expanded="false"
+                                                id="btnhojasa" aria-controls="collapseExample">
+                                                Hojas
+                                            </button>
+                                        </div>
+                                        <div class="btn-group">
+                                            <button class="fuu-width bttnn--prrimary btnhaz" type="button"
+                                                data-toggle="collapse" data-target="#haza" aria-expanded="false"
+                                                aria-controls="collapseExample">
+                                                Haz
+                                            </button>
+                                            <button class="fuu-width bttnn--prrimary btnenv" type="button"
+                                                data-toggle="collapse" data-target="#envesa" aria-expanded="false"
+                                                aria-controls="collapseExample">
+                                                Enves
+                                            </button>
+                                            <button class="fuu-width bttnn--prrimary btnflo" type="button"
+                                                data-toggle="collapse" data-target="#floresa" aria-expanded="false"
+                                                aria-controls="collapseExample">
+                                                Flores
+                                            </button>
+                                        </div>
+
+                                    </div>
+                                    <div id="btn-comaros">
+                                        <div class="btn-group">
+                                            <button class="fuu-width bttnn--prrimary" type="button"
+                                                data-toggle="collapse" data-target="#margen" aria-expanded="false"
+                                                id="btnmarg" aria-controls="collapseExample">
+                                                Margen
+                                            </button>
+                                            <button class="fuu-width bttnn--prrimary" type="button"
+                                                data-toggle="collapse" data-target="#inflore" aria-expanded="false"
+                                                id="btninflo" aria-controls="collapseExample">
+                                                Inflorescencia
+                                            </button>
+                                        </div>
+                                        <div class="btn-group">
+                                            <button class="fuu-width bttnn--prrimary btnpec" type="button"
+                                                data-toggle="collapse" data-target="#peciolosrll" aria-expanded="false"
+                                                aria-controls="collapseExample">
+                                                Peciolos y Ramillas
+                                            </button>
+                                            <button class="fuu-width bttnn--prrimary btnhaz" type="button"
+                                                data-toggle="collapse" data-target="#hazc" aria-expanded="false"
+                                                aria-controls="collapseExample">
+                                                Haz
+                                            </button>
+                                        </div>
+                                        <div class="btn-group">
+                                            <button class="fuu-width bttnn--prrimary btnenv" type="button"
+                                                data-toggle="collapse" data-target="#envesc" aria-expanded="false"
+                                                aria-controls="collapseExample">
+                                                Enves
+                                            </button>
+                                            <button class="fuu-width bttnn--prrimary btnflo" type="button"
+                                                data-toggle="collapse" data-target="#floresc" aria-expanded="false"
+                                                aria-controls="collapseExample">
+                                                Flores
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="btn-group">
+
+                                        <button class="fu-width bttn--prrimary" type="button" id="reiniciar">
+                                            REINICIAR FILTRO</button>
+                                        <button class="fu-width bttn--prrimary" type="button" id="btngeneros">
+                                            VOLVER A GENEROS</button>
+
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-10"><!--TARJETAS FILTROS-->
 
                             <!--HABITO-->
                             <div class="row filtro hover-effects image-hover collapse" id="habito">
@@ -1491,192 +1622,50 @@
                             </div>
 
                         </div>
-                        <div class="col-2">
-                            <!-- //BOTONES DE FILTROS -->
-                            <div class="row pt-5 pl-5" id="conteni">
-
-                                <div class="col-7">
-                                    <p class="pr-1">
-                                    <div class="btn-group">
-                                        <button class="fuu-width bttn--prrimary" type="button" data-toggle="collapse"
-                                            data-target="#habito" aria-expanded="false" id="btnhab"
-                                            aria-controls="collapseExample">
-                                            Habito
-                                        </button>
-                                        <button class="fuu-width bttn--prrimary" type="button" data-toggle="collapse"
-                                            data-target="#ubicacion" aria-expanded="false" id="btnubi"
-                                            aria-controls="collapseExample">
-                                            Ubicacion
-                                        </button>
+                        <div class="col-2"><!-- TABLAS DINAMICAS -->
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-6" id="tablaarb" hidden>
+                                        <h3 class="text-center">Arbutus</h3>
+                                        <table class="table">
+                                            <thead>
+                                                <tr>
+                                                    <th scope="col"></th>
+                                                    <th scope="col">Nombre</th>
+                                                    <th scope="col"></th>
+                                                </tr>
+                                            </thead>
+                                            <tbody id="tarbutus">
+                                            </tbody>
+                                        </table>
                                     </div>
-                                    </p>
-
-                                    <div id="btn-arbutus">
-                                     <div class="btn-group-vertical">
-                                        <button class="fuu-width bttnn--prrimary" type="button" data-toggle="collapse"
-                                            data-target="#cortrm" aria-expanded="false" id="btncortrm"
-                                            aria-controls="collapseExample">
-                                            Corteza de Ramas
-                                        </button>
-                                        <button class="fuu-width bttnn--prrimary" type="button" data-toggle="collapse"
-                                            data-target="#cortrll" aria-expanded="false" id="btncortrll"
-                                            aria-controls="collapseExample">
-                                            Corteza de Ramillas
-                                        </button>
-                                     </div>
-                                     <div class="btn-group">
-                                        <button class="fuu-width bttnn--prrimary btnpec" type="button"
-                                            data-toggle="collapse" data-target="#peciolos" aria-expanded="false"
-                                            aria-controls="collapseExample">
-                                            Peciolos
-                                        </button>
-                                        <button class="fuu-width bttnn--prrimary btnhoj" type="button"
-                                            data-toggle="collapse" data-target="#hojasa" aria-expanded="false"
-                                            id="btnhojasa" aria-controls="collapseExample">
-                                            Hojas
-                                        </button>
-                                     </div>
-                                     <div class="btn-group">
-                                        <button class="fuu-width bttnn--prrimary btnhaz" type="button"
-                                            data-toggle="collapse" data-target="#haza" aria-expanded="false"
-                                            aria-controls="collapseExample">
-                                            Haz
-                                        </button>
-                                        <button class="fuu-width bttnn--prrimary btnenv" type="button"
-                                            data-toggle="collapse" data-target="#envesa" aria-expanded="false"
-                                            aria-controls="collapseExample">
-                                            Enves
-                                        </button>
-                                        <button class="fuu-width bttnn--prrimary btnflo" type="button"
-                                            data-toggle="collapse" data-target="#floresa" aria-expanded="false"
-                                            aria-controls="collapseExample">
-                                            Flores
-                                        </button>
-                                     </div>
-
+                                    <div class="col-6" id="tablacoma" hidden>
+                                        <h3 class="text-center">Comarostaphilys</h3>
+                                        <table class="table">
+                                            <thead>
+                                                <tr>
+                                                    <th scope="col"></th>
+                                                    <th scope="col">Nombre</th>
+                                                    <th scope="col"></th>
+                                                </tr>
+                                            </thead>
+                                            <tbody id="tcomaros">
+                                            </tbody>
+                                        </table>
                                     </div>
-                                    <div id="btn-comaros">
-                                     <div class="btn-group">
-                                        <button class="fuu-width bttnn--prrimary" type="button" data-toggle="collapse"
-                                            data-target="#margen" aria-expanded="false" id="btnmarg"
-                                            aria-controls="collapseExample">
-                                            Margen
-                                        </button>
-                                        <button class="fuu-width bttnn--prrimary" type="button" data-toggle="collapse"
-                                            data-target="#inflore" aria-expanded="false" id="btninflo"
-                                            aria-controls="collapseExample">
-                                            Inflorescencia
-                                        </button>
-                                     </div>
-                                     <div class="btn-group">
-                                        <button class="fuu-width bttnn--prrimary btnpec" type="button"
-                                            data-toggle="collapse" data-target="#peciolosrll" aria-expanded="false"
-                                            aria-controls="collapseExample">
-                                            Peciolos y Ramillas
-                                        </button>
-                                        <button class="fuu-width bttnn--prrimary btnhaz" type="button"
-                                            data-toggle="collapse" data-target="#hazc" aria-expanded="false"
-                                            aria-controls="collapseExample">
-                                            Haz
-                                        </button>
-                                     </div>
-                                     <div class="btn-group">
-                                        <button class="fuu-width bttnn--prrimary btnenv" type="button"
-                                            data-toggle="collapse" data-target="#envesc" aria-expanded="false"
-                                            aria-controls="collapseExample">
-                                            Enves
-                                        </button>
-                                        <button class="fuu-width bttnn--prrimary btnflo" type="button"
-                                            data-toggle="collapse" data-target="#floresc" aria-expanded="false"
-                                            aria-controls="collapseExample">
-                                            Flores
-                                        </button>
-                                     </div>
-                                    </div>
-                                    <div class="btn-group">
-                                       
-                                            <button class="fu-width bttn--prrimary" type="button" id="reiniciar">
-                                                REINICIAR FILTRO</button>
-                                            <button class="fu-width bttn--prrimary" type="button" id="btngeneros">
-                                                VOLVER A GENEROS</button>
-                                        
-                                    </div>
-
                                 </div>
                             </div>
-
                         </div>
                     </div>
                 </div>
+
             </section>
 
         </div>
     </section>
     <!--FILTROS-->
 
-    <!-- TABLAS DINAMICAS -->
-
-    <div class="container pt-4">
-        <div class="row">
-            <div class="col-8">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-6" id="tablaarb" hidden>
-                            <h3 class="text-center">Arbutus</h3>
-                            <table class="table">
-                                <thead>
-                                    <tr>
-                                        <th scope="col"></th>
-                                        <th scope="col">Nombre</th>
-                                        <th scope="col"></th>
-                                    </tr>
-                                </thead>
-                                <tbody id="tarbutus">
-                                </tbody>
-                            </table>
-                        </div>
-                        <div class="col-6" id="tablacoma" hidden>
-                            <h3 class="text-center">Comarostaphilys</h3>
-                            <table class="table">
-                                <thead>
-                                    <tr>
-                                        <th scope="col"></th>
-                                        <th scope="col">Nombre</th>
-                                        <th scope="col"></th>
-                                    </tr>
-                                </thead>
-                                <tbody id="tcomaros">
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-4">
-                <!-- //HISTORIAL DEL FILTRO -->
-
-                <div class="container">
-                    <div class="row">
-                        <div class="col-12">
-                            <h5 class="">Historial de Busqueda</h5>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-12">
-                            <ul id="selecciones">
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-
-
-            </div>
-        </div>
-
-    </div>
-
     <!-- //MODAL Arbutus -->
-
     <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel"
         aria-hidden="true" id="ver1">
         <div class="modal-dialog modal-lg">
