@@ -1,0 +1,17 @@
+.dere{
+    height: 20vh;
+    width: 20%;
+    background-size: cover;
+    background-position: center;
+}
+.izq{
+    height: 80vh;
+    width: 80%;
+ 
+}
+#pant-dividida{
+    display: flex;
+}
+.conteni{
+    width: 30%;
+}

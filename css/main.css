@@ -835,11 +835,11 @@ input[type="button"] {
   font-family: "montserrat-medium", sans-serif;
   font-size: 1.2rem;
   text-transform: uppercase;
-  letter-spacing: 0.3rem;
+  letter-spacing: 0.1rem;
   height: 5.4rem;
   line-height: calc(5.4rem - 0.4rem);
-  padding: 0 3rem;
-  margin: 0 0.3rem 1.2rem 0;
+  padding: 0 2rem;
+  margin: 0 0.2rem 1.0rem 0;
   color: #000000;
   text-decoration: none;
   text-align: center;
@@ -904,6 +904,29 @@ input[type="button"].bttn--prrimary {
   color: #ffffff;
 }
 
+.bttnn.bttnn--prrimary:hover,
+button.bttn--prrimary:hover,
+input[type="submit"].bttnn--prrimary:hover,
+input[type="reset"].bttnn--prrimary:hover,
+input[type="button"].bttnn--prrimary:hover,
+.btn.bttnn--prrimary:focus,
+button.bttnn--prrimary:focus,
+input[type="submit"].bttnn--prrimary:focus,
+input[type="reset"].bttnn--prrimary:focus,
+input[type="button"].bttnn--prrimary:focus {
+  background: #39b54a;
+  border-color: #39b54a;
+}
+.bttnn.bttnn--prrimary,
+button.bttnn--prrimary,
+input[type="submit"].bttnn--prrimary,
+input[type="reset"].bttnn--prrimary,
+input[type="button"].bttnn--prrimary {
+  background: #e3a402;
+  border-color: #e3a402;
+  color: #ffffff;
+}
+
 .bttn.bttn--prrimary:hover,
 button.bttn--prrimary:hover,
 input[type="submit"].bttn--prrimary:hover,
@@ -917,6 +940,7 @@ input[type="button"].bttn--prrimary:focus {
   background: #e3a402;
   border-color: #e3a402;
 }
+
 
 .bttn2.btn2--prrimary,
 button.btn2--prrimary,
@@ -933,19 +957,27 @@ input[type="button"].btn2--prrimary {
 
 .btn.full-width,
 button.full-width {
-  width: 100%;
+  font-size:10px;
+  text-align: center ;
+  height: 35px;
   margin-right: 0;
 }
 .bttn.fulll-width,
 button.fulll-width {
-  width: 35%;
-  margin-right: 0;
+  font-size:12px;
+  text-align: center ;
+  height: 45px;
+  margin-right: 1;
 }
 .bttn.fu-width,
 button.fu-width {
-  width: 45%;
+  font-size:11px;
+  text-align: center ;
+  height: 45px;
   margin-right: 0;
+  
 }
+
 .bttn2.fu-width2,
 button.fu-width2 {
   width: 75%;
@@ -3883,8 +3915,8 @@ footer .row {
 }
 
 .sb-icon-box {
-  width: 70px;
-  height: 70px;
+  width: 40px;
+  height: 40px;
   background: #ffa600;
   position: relative;
   float: right;
@@ -3892,8 +3924,8 @@ footer .row {
   transition: 0.3s;
 }
 .sb-icon-box2 {
-  width: 60px;
-  height: 60px;
+  width: 40px;
+  height: 40px;
   background: #ffa600;
   position: relative;
   float: right;
@@ -3922,11 +3954,24 @@ footer .row {
   margin-top: 0px;
   margin-bottom: 14px;
 }
+.sb-captiion {
+  background-color: #fff;
+  padding: 1rem 1rem 1rem;
+  margin-top: 0px;
+  margin-bottom: 14px;
+}
 
 .sb-caption h3 {
   font-weight: 500;
   text-transform: uppercase;
   font-size: 18px;
+  margin-top: 0px;
+  margin-bottom: 14px;
+}
+.sb-captiion h3 {
+  font-weight: 500;
+  text-transform: uppercase;
+  font-size: 12px;
   margin-top: 0px;
   margin-bottom: 14px;
 }
@@ -3999,6 +4044,12 @@ footer .row {
 .section-tittle-alt {
   width: 100%;
   margin-bottom: 20px;
+  border-left: solid 6px #ffa600;
+}
+.section-tittle-alt2 {
+  font-size: 1.2rem;
+  width: 70%;
+  margin-bottom: 8px;
   border-left: solid 6px #ffa600;
 }
 
