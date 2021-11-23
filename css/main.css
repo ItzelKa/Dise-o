@@ -4046,6 +4046,12 @@ footer .row {
   margin-bottom: 20px;
   border-left: solid 6px #ffa600;
 }
+.section-tittle-alt2 {
+  font-size: 1.2rem;
+  width: 70%;
+  margin-bottom: 8px;
+  border-left: solid 6px #ffa600;
+}
 
 .section-tittle-alt h2 {
   margin-left: 20px;
