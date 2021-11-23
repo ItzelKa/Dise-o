@@ -835,10 +835,10 @@ input[type="button"] {
   font-family: "montserrat-medium", sans-serif;
   font-size: 1.2rem;
   text-transform: uppercase;
-  letter-spacing: 0.2rem;
+  letter-spacing: 0.1rem;
   height: 5.4rem;
   line-height: calc(5.4rem - 0.4rem);
-  padding: 0 3rem;
+  padding: 0 2rem;
   margin: 0 0.2rem 1.0rem 0;
   color: #000000;
   text-decoration: none;
@@ -957,22 +957,27 @@ input[type="button"].btn2--prrimary {
 
 .btn.full-width,
 button.full-width {
- 
+  font-size:10px;
+  text-align: center ;
+  height: 35px;
   margin-right: 0;
 }
 .bttn.fulll-width,
 button.fulll-width {
-  
-  margin-right: 0;
+  font-size:12px;
+  text-align: center ;
+  height: 45px;
+  margin-right: 1;
 }
 .bttn.fu-width,
 button.fu-width {
-  font-size:10px;
+  font-size:11px;
   text-align: center ;
-  width: 170px;
+  height: 45px;
   margin-right: 0;
   
 }
+
 .bttn2.fu-width2,
 button.fu-width2 {
   width: 75%;

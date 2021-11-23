@@ -135,14 +135,13 @@
     <section class="s-clients" id="filtro" hidden>
         <div class="container">
             <!--Cont General-->
-            <div class="section-tittle-alt">
+            <div class="section-tittle-alt mt-1">
                 <h2 id="titu">Genero</h2>
             </div>
-            <p class="gallery-info service-alt">Selecciona las caracteristicas que conoces</p>
-            <section id="pant-dividida">
+            <p class="gallery-info service-alt mb-1">Selecciona las caracteristicas que conoces</p>
 
-                <div class="container">
-                    <div class="row">
+                <div class="container-fluid mt-1">
+                    <div class="row mt-1">
                         <div class="col-12">
                             <!-- //HISTORIAL DEL FILTRO -->
                             <div class="container">
@@ -162,7 +161,114 @@
                     </div>
                     <div class="container">
                         <div class="row">
-                            <div class="col-8">
+                            <div class="col-12">
+                                <!-- //BOTONES DE FILTROS -->
+                            <div class="row pt-2" id="conteni">
+                                <div class="col-7">
+                                    <div class="btn-group">
+                                        <button class="fulll-width bttn--prrimary" type="button" data-toggle="collapse"
+                                            data-target="#habito" aria-expanded="false" id="btnhab"
+                                            aria-controls="collapseExample">
+                                            Habito
+                                        </button>
+                                        <button class="fulll-width bttn--prrimary" type="button" data-toggle="collapse"
+                                            data-target="#ubicacion" aria-expanded="false" id="btnubi"
+                                            aria-controls="collapseExample">
+                                            Ubicacion
+                                        </button>
+                                    </div>
+                                    <div id="btn-arbutus">
+                                        <div class="btn-group">
+                                            <button class="fulll-width bttnn--prrimary" type="button"
+                                                data-toggle="collapse" data-target="#cortrm" aria-expanded="false"
+                                                id="btncortrm" aria-controls="collapseExample">
+                                                Corteza de Ramas
+                                            </button>
+                                            <button class="fulll-width bttnn--prrimary" type="button"
+                                                data-toggle="collapse" data-target="#cortrll" aria-expanded="false"
+                                                id="btncortrll" aria-controls="collapseExample">
+                                                Corteza de Ramillas
+                                            </button>
+                                            <button class="fulll-width bttnn--prrimary btnpec" type="button"
+                                                data-toggle="collapse" data-target="#peciolos" aria-expanded="false"
+                                                aria-controls="collapseExample">
+                                                Peciolos
+                                            </button>
+                                            <button class="fulll-width bttnn--prrimary btnhoj" type="button"
+                                                data-toggle="collapse" data-target="#hojasa" aria-expanded="false"
+                                                id="btnhojasa" aria-controls="collapseExample">
+                                                Hojas
+                                            </button>
+                                        
+                                            <button class="fulll-width bttnn--prrimary btnhaz" type="button"
+                                                data-toggle="collapse" data-target="#haza" aria-expanded="false"
+                                                aria-controls="collapseExample">
+                                                Haz
+                                            </button>
+                                            <button class="fulll-width bttnn--prrimary btnenv" type="button"
+                                                data-toggle="collapse" data-target="#envesa" aria-expanded="false"
+                                                aria-controls="collapseExample">
+                                                Enves
+                                            </button>
+                                            <button class="fulll-width bttnn--prrimary btnflo" type="button"
+                                                data-toggle="collapse" data-target="#floresa" aria-expanded="false"
+                                                aria-controls="collapseExample">
+                                                Flores
+                                            </button>
+                                        </div>
+
+                                    </div>
+                                    <div id="btn-comaros">
+                                        <div class="btn-group">
+                                            <button class="fulll-width bttnn--prrimary" type="button"
+                                                data-toggle="collapse" data-target="#margen" aria-expanded="false"
+                                                id="btnmarg" aria-controls="collapseExample">
+                                                Margen
+                                            </button>
+                                            <button class="fulll-width bttnn--prrimary" type="button"
+                                                data-toggle="collapse" data-target="#inflore" aria-expanded="false"
+                                                id="btninflo" aria-controls="collapseExample">
+                                                Inflorescencia
+                                            </button>
+                                            <button class="fulll-width bttnn--prrimary btnpec" type="button"
+                                                data-toggle="collapse" data-target="#peciolosrll" aria-expanded="false"
+                                                aria-controls="collapseExample">
+                                                Peciolos y Ramillas
+                                            </button>
+                                            <button class="fulll-width bttnn--prrimary btnhaz" type="button"
+                                                data-toggle="collapse" data-target="#hazc" aria-expanded="false"
+                                                aria-controls="collapseExample">
+                                                Haz
+                                            </button>
+                                            <button class="fulll-width bttnn--prrimary btnenv" type="button"
+                                                data-toggle="collapse" data-target="#envesc" aria-expanded="false"
+                                                aria-controls="collapseExample">
+                                                Enves
+                                            </button>
+                                            <button class="fulll-width bttnn--prrimary btnflo" type="button"
+                                                data-toggle="collapse" data-target="#floresc" aria-expanded="false"
+                                                aria-controls="collapseExample">
+                                                Flores
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="btn-group">
+
+                                        <button class="fu-width bttn--prrimary" type="button" id="reiniciar">
+                                            REINICIAR FILTRO</button>
+                                        <button class="fu-width bttn--prrimary" type="button" id="btngeneros">
+                                            VOLVER A GENEROS</button>
+
+                                    </div>
+
+                                </div>
+                            </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-9">
     
                                 <!--HABITO-->
                                 <div class="row filtro hover-effects image-hover collapse" id="habito">
@@ -1509,11 +1615,11 @@
                                 </div>
     
                             </div>
-                            <div class="col-4">
+                            <div class="col-3">
                                 <div class="container">
                                     <div class="row">
                                         <div class="col-6" id="tablaarb" hidden>
-                                            <h3 class="text-center">Arbutus</h3>
+                                            <h5 class="text-center">Arbutus</h5>
                                             <table class="table">
                                                 <thead>
                                                     <tr>
@@ -1524,10 +1630,12 @@
                                                 </thead>
                                                 <tbody id="tarbutus">
                                                 </tbody>
+
+                                                
                                             </table>
                                         </div>
                                         <div class="col-6" id="tablacoma" hidden>
-                                            <h3 class="text-center">Comarostaphilys</h3>
+                                            <h5 class="text-center">Comarostaphilys</h5>
                                             <table class="table">
                                                 <thead>
                                                     <tr>
@@ -1535,7 +1643,7 @@
                                                         <th scope="col">Nombre</th>
                                                         <th scope="col"></th>
                                                     </tr>
-                                                </thead>
+                                                </thead>                                        
                                                 <tbody id="tcomaros">
                                                 </tbody>
                                             </table>
@@ -1549,7 +1657,6 @@
                 </div>
 
                 
-            </section>
 
         </div>
     </section>
@@ -1559,15 +1666,7 @@
 
     <div class="container pt-4">
         <div class="row">
-            <div class="col-8">
-
-            </div>
-            <div class="col-4">
-
-
-
-
-            </div>
+            
         </div>
 
     </div>
@@ -1723,11 +1822,11 @@
                     <fieldset>
 
                         <div class="form-field">
-                            <input name="contactName" type="text" id="contactName" placeholder="Your Name" value=""
+                            <input name="contactName" type="text" id="contactName" placeholder="Tu nombre" value=""
                                 minlength="2" required="" aria-required="true" class="full-width">
                         </div>
                         <div class="form-field">
-                            <input name="contactEmail" type="email" id="contactEmail" placeholder="Your Email" value=""
+                            <input name="contactEmail" type="email" id="contactEmail" placeholder="Tu Email" value=""
                                 required="" aria-required="true" class="full-width">
                         </div>
                         <div class="form-field">
@@ -1735,13 +1834,13 @@
                                 class="full-width">
                         </div>
                         <div class="form-field">
-                            <textarea name="contactMessage" id="contactMessage" placeholder="Your Message" rows="10"
+                            <textarea name="contactMessage" id="contactMessage" placeholder="Mensage" rows="10"
                                 cols="50" required="" aria-required="true" class="full-width"></textarea>
                         </div>
                         <div class="form-field">
-                            <button class="full-width btn--primary">Submit</button>
+                            <button class="full-width btn--primary">Enviar</button>
                             <div class="submit-loader">
-                                <div class="text-loader">Sending...</div>
+                                <div class="text-loader">Enviando...</div>
                                 <div class="s-loader">
                                     <div class="bounce1"></div>
                                     <div class="bounce2"></div>
@@ -1755,12 +1854,12 @@
 
                 <!-- contact-warning -->
                 <div class="message-warning">
-                    Something went wrong. Please try again.
+                    Algo salio mal, intenta de nuevo.
                 </div>
 
                 <!-- contact-success -->
                 <div class="message-success">
-                    Your message was sent, thank you!<br>
+                    Tu mensaje ha ido enviado, Gracias!<br>
                 </div>
 
             </div> <!-- end contact-primary -->

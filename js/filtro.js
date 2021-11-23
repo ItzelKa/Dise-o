@@ -15,7 +15,7 @@ $(document).ready(function () {
 				data.arbutus.forEach(function (dato, index) {
 					cont += '<tr><td scope="col">' + (index + 1) + '</td><td scope="col">'
 						+ dato.nombre + '</td><td scope="col">' +
-						'<button type="button" id="' + dato.nombre + '" class="btn btn-primary vera">Ver mas</button>'
+						'<button type="button" id="' + dato.nombre + '" class="full-width bttn--prrimary vera">Ver mas</button>'
 						+ '</td></tr>';
 				});
 				cont1 = cont;
@@ -34,7 +34,7 @@ $(document).ready(function () {
 				data.comarosta.forEach(function (dato, index) {
 					cont += '<tr><td scope="col">' + (index + 1) + '</td><td scope="col">'
 						+ dato.nombre + '</td><td scope="col">' +
-						'<button type="button" id="' + dato.nombre + '"class="btn btn-primary verc">Ver mas</button>'
+						'<button type="button" id="' + dato.nombre + '"class="full-width bttn--prrimary verc">Ver mas</button>'
 						+ '</td></tr>';
 				});
 				cont1 = cont;
@@ -60,7 +60,7 @@ $(document).ready(function () {
 					data.arbutus.forEach(function (dato, index) {
 						cont += '<tr><td scope="col">' + (index + 1) + '</td><td scope="col">'
 							+ dato.nombre + '</td><td scope="col">' +
-							'<button type="button" id="' + dato.nombre + '" class="btn btn-primary vera">Ver mas</button>'
+							'<button type="button" id="' + dato.nombre + '" class="full-width bttn--prrimary vera">Ver mas</button>'
 							+ '</td></tr>';
 					});
 					document.getElementById("tarbutus").innerHTML = cont;
@@ -83,7 +83,7 @@ $(document).ready(function () {
 					data.comarosta.forEach(function (dato, index) {
 						cont += '<tr><td scope="col">' + (index + 1) + '</td><td scope="col">'
 							+ dato.nombre + '</td><td scope="col">' +
-							'<button type="button" id="' + dato.nombre + '"class="btn btn-primary verc">Ver mas</button>'
+							'<button type="button" id="' + dato.nombre + '"class="full-width bttn--prrimary verc">Ver mas</button>'
 							+ '</td></tr>';
 					});
 					document.getElementById("tcomaros").innerHTML = cont;
