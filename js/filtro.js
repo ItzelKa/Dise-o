@@ -171,10 +171,12 @@ $(document).ready(function () {
 	//FUNCION CAMBIO DE COLOR BOTONES FILTRO
 	function color(btn, opt) {
 		if (opt == 1) {
-			$(btn).addClass('btn-dark');
+            $(btn).css("background","#39b54a");
+			//$(btn).addClass('btn-dark');
 		}
 		if (opt == 0) {
-			$(btn).removeClass('btn-dark');
+			$(btn).css("background","#e3a402");
+			//$(btn).removeClass('btn-dark');
 		}
 	}
 
@@ -513,6 +515,7 @@ $(document).ready(function () {
 		if ($('#Arbutus').prop('checked') == true) { fetch1() }
 		if ($('#Comarostaphylis').prop('checked') == true) { fetch2() }
 		$('#selecciones').html("");
+		$('#color').css("");
 		reset();
 		//$('#habito').collapse('show');
 	});
