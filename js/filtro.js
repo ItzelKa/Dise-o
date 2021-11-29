@@ -171,11 +171,11 @@ $(document).ready(function () {
 	//FUNCION CAMBIO DE COLOR BOTONES FILTRO
 	function color(btn, opt) {
 		if (opt == 1) {
-            $(btn).css("background","#39b54a");
+            $(btn).attr('style', 'background: black !important');
 			//$(btn).addClass('btn-dark');
 		}
 		if (opt == 0) {
-			$(btn).css("background","#e3a402");
+			$(btn).attr('style', 'background:#39b54a !important');
 			//$(btn).removeClass('btn-dark');
 		}
 	}
@@ -208,7 +208,7 @@ $(document).ready(function () {
 			$('#tablacoma').prop('hidden', true);
 			$('#btn-comaros').prop('hidden', true);
 			$('#btn-arbutus').prop('hidden', false);
-			$('#habito').collapse('show');
+			// $('#habito').collapse('show');
 		}
 		//en caso de fallo eliminar else y solo dejar if
 		 else if (gen == "Comarostaphylis") {
@@ -218,7 +218,7 @@ $(document).ready(function () {
 			$('#tablaarb').prop('hidden', true);
 			$('#btn-arbutus').prop('hidden', true);
 			$('#btn-comaros').prop('hidden', false);
-			$('#habito').collapse('show');
+			// $('#habito').collapse('show');
 		}
 		else if ($('#Arbutus').prop('checked') == false && $('#Comarostaphylis').prop('checked') == false) {
 			$('#filtro').prop('hidden', true);
