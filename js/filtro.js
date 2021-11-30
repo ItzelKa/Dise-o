@@ -165,7 +165,6 @@ $(document).ready(function () {
 		delete obj.peciolos;
 		delete obj.peciolos_ramillas;
 		delete obj.hojas;
-		$('.btn').removeClass('btn-dark');
 	}
 
 	//FUNCION CAMBIO DE COLOR BOTONES FILTRO
@@ -514,7 +513,6 @@ $(document).ready(function () {
 		$('#selecciones').html("");
 		color('.fulll-width',0);
 		reset();
-		//$('#habito').collapse('show');
 	});
 	
 	///BOTONES VER MAS
