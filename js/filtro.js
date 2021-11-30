@@ -519,7 +519,7 @@ $(document).ready(function () {
 		reset();
 		//$('#habito').collapse('show');
 	});
-
+	
 	///BOTONES VER MAS
 	$('body').on('click', '.vera', function () {
 		var id = $(this).prop('id');
