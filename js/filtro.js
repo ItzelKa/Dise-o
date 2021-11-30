@@ -171,14 +171,13 @@ $(document).ready(function () {
 	//FUNCION CAMBIO DE COLOR BOTONES FILTRO
 	function color(btn, opt) {
 		if (opt == 1) {
-            $(btn).attr('style', 'background: black !important');
-			//$(btn).addClass('btn-dark');
-		}
-		if (opt == 0) {
-			$(btn).attr('style', 'background:#39b54a !important');
-			//$(btn).removeClass('btn-dark');
-		}
+			$(btn).removeClass('bttn--prrimary');
+			$(btn).addClass('btnactivo');
+		}else{
+			$(btn).removeClass('btnactivo');
+			$(btn).addClass('bttn--prrimary');
 	}
+}
 
 	//FUNCION CAMBIO DE COLOR BOTONES FILTRO
 	function selecciones() {
@@ -466,16 +465,14 @@ $(document).ready(function () {
 		mapa.addListener("clickMapObject", function (event) {
 			//var ags= event.chart.dataProvider.areas[0].id;
 			//console.log(ags)
-			color('#btnubi', 1);
 			obj.ubicacion = event.mapObject.enTitle;
+			setTimeout(fetchpost, 200, obj);
 			selecciones();
-		});
-        
-		color('#btnubi', 0);
+			color('#btnubi', 1);
+		});	
 		obj.ubicacion = "";
 		selecciones();
-
-		//$('#ubicacion').collapse('show');
+		color('#btnubi', 0);
 	}
 	$('#limpiarMapa').on('click', function () {
         crear();
@@ -515,7 +512,7 @@ $(document).ready(function () {
 		if ($('#Arbutus').prop('checked') == true) { fetch1() }
 		if ($('#Comarostaphylis').prop('checked') == true) { fetch2() }
 		$('#selecciones').html("");
-		$('#color').css("");
+		color('.fulll-width',0);
 		reset();
 		//$('#habito').collapse('show');
 	});

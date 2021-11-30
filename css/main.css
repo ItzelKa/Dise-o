@@ -904,6 +904,12 @@ input[type="button"].bttn--prrimary {
   color: #ffffff;
 }
 
+.btnactivo{
+  background: #000000;
+  color: #ffffff;
+  border-color: #dddddd;
+}
+
 .bttnn.bttnn--prrimary:hover,
 button.bttn--prrimary:hover,
 input[type="submit"].bttnn--prrimary:hover,
