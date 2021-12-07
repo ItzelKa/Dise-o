@@ -3111,7 +3111,7 @@ html.no-csstransitions .home-content__main {
  * ------------------------------------------------------------------- */
 .s-contact {
   background-color: #151515;
-  background-image: url("../img/img-contact.jpg");
+  background-image: url("../img/contacto.jpg");
   background-repeat: no-repeat;
   background-position: center, center;
   padding-top: 15rem;
@@ -3121,7 +3121,7 @@ html.no-csstransitions .home-content__main {
 }
 .b-contact {
   background-color: #151515;
-  background-image: url("../img/Filtro/buscador_img.jpg");
+  background-image: url("../img/flor2.png");
   background-repeat: repeat;
   background-position: center, center;
   padding-top: 15rem;
