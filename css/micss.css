@@ -234,6 +234,12 @@
   height: 100%;
   float: right;
   width: 100%;
+  background: rgb(253, 29, 29);
+  background: linear-gradient(
+    177deg,
+    rgba(253, 29, 29, 1) 0%,
+    rgba(252, 176, 69, 1) 100%
+  );
   display: inline-block;
 }
 
@@ -258,18 +264,17 @@
   top: 0;
 }
 
-.infogl h1 {
+.title h4 {
   text-align: center;
-  font-family: "Bree Serif", serif;
-  font-size: 25px;
-  margin-top: 30px;
-  color: #fff;
+  font-size: 22px;
+  margin-top: 5px;
 }
 
 .infogl p {
   text-align: center;
   font-family: "Bree Serif", serif;
-  font-size: 15px;
+  font-size: 21px;
+  margin-top: 30px;
   color: #fff;
   word-wrap: break-word;
 }

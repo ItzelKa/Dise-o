@@ -130,7 +130,7 @@ $(document).ready(function() {
 							<div class="modal-body">
 								<ul>
 									<li><strong>Hojas: </strong>${dato.hojas}</li>
-									<li><strong>Infloresencia: </strong>${dato.inflorescencia}</li>
+									<li><strong>Inflorescencia: </strong>${dato.inflorescencia}</li>
 									<li><strong>Margen: </strong>${dato.margen}</li>
 									<li><strong>Peciolos ramillas: </strong>${dato.peciolos_ramillas}</li>
 									<li><strong>Ubicacion: </strong>${dato.ubicacion}</li>
