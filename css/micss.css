@@ -234,6 +234,12 @@
   height: 100%;
   float: right;
   width: 100%;
+  background: rgb(253, 29, 29);
+  background: linear-gradient(
+    177deg,
+    rgba(253, 29, 29, 1) 0%,
+    rgba(252, 176, 69, 1) 100%
+  );
   display: inline-block;
 }
 
@@ -258,18 +264,17 @@
   top: 0;
 }
 
-.infogl h1 {
+.title h4 {
   text-align: center;
-  font-family: "Bree Serif", serif;
-  font-size: 25px;
-  margin-top: 30px;
-  color: #fff;
+  font-size: 22px;
+  margin-top: 5px;
 }
 
 .infogl p {
   text-align: center;
   font-family: "Bree Serif", serif;
-  font-size: 15px;
+  font-size: 21px;
+  margin-top: 30px;
   color: #fff;
   word-wrap: break-word;
 }
@@ -327,4 +332,61 @@
 .imgcards {
   width: 180px;
   height: 286px;
+}
+/*--------login-----------*/
+.login-page {
+  width: 360px;
+  padding: 8% 0 0;
+  margin: auto;
+}
+.form {
+  position: relative;
+  z-index: 1;
+  background: #ffffff;
+  max-width: 360px;
+  margin: 0 auto 100px;
+  padding: 45px;
+  text-align: center;
+  -webkit-box-shadow: 15px 15px 15px -5px rgba(0, 0, 0, 0.65);
+  box-shadow: 15px 15px 15px -5px rgba(0, 0, 0, 0.65);
+}
+.form input {
+  font-family: "Roboto", sans-serif;
+  outline: 0;
+  background: #f2f2f2;
+  width: 100%;
+  border: 0;
+  margin: 0 0 15px;
+  padding: 15px;
+  box-sizing: border-box;
+  font-size: 14px;
+}
+.form button {
+  font-family: "Roboto", sans-serif;
+  text-transform: uppercase;
+  outline: 0;
+  background: #4caf50;
+  width: 100%;
+  border: 0;
+  padding: 15px;
+  color: #ffffff;
+  font-size: 14px;
+  -webkit-transition: all 0.3 ease;
+  transition: all 0.3 ease;
+  cursor: pointer;
+}
+.form button:hover {
+  background-color: yellow;
+}
+.form button:active,
+.form button:focus {
+  background: #43a047;
+}
+.loginTarget {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  padding: 10px;
+  border-radius: 15%;
 }

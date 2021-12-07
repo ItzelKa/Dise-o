@@ -6,7 +6,7 @@
     <!--- basic page needs
     ================================================== -->
     <meta charset="utf-8">
-    <title>Buscador</title>
+    <title>Madroños - Buscador</title>
     <meta name="description" content="">
     <meta name="TechnoGenesis" content="">
 
@@ -29,6 +29,14 @@
     <link rel="stylesheet" href="css/pantalla.css">
     <!-- CSSMenu -->
     <link rel="stylesheet" href="css/styleMen.css">
+
+    <!-- CAROUSEL -->
+    <link rel="stylesheet" href="css/carousel.css">
+    <script src="js/carousel.js"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+
+
+
     <!-- <link rel="stylesheet" href="mapaP1.html"> -->
 
     <!-- script
@@ -68,8 +76,10 @@
                 <div class="collapse navbar-collapse" id="ftco-nav">
                     <ul class="navbar-nav ml-auto">
                         <li class="nav-item"><a href="./index.html" class="nav-link">Inicio</a></li>
-                        <li class="nav-item active"><a href="#busq" class="nav-link">Buscador</a></li>
+                        <li class="nav-item active"><a href="#busq" class="nav-link">Buscador</a></li>                       
+                        <li class="nav-item"><a href="./glosario.html" class="nav-link">Glosario</a></li>
                         <li class="nav-item"><a href="#cont" class="nav-link">Contacto</a></li>
+                        <li class="nav-item"><a href="http://localhost:3000/usuario/login" class="nav-link">Login</a></li>
                     </ul>
                 </div>
             </div>
@@ -84,9 +94,9 @@
 
         <div class="row section-header" data-aos="fade-up">
             <div class="col-full">
-                <h1 class="display-2 display-2--light">Búsqueda guiada</h1>
+                <h1 class="display-2 display-2--light">Búsqueda guiada.</h1>
                 <h3 class="ssubhead">La búsqueda guiada te permite encontrar de manera rapida y eficaz lo que estes
-                    buscando</h3>
+                    buscando.</h3>
             </div>
         </div>
     </section>
@@ -95,7 +105,7 @@
     <!-- GENEROS-->
     <div class="container pt-5" id="generos">
         <div class="section-tittle-alt">
-            <h2>Elige algun genero de madroño para iniciar tu busqueda</h2>
+            <h2>Elige algun genero de madroño para iniciar tu busqueda.</h2>
         </div>
         <div class="col-md-6 col-lg-6">
             <div class="service-box">
@@ -109,7 +119,7 @@
                     <figure class="sb-icon"><img src="" alt=""></figure>
                 </div>
                 <div class="sb-caption">
-                    <h3>Arbutus</h3>
+                    <h3>Arbutus.</h3>
                 </div>
             </div>
         </div>
@@ -125,7 +135,7 @@
                     <figure class="sb-icon"><img src="" alt=""></figure>
                 </div>
                 <div class="sb-caption">
-                    <h3>Comarostaphilys</h3>
+                    <h3>Comarostaphilys.</h3>
                 </div>
             </div>
         </div>
@@ -137,9 +147,9 @@
         <div class="container">
             <!--Cont General-->
             <div class="section-tittle-alt mt-1">
-                <h2 id="titu">Genero</h2>
+                <h2 id="titu">Genero.</h2>
             </div>
-            <p class="gallery-info service-alt mb-1">Selecciona las caracteristicas que conoces</p>
+            <p class="gallery-info service-alt mb-1">Selecciona las caracteristicas que conoces.</p>
 
                 <div class="container-fluid mt-1">
                     <div class="row mt-1">
@@ -148,7 +158,7 @@
                             <div class="container">
                                 <div class="row">
                                     <div class="col-12">
-                                        <h4 class="">Historial de Busqueda</h4>
+                                        <h4 class="">Historial de Busqueda.</h4>
                                     </div>
                                 </div>
                                 <div class="row">
@@ -1671,28 +1681,34 @@
         aria-hidden="true" id="ver1">
         <div class="modal-dialog modal-lg">
             <div class="modal-content">
-                <div class="modal-header">
-                    <div class="container text-center">
+                <div class="modal-header p-0">
+                    <div class="container p-0 text-center">
                         <h1 id="nom">Nombre</h1>
                     </div>
                 </div>
                 <div class="modal-body">
                     <div class="container">
                         <div class="row">
-                            <div class="col-4">
-                                <div class="container">
-                                    <div class="row pb-2">
-                                        <div class="col-12"><img src="" class="d-block w-100" id="imga1" alt=""></div>
-                                    </div>
-                                    <div class="row pb-2">
-                                        <div class="col-12"><img src="" class="d-block w-100" id="imga2" alt=""></div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-12"><img src="" class="d-block w-100" id="imga3" alt=""></div>
-                                    </div>
-                                </div>
+                            <div class="col-12">
+                                <section class="container-slider">	
+                                    <a href="javascript: fntExecuteSlide('prev');" class="arrowPrev"><i class="fas fa-chevron-circle-left"></i></a>
+                                    <a href="javascript: fntExecuteSlide('next');" class="arrowNext"><i class="fas fa-chevron-circle-right"></i></a>
+                                    <ul class="listslider">
+                                      <li><a itlist="itList_0" href="#" class="item-select-slid"></a></li>
+                                      <li><a itlist="itList_1" href="#"></a></li>
+                                      <li><a itlist="itList_2" href="#"></a></li>
+                                    </ul>
+                                    <ul class="slider" id="slider1">
+                                      <img id="imga1" src="" style="z-index:0; opacity: 1;"></img>
+                                      <img id="imga2" src=""></img>
+                                      <img id="imga3" src=""></img>
+                                   </ul>
+                                 </section>
                             </div>
-                            <div class="col-8">
+                        </div>
+
+                        <div class="row">
+                            <div class="col-6">
                                 <div class="container">
                                     <h5>Habito:</h5>
                                     <p id="hab">sfsfsf</p>
@@ -1709,6 +1725,11 @@
                                     <h5>Hojas:</h5>
                                     <p id="hoj">sfsfsf</p>
 
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="container">
+                                    
                                     <h5>Haz:</h5>
                                     <p id="ha">sfsfsf</p>
 
@@ -1719,10 +1740,11 @@
                                     <p id="flo">sfsfsf</p>
 
                                     <h5>Ubicacion:</h5>
-                                    <p id="ub" class="text-break">sfsfsf</p>
+                                    <p id="ub" class="text-break">sfsfsf</p>    
                                 </div>
                             </div>
                         </div>
+
                     </div>
                 </div>
             </div>
@@ -1742,21 +1764,28 @@
                 </div>
                 <div class="modal-body">
                     <div class="container">
+
                         <div class="row">
-                            <div class="col-4">
-                                <div class="container">
-                                    <div class="row pb-2">
-                                        <div class="col-12"><img src="" class="d-block w-100" id="imgc1" alt=""></div>
-                                    </div>
-                                    <div class="row pb-2">
-                                        <div class="col-12"><img src="" class="d-block w-100" id="imgc2" alt=""></div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-12"><img src="" class="d-block w-100" id="imgc3" alt=""></div>
-                                    </div>
-                                </div>
+                            <div class="col-12">
+                                <section class="container-slider">	
+                                    <a href="javascript: fntExecuteSlide('prev');" class="arrowPrev"><i class="fas fa-chevron-circle-left"></i></a>
+                                    <a href="javascript: fntExecuteSlide('next');" class="arrowNext"><i class="fas fa-chevron-circle-right"></i></a>
+                                    <ul class="listslider">
+                                      <li><a itlist="itList_0" href="#" class="item-select-slid"></a></li>
+                                      <li><a itlist="itList_1" href="#"></a></li>
+                                      <li><a itlist="itList_2" href="#"></a></li>
+                                    </ul>
+                                    <ul class="slider" id="slider2">
+                                      <img id="imgc1" src="" style="z-index:0; opacity: 1;"></img>
+                                      <img id="imgc2" src=""></img>
+                                      <img id="imgc3" src=""></img>
+                                   </ul>
+                                 </section>
                             </div>
-                            <div class="col-8">
+                        </div>
+
+                        <div class="row">
+                            <div class="col-6">
                                 <div class="container">
                                     <h5>Habito:</h5>
                                     <p id="hab2">sfsfsf</p>
@@ -1773,6 +1802,11 @@
                                     <h5>Haz:</h5>
                                     <p id="h">sfsfsf</p>
 
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="container">
+                                    
                                     <h5>Enves:</h5>
                                     <p id="env2">sfsfsf</p>
 
@@ -1783,10 +1817,11 @@
                                     <p id="fl">sfsfsf</p>
 
                                     <h5>Ubicacion:</h5>
-                                    <p id="ubi" class="text-break">sfsfsf</p>
+                                    <p id="ubi" class="text-break">sfsfsf</p>   
                                 </div>
                             </div>
                         </div>
+                    
                     </div>
                 </div>
             </div>
@@ -1920,10 +1955,10 @@
 
             <div class="col-six tab-full right footer-subscribe text-dark">
 
-                <h2 class="text-dark">Tecno Genesis</h2>
-                <h4 class="text-dark md-1-1">Misión</h4>
+                <h2 class="text-dark">Tecno Genesis.</h2>
+                <h4 class="text-dark md-1-1">Misión.</h4>
                 <p class="mt-1">“Transformar el entorno a través de una educación superior integral de 
-                    excelencia en beneficio de la sociedad.”</p>
+                    excelencia en beneficio de la sociedad".</p>
 
                 <img src="img/footer/utna.png" alt="" width="160px" height="200px">
                 <img src="img/footer/ipn.png" alt="" width="170px" height="240px">
@@ -1933,8 +1968,8 @@
 
             <div class="col-twelve">
                 <div class="copyright">
-                    <span>© Copyright TecnoGenesis 2017</span>
-                    <span>Site Template by TecnoGenesis</span>
+                    <span>© Copyright TecnoGenesis 2022.</span>
+                    <span>Site Template by TecnoGenesis.</span>
                 </div>
 
                 <div class="go-top">
@@ -1965,6 +2000,8 @@
     <script src="js/bootstrap-datepicker.js"></script>
     <script src="js/scrollax.min.js"></script>
     <script src="js/main2.js"></script>
+    <!-- CAROUSEL -->
+    <script src="js/carousel.js"></script>
 
 
     <!-- <script src="js/fetch.js"></script> -->
