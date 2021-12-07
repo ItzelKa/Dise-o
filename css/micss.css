@@ -99,6 +99,33 @@
   border-radius: 10%;
 }
 
+.card4 {
+  background-image: url(../img/Nosotros/Karla.jpeg);
+  background-size: cover;
+  border-radius: 10%;
+}
+
+.card5 {
+  background-image: url(../img/Nosotros/Alexander.jpeg);
+  background-size: cover;
+  border-radius: 10%;
+}
+.card6 {
+  background-image: url(../img/Nosotros/Jose.jpeg);
+  background-size: cover;
+  border-radius: 10%;
+}
+.card7 {
+  background-image: url(../img/Nosotros/Carlos.jpeg);
+  background-size: cover;
+  border-radius: 10%;
+}
+.card8 {
+  background-image: url(../img/Nosotros/Aron.jpeg);
+  background-size: cover;
+  border-radius: 10%;
+}
+
 /*---Comarostaphylis y Arbutus--------*/
 .cont-comarosta {
   box-shadow: 0 15px 30px 1px gray;
