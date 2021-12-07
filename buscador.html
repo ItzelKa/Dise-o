@@ -29,6 +29,14 @@
     <link rel="stylesheet" href="css/pantalla.css">
     <!-- CSSMenu -->
     <link rel="stylesheet" href="css/styleMen.css">
+
+    <!-- CAROUSEL -->
+    <link rel="stylesheet" href="css/carousel.css">
+    <script src="js/carousel.js"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+
+
+
     <!-- <link rel="stylesheet" href="mapaP1.html"> -->
 
     <!-- script
@@ -1671,28 +1679,34 @@
         aria-hidden="true" id="ver1">
         <div class="modal-dialog modal-lg">
             <div class="modal-content">
-                <div class="modal-header">
-                    <div class="container text-center">
+                <div class="modal-header p-0">
+                    <div class="container p-0 text-center">
                         <h1 id="nom">Nombre</h1>
                     </div>
                 </div>
                 <div class="modal-body">
                     <div class="container">
                         <div class="row">
-                            <div class="col-4">
-                                <div class="container">
-                                    <div class="row pb-2">
-                                        <div class="col-12"><img src="" class="d-block w-100" id="imga1" alt=""></div>
-                                    </div>
-                                    <div class="row pb-2">
-                                        <div class="col-12"><img src="" class="d-block w-100" id="imga2" alt=""></div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-12"><img src="" class="d-block w-100" id="imga3" alt=""></div>
-                                    </div>
-                                </div>
+                            <div class="col-12">
+                                <section class="container-slider">	
+                                    <a href="javascript: fntExecuteSlide('prev');" class="arrowPrev"><i class="fas fa-chevron-circle-left"></i></a>
+                                    <a href="javascript: fntExecuteSlide('next');" class="arrowNext"><i class="fas fa-chevron-circle-right"></i></a>
+                                    <ul class="listslider">
+                                      <li><a itlist="itList_0" href="#" class="item-select-slid"></a></li>
+                                      <li><a itlist="itList_1" href="#"></a></li>
+                                      <li><a itlist="itList_2" href="#"></a></li>
+                                    </ul>
+                                    <ul class="slider" id="slider1">
+                                      <img id="imga1" src="" style="z-index:0; opacity: 1;"></img>
+                                      <img id="imga2" src=""></img>
+                                      <img id="imga3" src=""></img>
+                                   </ul>
+                                 </section>
                             </div>
-                            <div class="col-8">
+                        </div>
+
+                        <div class="row">
+                            <div class="col-6">
                                 <div class="container">
                                     <h5>Habito:</h5>
                                     <p id="hab">sfsfsf</p>
@@ -1709,6 +1723,11 @@
                                     <h5>Hojas:</h5>
                                     <p id="hoj">sfsfsf</p>
 
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="container">
+                                    
                                     <h5>Haz:</h5>
                                     <p id="ha">sfsfsf</p>
 
@@ -1719,10 +1738,11 @@
                                     <p id="flo">sfsfsf</p>
 
                                     <h5>Ubicacion:</h5>
-                                    <p id="ub" class="text-break">sfsfsf</p>
+                                    <p id="ub" class="text-break">sfsfsf</p>    
                                 </div>
                             </div>
                         </div>
+
                     </div>
                 </div>
             </div>
@@ -1742,21 +1762,28 @@
                 </div>
                 <div class="modal-body">
                     <div class="container">
+
                         <div class="row">
-                            <div class="col-4">
-                                <div class="container">
-                                    <div class="row pb-2">
-                                        <div class="col-12"><img src="" class="d-block w-100" id="imgc1" alt=""></div>
-                                    </div>
-                                    <div class="row pb-2">
-                                        <div class="col-12"><img src="" class="d-block w-100" id="imgc2" alt=""></div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-12"><img src="" class="d-block w-100" id="imgc3" alt=""></div>
-                                    </div>
-                                </div>
+                            <div class="col-12">
+                                <section class="container-slider">	
+                                    <a href="javascript: fntExecuteSlide('prev');" class="arrowPrev"><i class="fas fa-chevron-circle-left"></i></a>
+                                    <a href="javascript: fntExecuteSlide('next');" class="arrowNext"><i class="fas fa-chevron-circle-right"></i></a>
+                                    <ul class="listslider">
+                                      <li><a itlist="itList_0" href="#" class="item-select-slid"></a></li>
+                                      <li><a itlist="itList_1" href="#"></a></li>
+                                      <li><a itlist="itList_2" href="#"></a></li>
+                                    </ul>
+                                    <ul class="slider" id="slider2">
+                                      <img id="imgc1" src="" style="z-index:0; opacity: 1;"></img>
+                                      <img id="imgc2" src=""></img>
+                                      <img id="imgc3" src=""></img>
+                                   </ul>
+                                 </section>
                             </div>
-                            <div class="col-8">
+                        </div>
+
+                        <div class="row">
+                            <div class="col-6">
                                 <div class="container">
                                     <h5>Habito:</h5>
                                     <p id="hab2">sfsfsf</p>
@@ -1773,6 +1800,11 @@
                                     <h5>Haz:</h5>
                                     <p id="h">sfsfsf</p>
 
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="container">
+                                    
                                     <h5>Enves:</h5>
                                     <p id="env2">sfsfsf</p>
 
@@ -1783,10 +1815,11 @@
                                     <p id="fl">sfsfsf</p>
 
                                     <h5>Ubicacion:</h5>
-                                    <p id="ubi" class="text-break">sfsfsf</p>
+                                    <p id="ubi" class="text-break">sfsfsf</p>   
                                 </div>
                             </div>
                         </div>
+                    
                     </div>
                 </div>
             </div>
@@ -1965,6 +1998,8 @@
     <script src="js/bootstrap-datepicker.js"></script>
     <script src="js/scrollax.min.js"></script>
     <script src="js/main2.js"></script>
+    <!-- CAROUSEL -->
+    <script src="js/carousel.js"></script>
 
 
     <!-- <script src="js/fetch.js"></script> -->
